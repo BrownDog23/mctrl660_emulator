@@ -1,0 +1,30 @@
+main.py
+device_state.py
+logger.py
+inspector.py
+protocol.py
+udp_handler.py
+udp_server.py
+
+client_UDP.py
+
+
+
+cd prj_python\mctrl660_emulator
+
+wireshark
+udp
+tcp
+eth.addr == ff:ff:ff:ff:ff:ff
+ip.dst == 255.255.255.255
+
+
+https://github.com/cedric-uden/Novastar-Controller
+https://github.com/cedric-uden/Novastar-Controller/tree/master/fader
+https://manuals.plus/novastar/vx-pro-series-control-protocol-manual
+
+
+py -c "import openpyxl; print(openpyxl.__version__)"
+
+
+
