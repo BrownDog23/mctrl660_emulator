@@ -1,0 +1,150 @@
+diff --git a/settings.py b/settings.py
+new file mode 100644
+index 0000000:contentReference[oaicite:8]{index=8}ll
++++ b/settings.py
+@@ -0,0 +1,22 @@
++# Config centralizzata emulatore
++# Step1: allineamento rete/porte con quanto osservato da NovaLCT
++#
++# Nota: per ascoltare su TCP 443 su Windows potresti dover:
++# - eseguire come Admin
++# - assicurarti che nessun altro servizio stia già usando 443
++
++EMULATOR_IP = "192.168.0.10"
++
++# NovaLCT tenta TCP 443 verso l'IP target (da capture)
++TCP_PORT = 443
++
++# Dalle capture è stata osservata anche UDP 6666 (oltre 3702/1900).
++# In Step1 mettiamo 6666 per iniziare a vedere traffico utile.
++UDP_PORT = 6666
+diff --git a/tcp_server.py b/tcp_server.py
+index 0000000..1111111 100644
+--- a/tcp_server.py
++++ b/tcp_server.py
+@@ -1 +1,68 @@
+-import socket import threading from logger import log_packet, log_text from tcp_handler import handle_tcp_stream TCP_PORT = 5200 BIND_IP = "0.0.0.0" # ascolta su tutte le interfacce def client_thread(conn: socket.socket, addr): log_text(f"[TCP] Client connected: {addr}") try: handle_tcp_stream(conn, addr) except Exception as e: log_text(f"[TCP] ERROR for {addr}: {e}") raise finally: try: conn.close() except Exception: pass log_text(f"[TCP] Client disconnected: {addr}") def start_tcp(): srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM) srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) srv.bind((BIND_IP, TCP_PORT)) srv.listen(5) log_text(f"TCP server in ascolto su {BIND_IP}:{TCP_PORT}") while True: conn, addr = srv.accept() t = threading.Thread(target=client_thread, args=(conn, addr), daemon=True) t.start() if __name__ == "__main__": start_tcp()
++import socket
++import threading
++
++from logger import log_text
++from tcp_handler import handle_tcp_stream
++from settings import EMULATOR_IP, TCP_PORT
++
++
++# Bindiamo esplicitamente l'IP emulato.
++# (Se Windows non ha EMULATOR_IP assegnato a una NIC/loopback, bind fallirà.)
++BIND_IP = EMULATOR_IP
++
++
++def client_thread(conn: socket.socket, addr):
++    log_text(f"[TCP] Client connected: {addr}")
++    try:
++        handle_tcp_stream(conn, addr)
++    except Exception as e:
++        log_text(f"[TCP] ERROR for {addr}: {e}")
++        raise
++    finally:
++        try:
++            conn.close()
++        except Exception:
++            pass
++        log_text(f"[TCP] Client disconnected: {addr}")
++
++
++def start_tcp():
++    srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
++    srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
++
++    # Su Windows, se 443 è occupata o servono privilegi, qui fallirà:
++    # - OSError: [WinError 10013] ... accesso negato
++    # - OSError: [WinError 10048] ... indirizzo già in uso
++    srv.bind((BIND_IP, TCP_PORT))
++    srv.listen(5)
++    log_text(f"TCP server in ascolto su {BIND_IP}:{TCP_PORT}")
++
++    while True:
++        conn, addr = srv.accept()
++        t = threading.Thread(target=client_thread, args=(conn, addr), daemon=True)
++        t.start()
++
++
++if __name__ == "__main__":
++    start_tcp()
+diff --git a/udp_server.py b/udp_server.py
+index 0000000..2222222 100644
+--- a/udp_server.py
++++ b/udp_server.py
+@@ -1 +1,43 @@
+-import socket from logger import log_text from udp_handler import handle_udp UDP_PORT = 5200 # confermeremo con sniffing def start_udp(): sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1) sock.bind(("", UDP_PORT)) log_text(f"UDP server in ascolto su 0.0.0.0:{UDP_PORT}") while True: data, addr = sock.recvfrom(2048) try: response = handle_udp(data, addr) except Exception as e: import traceback log_text(f"ERROR in handle_udp: {e}") traceback.print_exc() continue if not response: continue if isinstance(response, list): for r in response: sock.sendto(r, addr) else: sock.sendto(response, addr) if __name__ == "__main__": start_udp()
++import socket
++
++from logger import log_text
++from udp_handler import handle_udp
++from settings import UDP_PORT
++
++
++def start_udp():
++    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
++    sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
++    sock.bind(("", UDP_PORT))
++    log_text(f"UDP server in ascolto su 0.0.0.0:{UDP_PORT}")
++
++    while True:
++        data, addr = sock.recvfrom(2048)
++        try:
++            response = handle_udp(data, addr)
++        except Exception as e:
++            import traceback
++
++            log_text(f"ERROR in handle_udp: {e}")
++            traceback.print_exc()
++            continue
++
++        if not response:
++            continue
++
++        if isinstance(response, list):
++            for r in response:
++                sock.sendto(r, addr)
++        else:
++            sock.sendto(response, addr)
++
++
++if __name__ == "__main__":
++    start_udp()
+diff --git a/device_registry.py b/device_registry.py
+index 0000000..3333333 100644
+--- a/device_registry.py
++++ b/device_registry.py
+@@ -1 +1,42 @@
+-from device_state import DeviceState class DeviceRegistry: def __init__(self): # Crea qui quanti device vuoi self.devices = [ # DeviceState(serial="FAKE-MCTRL660-001", ip="192.168.0.100"), # DeviceState(serial="FAKE-MCTRL660-002", ip="192.168.0.101"), # DeviceState(serial="FAKE-MCTRL660-003", ip="192.168.0.102"), DeviceState(serial="FAKE-MCTRL660-001", ip="192.168.56.1"), ] def all(self): return self.devices def get_by_index(self, idx: int) -> DeviceState: if idx < 0 or idx >= len(self.devices): return self.devices[0] return self.devices[idx] def get_free_device_index(self): for idx, dev in enumerate(self.devices): if not hasattr(dev, "assigned"): dev.assigned = False if not dev.assigned: return idx return None def assign(self, idx): self.devices[idx].assigned = True def get_by_index(self, idx): return self.devices[idx]
++from device_state import DeviceState
++from settings import EMULATOR_IP
++
++
++class DeviceRegistry:
++    def __init__(self):
++        # Crea qui quanti device vuoi
++        self.devices = [
++            DeviceState(serial="FAKE-MCTRL660-001", ip=EMULATOR_IP),
++        ]
++
++    def all(self):
++        return self.devices
++
++    def get_by_index(self, idx: int) -> DeviceState:
++        if idx < 0 or idx >= len(self.devices):
++            return self.devices[0]
++        return self.devices[idx]
++
++    def get_free_device_index(self):
++        for idx, dev in enumerate(self.devices):
++            if not hasattr(dev, "assigned"):
++                dev.assigned = False
++            if not dev.assigned:
++                return idx
++        return None
++
++    def assign(self, idx):
++        self.devices[idx].assigned = True
