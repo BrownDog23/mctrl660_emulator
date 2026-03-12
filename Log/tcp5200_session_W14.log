@@ -1,0 +1,481 @@
+[TCP] Listening on 0.0.0.0:5200 allowed_dst=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 255]
+[TCP] Conn from ('192.168.0.10', 6269)
+[TCP] RX serial=CB src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x01000000 len=1
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=D8 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=D1 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=C0 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=16 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=BF src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=01 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=02 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=03 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=04 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=05 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] Rebuilding controller screen blocks from 0 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] (none)
+[EMU] ---- SCREEN_WRITES ----
+[EMU] (none)
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=0
+[EMU] 0x02000000 head=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x02000100 head=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x02020020 head=010000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x08000000 head=010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=06 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=07 src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150221
+[EMU] Rebuilding controller screen blocks from 1 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=1
+[EMU] 0x02000000 head=010100002020010100000000000000002603111502210000000000000000000000000000000000000000000000000000...
+[EMU] 0x02000100 head=01a500002020010100000000000000002603111502210000000000000000000000000000000000000000000000000000...
+[EMU] 0x02020020 head=010000010000000026031115022100000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x08000000 head=010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=08 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=09 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=0A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=0B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=0C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=010100002020010100000000000000002603111502210000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=0D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=01a500002020010100000000000000002603111502210000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=CE src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=63 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=2A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=57 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=3C src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=0E src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150240
+[EMU] Rebuilding controller screen blocks from 2 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] RAW[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ROUTE[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=2
+[EMU] 0x02000000 head=020100002020010100000000000000002603111502210000260311150240000000000000000000000000000000000000...
+[EMU] 0x02000100 head=02a500002020010100000000000000002603111502210000260311150240000000000000000000000000000000000000...
+[EMU] 0x02020020 head=020000010000000026031115022100002603111502400000000000000000000000000000000000000000000000000000...
+[EMU] 0x08000000 head=010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=0F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=10 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=11 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=12 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=13 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=020100002020010100000000000000002603111502210000260311150240000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=14 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=02a500002020010100000000000000002603111502210000260311150240000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=15 src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150300
+[EMU] Rebuilding controller screen blocks from 3 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] RAW[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] RAW[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ROUTE[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] ROUTE[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=3
+[EMU] 0x02000000 head=030100002020010100000000000000002603111502210000260311150240000026031115030000000000000000000000...
+[EMU] 0x02000100 head=03a500002020010100000000000000002603111502210000260311150240000026031115030000000000000000000000...
+[EMU] 0x02020020 head=030000010000000026031115022100002603111502400000260311150300000000000000000000000000000000000000...
+[EMU] 0x08000000 head=010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=BB src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=DB src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=EE src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=7C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=FD src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=16 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=17 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=18 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=19 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=1A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=030100002020010100000000000000002603111502210000260311150240000026031115030000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=1B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=03a500002020010100000000000000002603111502210000260311150240000026031115030000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=1C src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150320
+[EMU] Rebuilding controller screen blocks from 4 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] RAW[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] RAW[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] RAW[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ROUTE[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] ROUTE[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] ROUTE[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=4
+[EMU] 0x02000000 head=040100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02000100 head=04a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02020020 head=040000010000000026031115022100002603111502400000260311150300000026031115032000000000000000000000...
+[EMU] 0x08000000 head=010101010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=1D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=1E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=1F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=20 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=21 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=040100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=22 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=04a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=23 src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150340
+[EMU] Rebuilding controller screen blocks from 5 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] RAW[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] RAW[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] RAW[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] RAW[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ROUTE[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] ROUTE[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] ROUTE[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] ROUTE[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=5
+[EMU] 0x02000000 head=050100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02000100 head=05a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02020020 head=050000010000000026031115022100002603111502400000260311150300000026031115032000002603111503400000...
+[EMU] 0x08000000 head=010101010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=CF src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=6C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=FE src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=5D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=DC src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=24 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=25 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=26 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=27 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=28 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=050100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=29 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=05a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=2A src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150400
+[EMU] Rebuilding controller screen blocks from 6 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] RAW[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] RAW[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] RAW[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] RAW[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] RAW[05] dev=00 port=00 rcv=0000 dst=FF data=260311150400
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ROUTE[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] ROUTE[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] ROUTE[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] ROUTE[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] ROUTE[05] dev=00 port=00 rcv=0000 dst=FF data=260311150400
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=6
+[EMU] 0x02000000 head=060100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02000100 head=06a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02020020 head=060000010000000026031115022100002603111502400000260311150300000026031115032000002603111503400000...
+[EMU] 0x08000000 head=010101010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=2B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=2C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=2D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=2E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=2F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=060100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=30 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=06a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=31 src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150420
+[EMU] Rebuilding controller screen blocks from 7 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] RAW[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] RAW[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] RAW[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] RAW[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] RAW[05] dev=00 port=00 rcv=0000 dst=FF data=260311150400
+[EMU] RAW[06] dev=00 port=00 rcv=0000 dst=FF data=260311150420
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ROUTE[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] ROUTE[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] ROUTE[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] ROUTE[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] ROUTE[05] dev=00 port=00 rcv=0000 dst=FF data=260311150400
+[EMU] ROUTE[06] dev=00 port=00 rcv=0000 dst=FF data=260311150420
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=7
+[EMU] 0x02000000 head=070100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02000100 head=07a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02020020 head=070000010000000026031115022100002603111502400000260311150300000026031115032000002603111503400000...
+[EMU] 0x08000000 head=010101010101010000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=D6 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=62 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=75 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=AC src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=95 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=32 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=33 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=34 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=35 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=36 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=070100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=37 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=07a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=38 src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150440
+[EMU] Rebuilding controller screen blocks from 8 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] RAW[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] RAW[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] RAW[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] RAW[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] RAW[05] dev=00 port=00 rcv=0000 dst=FF data=260311150400
+[EMU] RAW[06] dev=00 port=00 rcv=0000 dst=FF data=260311150420
+[EMU] RAW[07] dev=00 port=00 rcv=0000 dst=FF data=260311150440
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ROUTE[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] ROUTE[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] ROUTE[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] ROUTE[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] ROUTE[05] dev=00 port=00 rcv=0000 dst=FF data=260311150400
+[EMU] ROUTE[06] dev=00 port=00 rcv=0000 dst=FF data=260311150420
+[EMU] ROUTE[07] dev=00 port=00 rcv=0000 dst=FF data=260311150440
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=8
+[EMU] 0x02000000 head=080100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02000100 head=08a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02020020 head=080000010000000026031115022100002603111502400000260311150300000026031115032000002603111503400000...
+[EMU] 0x08000000 head=010101010101010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=39 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=3A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=3B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=3C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=3D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=080100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=3E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=08a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=3F src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000011 len=6
+[EMU] ROUTE CMD reg=0x02000011 dst=FF dev=00 port=00 rcv=0000 data=260311150500
+[EMU] Rebuilding controller screen blocks from 9 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] RAW[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] RAW[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] RAW[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] RAW[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] RAW[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] RAW[05] dev=00 port=00 rcv=0000 dst=FF data=260311150400
+[EMU] RAW[06] dev=00 port=00 rcv=0000 dst=FF data=260311150420
+[EMU] RAW[07] dev=00 port=00 rcv=0000 dst=FF data=260311150440
+[EMU] RAW[08] dev=00 port=00 rcv=0000 dst=FF data=260311150500
+[EMU] ---- SCREEN_WRITES ----
+[EMU] ROUTE[00] dev=00 port=00 rcv=0000 dst=FF data=260311150221
+[EMU] ROUTE[01] dev=00 port=00 rcv=0000 dst=FF data=260311150240
+[EMU] ROUTE[02] dev=00 port=00 rcv=0000 dst=FF data=260311150300
+[EMU] ROUTE[03] dev=00 port=00 rcv=0000 dst=FF data=260311150320
+[EMU] ROUTE[04] dev=00 port=00 rcv=0000 dst=FF data=260311150340
+[EMU] ROUTE[05] dev=00 port=00 rcv=0000 dst=FF data=260311150400
+[EMU] ROUTE[06] dev=00 port=00 rcv=0000 dst=FF data=260311150420
+[EMU] ROUTE[07] dev=00 port=00 rcv=0000 dst=FF data=260311150440
+[EMU] ROUTE[08] dev=00 port=00 rcv=0000 dst=FF data=260311150500
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=9
+[EMU] 0x02000000 head=090100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02000100 head=09a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[EMU] 0x02020020 head=090000010000000026031115022100002603111502400000260311150300000026031115032000002603111503400000...
+[EMU] 0x08000000 head=010101010101010101000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=FE src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=4D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=FA src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=E9 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=8A src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] ERROR: [Errno 104] Connection reset by peer
+[TCP] Conn from ('192.168.0.10', 6317)
+[TCP] RX serial=CC src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x01000000 len=1
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=38 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=C6 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=48 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=4A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=58 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=01 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=02 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=03 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=04 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000000 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=05 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05066000 len=256
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=06 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=07 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200000B len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=08 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000023 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=09 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x03100109 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=0A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000022 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=B6 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B2 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=BD src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=EF src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=CC src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=0B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02200117 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=0C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=090100002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=0D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=09a500002020010100000000000000002603111502210000260311150240000026031115030000002603111503200000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=0E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02020020 len=64
+[EMU] READBACK reg=0x02020020 dev=00 port=00 rcv=0000 dst=00 data=090000010000000026031115022100002603111502400000260311150300000026031115032000002603111503400000...
+[TCP] TX ack=00 bytes=84
+[TCP] RX serial=3F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=22 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=DB src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=89 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=72 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=0F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200000B len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=10 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x08000000 len=256
+[EMU] READBACK reg=0x08000000 dev=00 port=00 rcv=0000 dst=00 data=010101010101010101000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=11 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200009D len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=12 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000023 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=13 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200009D len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=14 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x03100109 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=15 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000022 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=5B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=98 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=6A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=22 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=92 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=16 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24

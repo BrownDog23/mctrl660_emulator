@@ -1,0 +1,560 @@
+1) Avviare file Python da Power shell:
+python nome_file.py
+
+2) Versione Python
+python --version
+
+3) Installare un'applicazione e verificare versione usata:
+installare openpyxl, Da CMD/PowerShell:
+python -m pip install openpyxl
+
+Se hai più versioni di Python e pip va su quella sbagliata:
+py -m pip install openpyxl
+
+Dopo, verifica:
+python -c "import openpyxl; print(openpyxl.__version__)"
+
+
+4) Cerca pacchetti UDP su porta 5200
+netstat -ano | find "5200"
+
+5) Testare server in ascolto su porta specifica
+PowerShell (non CMD) e prova:
+Test-NetConnection 192.168.56.1 -Port 443
+
+6)Trova quale servizio è associato ad un determinato PID
+netstat -ano | findstr 12436
+
+7)Verifica associazione porte con:
+netstat -abno
+
+8) Visualizza impostazioni di rete
+ipconfig
+
+9) Trova traffico UDP di un determinato servizio su una porta o più porte dichiarate nella stringa
+netstat -abno | findstr /i "novalct mars 443 5200 6666 8888 1900 3702 50000"
+
+10)Verifica traffico UDP di un determinato indirizzo IP
+netstat -ano | findstr /i "192.168.0.10"
+
+11) analizza route verso una rete specifica
+route print | findstr 192.168.0
+
+12) Trova porte TCP/UDP in modalità LISTEN
+netstat -ano | findstr LISTEN
+
+13)cerca traffico su una porta specifica
+netstat -ano | findstr :443
+
+14)Controlla status progetto GIT
+Vai nella cartella del progetto, per esempio:
+cd C:\Users\TUO_NOME\Desktop\mctrl660_emulator
+Poi verifica che sia un repo Git:
+git status
+Se vedi qualcosa tipo:
+On branch main
+Sei nel posto giusto.
+
+15) Applicare una PATCH ad progetto GIT
+Applicare la patch
+Sempre dentro la cartella del repo:
+git apply patch_step1.diff
+Se non mostra errori → patch applicata.
+Verifica che sia andata a buon fine
+git status
+
+16) Applica PATCH ignorando errori dati da spazi bianchi
+2) Applica ignorando gli avvisi sugli spazi
+Da PowerShell nella cartella del repo:
+git apply --whitespace=nowarn patch_step1.diff
+
+17) Assegna davvero 192.168.0.10 al PC
+A) Trova il nome della scheda su cui vuoi mettere l’IP
+Apri PowerShell come amministratore e lancia:
+Get-NetAdapter | Format-Table -Auto Name, Status, LinkSpeed
+
+B) Assegna IP 192.168.0.10/24
+Sostituisci "NOME_SCHEDA" con quello che vedi:
+New-NetIPAddress -InterfaceAlias "NOME_SCHEDA" -IPAddress 192.168.0.10 -PrefixLength 24
+
+C)Verifica:
+Get-NetIPAddress -IPAddress 192.168.0.10
+
+
+18)Identifica interfaccia ethernet
+Get-NetIPAddress | ? {$_.AddressFamily -eq "IPv4"} | ft InterfaceAlias,IPAddress,PrefixLength -Auto
+
+19)controlla stato rete
+Controlla che “Ethernet 2” sia Up
+In PowerShell:
+Get-NetAdapter -Name "Ethernet 2" | Format-Table -Auto Name, Status, MacAddress, LinkSpeed
+
+19)Rinfresca lo stato IP (disabilita/abilita l’interfaccia)
+Se è Enabled ma Tentative, prova:
+Disable-NetAdapter -Name "Ethernet 2" -Confirm:$false
+Enable-NetAdapter -Name "Ethernet 2" -Confirm:$false
+
+Poi ricontrolla:
+Get-NetIPAddress -IPAddress 192.168.0.10
+
+
+20)elimina e ricrea IP con SkipAsSource (più “gentile”)
+Prima rimuovi:
+Remove-NetIPAddress -IPAddress 192.168.0.10 -Confirm:$false
+
+Poi ricrea così:
+New-NetIPAddress -InterfaceAlias "Ethernet 2" -IPAddress 192.168.0.10 -PrefixLength 24 -SkipAsSource $true
+
+
+21)Assegna IP 192.168.0.10
+PowerShell amministratore:
+Get-NetAdapter
+
+Trova il nome esatto della nuova scheda.
+Poi:
+New-NetIPAddress -InterfaceAlias "NOME_LOOPBACK" -IPAddress 192.168.0.10 -PrefixLength 24
+
+Verifica:
+Get-NetIPAddress -IPAddress 192.168.0.10
+
+
+22) Identificare il nome esatto della nuova interfaccia
+Apri PowerShell come Amministratore:
+Get-NetAdapter | Format-Table -Auto Name, Status, LinkSpeed
+
+
+23)Spostare 192.168.0.10 dal vecchio “Ethernet 2” (Disconnected) alla loopback
+Prima rimuoviamo l’IP dall’interfaccia sbagliata (quella Disconnected), così evitiamo conflitti/stati “Tentative”.
+Remove-NetIPAddress -IPAddress 192.168.0.10 -Confirm:$false
+
+Poi assegniamo l’IP alla loopback (sostituisci NOME_LOOPBACK):
+New-NetIPAddress -InterfaceAlias "NOME_LOOPBACK" -IPAddress 192.168.0.10 -PrefixLength 24
+
+Verifica
+Get-NetIPAddress -IPAddress 192.168.0.10 | Format-List IPAddress,InterfaceAlias,AddressState,PrefixLength
+
+
+24)Verifica impostazioni rete
+Apri PowerShell (normale va bene, non serve admin):
+Get-NetIPAddress -IPAddress 192.168.0.10 | Format-List IPAddress,InterfaceAlias,AddressState
+
+25) Creare un certificato di sicurezza CON OPENSSL
+Crea cartella cert e genera cert/key (scegli uno dei 2 metodi)
+Metodo A (se hai OpenSSL)
+
+Da PowerShell nella root del repo:
+
+mkdir cert
+openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes `
+  -keyout cert\server.key -out cert\server.crt `
+  -subj "/CN=192.168.0.10"
+
+
+26) Creare un certificato di sicurezza SENZA OPENSSL
+STEP 1 — Creare certificato self-signed nello store Windows
+
+Apri PowerShell come Amministratore e lancia:
+
+$cert = New-SelfSignedCertificate `
+  -DnsName "192.168.0.10" `
+  -CertStoreLocation "cert:\LocalMachine\My" `
+  -KeyAlgorithm RSA `
+  -KeyLength 2048 `
+  -NotAfter (Get-Date).AddYears(10)
+
+Questo crea un certificato valido 10 anni.
+
+27) esportare un certificato di sicurezza
+Esportarlo in PFX
+Sempre in PowerShell:
+$pwd = ConvertTo-SecureString -String "novalct" -Force -AsPlainText
+Export-PfxCertificate `
+  -Cert $cert `
+  -FilePath "D:\prj_python\mctrl660_emulator\cert\server.pfx" `
+  -Password $pwd
+
+28)Convertire PFX in PEM usando Python
+Python può leggere PFX usando ssl + cryptography.
+Prima verifica se hai cryptography:
+pip show cryptography
+Se non ce l’hai:
+pip install cryptography
+
+Usa pip tramite Python
+In PowerShell:
+python -m pip show cryptography
+Se non è installato:
+python -m pip install cryptography
+
+
+Se python -m pip non funziona
+Prova:
+py -m pip install cryptography
+
+
+29) oppure verifica che Python sia nel PATH:
+python --version
+
+
+30) Genera un certificato da bsh GIT
+Apri Git Bash (non PowerShell)
+2️.Vai nella cartella del progetto:
+ex:
+cd /d/prj_python/mctrl660_emulator
+
+3️.Lancia:
+openssl version
+Se risponde → abbiamo OpenSSL disponibile.
+
+Allora genera cert direttamente lì:
+mkdir cert
+openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes \
+  -keyout cert/server.key -out cert/server.crt \
+  -subj "/CN=192.168.0.10"
+
+
+31) installare applicazione Python 
+aggiorna Python (soluzione “definitiva” per futuro)
+installa Python 3.12 x64
+
+poi:
+py -3.12 -m pip install --upgrade pip
+py -3.12 -m pip install cryptography
+
+
+32)Verifica Python attuale (cosa stai usando davvero)
+Apri PowerShell (anche non Admin va bene) ed esegui tutti:
+python --version
+where python
+py --version
+py -0p
+
+33)Verifica che il launcher veda Python
+Dopo installazione, in PowerShell:
+py -0p
+py -3.12 --version
+python --version
+
+
+
+34)Forziamo l’emulatore a usare Python 3.12 (venv nel progetto)
+Quando 3.12 è disponibile, nella cartella del progetto:
+cd D:\prj_python\mctrl660_emulator
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe --version
+
+
+35)Aggiornare pip (dentro il venv)
+Sempre nella root del progetto:
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip --version
+
+
+36)Genera certificato self-signed
+openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes `
+  -keyout cert\server.key `
+  -out cert\server.crt `
+  -subj "/CN=192.168.0.10"
+
+Verifica:
+dir cert
+
+
+
+37)Genera nuovo cert + key con SAN e serverAuth
+Esegui questo comando (uno solo):
+openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes `
+  -keyout cert\server.key `
+  -out cert\server.crt `
+  -subj "/CN=192.168.0.10" `
+  -addext "subjectAltName=IP:192.168.0.10" `
+  -addext "extendedKeyUsage=serverAuth"
+
+Verifica che i file esistano:
+dir cert
+
+38)scoprire chi si connette (comandi precisi)
+
+Apri PowerShell come Admin e lancia:
+
+# 1) Mostra tutte le connessioni/attempt su 192.168.0.10:443 con PID
+netstat -ano | findstr "192.168.0.10:443"
+
+# 2) (Opzionale ma utile) mostra anche chi sta usando UDP 6666
+netstat -ano | findstr ":6666"
+
+
+39)Verifica che stai modificando il file giusto in Python
+cd D:\prj_python\mctrl660_emulator
+python -c "import tcp_server,inspect; print(tcp_server.__file__); print('DIAG' in inspect.getsource(tcp_server))"
+
+
+40)Verifica connessione
+Test “loopback” locale: ti connetti TU al server
+Sempre con server attivo:
+powershell -Command "$c=New-Object Net.Sockets.TcpClient('192.168.0.10',5200); 'connected'; $c.Close()"
+Se qui stampa connected e sul server compare Connection from ... → il server funziona, quindi NovaLCT non usa 5200 (oppure non tenta proprio).
+Se invece NON si connette → c’è un problema di IP/bind/firewall sulla macchina.
+
+
+41)prova connessione locale a 5200
+Copia/incolla esattamente uno di questi (meglio il primo):
+
+Opzione A (più semplice)
+Test-NetConnection 192.168.0.10 -Port 5200
+
+Opzione B (TcpClient, one-liner robusto)
+powershell -NoProfile -Command "$c = New-Object System.Net.Sockets.TcpClient; $c.Connect('192.168.0.10',5200); 'connected'; $c.Close()"
+
+Cosa deve succedere:
+sul server deve comparire Connection from ...
+e la shell deve stampare connected (opzione B) oppure TcpTestSucceeded : True (opzione A)
+
+
+42)Comando TcpClient corretto (da PowerShell)
+Eseguilo direttamente nella shell PowerShell (senza richiamare powershell -Command):
+$c = New-Object System.Net.Sockets.TcpClient
+$c.Connect('192.168.0.10', 5200)
+'connected'
+$c.Close()
+Se funziona, sul server deve comparire Connection from ....
+
+Se invece vuoi proprio usare powershell -Command, allora devi usare apici singoli per evitare l’espansione di $c:
+powershell -NoProfile -Command '$c = New-Object System.Net.Sockets.TcpClient; $c.Connect("192.168.0.10",5200); "connected"; $c.Close()'
+
+Test “brutale” (solo per prova)
+Disattiva temporaneamente Windows Defender Firewall per il profilo attivo (di solito “Private” o “Public”) e riprova Test-NetConnection.
+
+Oppure (più pulito) crea una regola inbound solo per la porta 5200:
+Apri Prompt dei comandi come Amministratore e lancia:
+netsh advfirewall firewall add rule name="NovaLCT Emulator TCP 5200" dir=in action=allow protocol=TCP localport=5200
+
+Poi riprova:
+Test-NetConnection 192.168.0.10 -Port 5200
+e guarda se sul server appare la connessione.
+
+
+
+42)Aggiungi IP 192.168.0.11 al Loopback Adapter (Ethernet 6)
+Da CMD come amministratore:
+netsh interface ip add address "Ethernet 6" 192.168.0.11 255.255.255.0
+Verifica:
+ipconfig
+
+
+
+
+43)
+Setup Raspberry (una volta sola)
+1️_ Metti IP statico 192.168.0.11
+
+Sul Raspberry:
+sudo nano /etc/dhcpcd.conf
+
+Aggiungi in fondo:
+interface eth0
+static ip_address=192.168.0.11/24
+static routers=
+static domain_name_servers=
+
+Salva, poi:
+sudo reboot
+
+
+44) Abilita SSH (se non già attivo)
+sudo raspi-config
+→ Interface Options
+→ SSH
+→ Enable
+
+Oppure:
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
+45)Collegati dal PC Windows
+
+Sul PC:
+ssh nome_user@192.168.0.11
+(password del Raspberry)
+
+esempio:
+ssh kaos23@192.168.0.11
+
+Da quel momento:
+puoi lanciare Python
+modificare file
+fare debug
+vedere tutto nel terminale del PC
+
+
+46) Se vuoi anche interfaccia grafica (opzionale)
+Se proprio vuoi “vedere il desktop” del Raspberry:
+Opzione semplice: RealVNC (già integrato in Raspberry OS)
+
+Sul Raspberry:
+sudo raspi-config
+→ Interface Options
+→ VNC → Enable
+
+Sul PC:
+Installa RealVNC Viewer
+Connettiti a 192.168.0.11
+
+
+47)Ambiente Python sul Raspberry
+Dentro SSH:
+python3 --version
+
+
+48) Copia script dal PC al Raspberry
+Dal PC (PowerShell):
+scp udp3800_responder_mcast.py pi@192.168.0.11:/home/pi/emulator/
+scp tcp_multi_probe.py pi@192.168.0.11:/home/pi/emulator/
+
+Esempio:
+scp tcp_server.py kaos23@192.168.0.11:/home/kaos23/emulator/
+
+Copia script dal Raspberry al PC 
+scp kaos23@192.168.0.11:/home/kaos23/emulator/tcp5200_session_F_raw.log D:\prj_python\mctrl660_emulator\
+
+
+49)Avvio file Python sul Raspberry
+Dentro SSH:
+cd emulator
+source venv/bin/activate
+python3 udp3800_responder_mcast.py
+
+
+50)controllo rete su Raspberry
+Sul Raspberry:
+ip addr
+
+
+51) assegnazione IP statico al Raspberry (caso specifico)
+sudo ip link set eth0 up
+sudo ip addr add 192.168.0.11/24 dev eth0
+
+Poi verifica:
+ip addr show eth0
+
+Ora deve comparire:
+inet 192.168.0.11/24
+
+Verifica Dal PC:
+ping 192.168.0.11
+deve ritornare almeno 3 pacchetti
+
+
+
+52) Verifica utente di RaspBerry
+Verifica dal Raspberry (se hai monitor)
+Sul Raspberry digita:
+whoami
+
+oppure
+cat /etc/passwd | grep home
+
+Vedrai il nome dell’utente creato.
+
+
+53) Reset Password
+RESET PASSWORD DIRETTO (metodo rapido)
+
+Sul Raspberry (con monitor e tastiera):
+Verifica utente
+whoami
+
+oppure se sei già dentro con un altro utente:
+ls /home
+
+Identifica il nome corretto dell’utente (es: marco, admin, ecc.)
+
+Cambia password
+sudo passwd NOMEUTENTE
+
+Esempio:
+sudo passwd marco
+
+Ti chiederà:
+New password:
+Retype new password:
+
+Scrivila (non si vedrà mentre digiti, è normale).
+
+Dovresti vedere:
+password updated successfully
+
+Alternativa ancora più semplice (se sei loggato come quell’utente)
+Se sei già dentro con quell’utente:
+passwd
+Cambia direttamente la password dell’utente corrente.
+
+
+54) Assegnare un IP statico PERMANENTE a Rasperry
+STEP 1 — Verifica se stai usando NetworkManager
+
+Sul Raspberry:
+nmcli device status
+Se vedi eth0 con stato connected → stai usando NetworkManager (molto probabile).
+
+METODO CONSIGLIATO (NetworkManager – moderno)
+1️_Mostra la connessione attiva
+nmcli connection show
+
+Vedrai qualcosa tipo:
+Wired connection 1
+Prendiamo esattamente quel nome.
+
+2_Imposta IP statico
+Sostituisci "Wired connection 1" con il nome reale:
+sudo nmcli connection modify "Wired connection 1" \
+  ipv4.method manual \
+  ipv4.addresses 192.168.0.11/24 \
+  ipv4.gateway "" \
+  ipv4.dns ""
+
+3️_Riattiva la connessione
+sudo nmcli connection down "Wired connection 1"
+sudo nmcli connection up "Wired connection 1"
+
+4_Verifica
+ip addr show eth0
+Deve mostrare:
+inet 192.168.0.11/24
+
+
+5️_Test finale
+Riavvia il Raspberry:
+sudo reboot
+
+Dopo riavvio:
+ping 192.168.0.11
+ssh tuo_utente@192.168.0.11
+Se funziona → IP statico permanente correttamente configurato.
+
+
+55)Lanciare un file Python da Raspberry
+python3 tcp_multi_probe.py
+
+56) Analisi pacchetti su porta specifica in Raspberry
+Sul Raspberry (SSH), lancia:
+sudo tcpdump -ni eth0 udp port 3800 -vv
+sudo tcpdump -ni eth0 -vv udp port 3800
+sudo tcpdump -ni eth0 udp port 3800 -vv
+sudo tcpdump -ni eth0 -vv tcp port 5200
+
+57) Raspberry Installa Applicazione
+Installa tcpdump (30 secondi)
+
+sudo apt update
+sudo apt install tcpdump -y
+
+
+58) Raspberry stampa un file di LOG per uno specifico file:
+python3 tcp_server.py | tee tcp5200_session.log
+
+59)Raspberry estrai determinate stringhe da un file
+grep "\[EMU\]" tcp5200_session_W14.log
+
+60) head nome file
+estrae le prime 10 righe o righe specifiche di un file

@@ -1,0 +1,2321 @@
+2026-02-21 17:55:59,107 | UDP server in ascolto su 0.0.0.0:6666
+2026-02-21 17:55:59,107 | TCP server in ascolto su 192.168.0.10:443
+2026-02-21 17:56:00,550 | [TCP] Client connected: ('192.168.0.10', 4406)
+2026-02-21 17:56:00,563 | [TCP RX ('192.168.0.10', 4406)]: 160301005a0100005603016999e3a0c8b436451bb2fa117e62a305a5923777b0cb575312eb7efba51b287100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:01,509 | [TCP] Client connected: ('192.168.0.10', 4407)
+2026-02-21 17:56:01,509 | [TCP RX ('192.168.0.10', 4407)]: 160301005a0100005603016999e3a19390a86b8775b8a00b2587fe16c0523d78161417a800cc4d498d921a00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:01,554 | [TCP] Client connected: ('192.168.0.10', 4408)
+2026-02-21 17:56:01,554 | [TCP RX ('192.168.0.10', 4408)]: 160301005a0100005603016999e3a12519af69b076fa9389ee8a3251f6d4e49aec5c424e8c3aef7d45bc2a00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:05,569 | [TCP] ERROR for ('192.168.0.10', 4406): timed out
+2026-02-21 17:56:05,569 | [TCP] Client disconnected: ('192.168.0.10', 4406)
+2026-02-21 17:56:05,572 | [TCP] Client connected: ('192.168.0.10', 4409)
+2026-02-21 17:56:05,572 | [TCP RX ('192.168.0.10', 4409)]: 160301005a0100005603016999e3a51cca44cb5a0cf13765457a0513e103abc5d511d898e6eb173d3b236600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-2:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:06,525 | [TCP] ERROR for ('192.168.0.10', 4407): timed out
+2026-02-21 17:56:06,525 | [TCP] Client disconnected: ('192.168.0.10', 4407)
+2026-02-21 17:56:06,527 | [TCP] Client connected: ('192.168.0.10', 4410)
+2026-02-21 17:56:06,527 | [TCP RX ('192.168.0.10', 4410)]: 160301005a0100005603016999e3a68654b15bfbda9e8d5678cc0b6cd3ef8612740e1ebb17adbec608f4a800000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:06,557 | [TCP] ERROR for ('192.168.0.10', 4408): timed out
+2026-02-21 17:56:06,557 | [TCP] Client disconnected: ('192.168.0.10', 4408)
+2026-02-21 17:56:06,559 | [TCP] Client connected: ('192.168.0.10', 4411)
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:06,561 | [TCP RX ('192.168.0.10', 4411)]: 160301005a0100005603016999e3a6f62cc60dc441dacdb339d49559e3ab662e73eb5476af077768e2d23d00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:10,562 | [TCP] Client connected: ('192.168.0.10', 4413)
+2026-02-21 17:56:10,563 | [TCP RX ('192.168.0.10', 4413)]: 160301005a0100005603016999e3aa0a9d2d0dff33c86284b2e80c4d942ef0911ce954c3a22014f180e86600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:10,588 | [TCP] ERROR for ('192.168.0.10', 4409): timed out
+2026-02-21 17:56:10,588 | [TCP] Client disconnected: ('192.168.0.10', 4409)
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:11,528 | [TCP] ERROR for ('192.168.0.10', 4410): timed out
+2026-02-21 17:56:11,528 | [TCP] Client disconnected: ('192.168.0.10', 4410)
+Exception in thread Thread-6:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:11,562 | [TCP] Client connected: ('192.168.0.10', 4414)
+2026-02-21 17:56:11,562 | [TCP RX ('192.168.0.10', 4414)]: 160301005a0100005603016999e3ab47b312ad840c42189ddb49e45234623bc3aefdd8ad50fc4835fe017800000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:11,576 | [TCP] ERROR for ('192.168.0.10', 4411): timed out
+2026-02-21 17:56:11,577 | [TCP] Client disconnected: ('192.168.0.10', 4411)
+Exception in thread Thread-7:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:15,574 | [TCP] ERROR for ('192.168.0.10', 4413): timed out
+2026-02-21 17:56:15,574 | [TCP] Client disconnected: ('192.168.0.10', 4413)
+2026-02-21 17:56:15,577 | [TCP] Client connected: ('192.168.0.10', 4417)
+2026-02-21 17:56:15,577 | [TCP RX ('192.168.0.10', 4417)]: 160301005a0100005603016999e3af0dca46979a7b70a017499488354005bddb4a43215c82f2a032b8b27700000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-8:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:16,521 | [TCP] Client connected: ('192.168.0.10', 4418)
+2026-02-21 17:56:16,521 | [TCP RX ('192.168.0.10', 4418)]: 160301005a0100005603016999e3b0ed66b06d77db7fe34288d51258489942d65ece283981d7a77016e7df00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:16,563 | [TCP] ERROR for ('192.168.0.10', 4414): timed out
+2026-02-21 17:56:16,563 | [TCP] Client disconnected: ('192.168.0.10', 4414)
+2026-02-21 17:56:16,566 | [TCP] Client connected: ('192.168.0.10', 4419)
+Exception in thread Thread-9:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:16,567 | [TCP RX ('192.168.0.10', 4419)]: 160301005a0100005603016999e3b088e7941785334026d14333d5581c91424ed9cc3ab4f84d8752b2fbad00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:20,570 | [TCP] Client connected: ('192.168.0.10', 4420)
+2026-02-21 17:56:20,570 | [TCP RX ('192.168.0.10', 4420)]: 160301005a0100005603016999e3b4314933c219dfa05a13462d1dbe8a99dad42cc95e03a1c7658a15920a00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:20,579 | [TCP] ERROR for ('192.168.0.10', 4417): timed out
+2026-02-21 17:56:20,579 | [TCP] Client disconnected: ('192.168.0.10', 4417)
+Exception in thread Thread-10:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:21,534 | [TCP] ERROR for ('192.168.0.10', 4418): timed out
+2026-02-21 17:56:21,534 | [TCP] Client disconnected: ('192.168.0.10', 4418)
+2026-02-21 17:56:21,537 | [TCP] Client connected: ('192.168.0.10', 4421)
+Exception in thread Thread-11:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:21,538 | [TCP RX ('192.168.0.10', 4421)]: 160301005a0100005603016999e3b5517c75525dffbc50decb47cce9db57441354f9900fc8c40c6de3e8cd00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:21,568 | [TCP] Client connected: ('192.168.0.10', 4422)
+2026-02-21 17:56:21,568 | [TCP RX ('192.168.0.10', 4422)]: 160301005a0100005603016999e3b56357fc1e66a7a12fa7ee603f742fde679a6d80598d39dac12995ead500000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:21,581 | [TCP] ERROR for ('192.168.0.10', 4419): timed out
+2026-02-21 17:56:21,582 | [TCP] Client disconnected: ('192.168.0.10', 4419)
+Exception in thread Thread-12:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:25,583 | [TCP] ERROR for ('192.168.0.10', 4420): timed out
+2026-02-21 17:56:25,583 | [TCP] Client disconnected: ('192.168.0.10', 4420)
+Exception in thread Thread-13:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:56:25,587 | [TCP] Client connected: ('192.168.0.10', 4424)
+
+2026-02-21 17:56:25,589 | [TCP RX ('192.168.0.10', 4424)]: 160301005a0100005603016999e3b953e984464f836d93aeadcd4eb4c6e3597dcef926c88d212962a7c96600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:26,540 | [TCP] ERROR for ('192.168.0.10', 4421): timed out
+2026-02-21 17:56:26,540 | [TCP] Client disconnected: ('192.168.0.10', 4421)
+Exception in thread Thread-14:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:26,572 | [TCP] ERROR for ('192.168.0.10', 4422): timed out
+2026-02-21 17:56:26,572 | [TCP] Client disconnected: ('192.168.0.10', 4422)
+Exception in thread Thread-15:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:56:26,574 | [TCP] Client connected: ('192.168.0.10', 4425)
+
+2026-02-21 17:56:26,575 | [TCP RX ('192.168.0.10', 4425)]: 160301005a0100005603016999e3baafa73a0382743b5bd4949d5143f1a87c1525b78b0c491bace9faf5c600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:30,570 | [TCP] Client connected: ('192.168.0.10', 4428)
+2026-02-21 17:56:30,570 | [TCP RX ('192.168.0.10', 4428)]: 160301005a0100005603016999e3be003e64c496525823e1ca42d7d9d52b28820518faa510fd65252cf24a00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:30,598 | [TCP] ERROR for ('192.168.0.10', 4424): timed out
+2026-02-21 17:56:30,598 | [TCP] Client disconnected: ('192.168.0.10', 4424)
+Exception in thread Thread-16:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:31,531 | [TCP] Client connected: ('192.168.0.10', 4429)
+2026-02-21 17:56:31,532 | [TCP RX ('192.168.0.10', 4429)]: 160301005a0100005603016999e3bfd98c3664d00bbf04d49b234f61390742ffd442d6d2dd6aab6a72452000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:31,574 | [TCP] Client connected: ('192.168.0.10', 4430)
+2026-02-21 17:56:31,574 | [TCP RX ('192.168.0.10', 4430)]: 160301005a0100005603016999e3bf4149ce918042f9ee89843f2ca14c270b77fbafe74715808b9349f4ea00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:31,587 | [TCP] ERROR for ('192.168.0.10', 4425): timed out
+2026-02-21 17:56:31,588 | [TCP] Client disconnected: ('192.168.0.10', 4425)
+Exception in thread Thread-17:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:35,574 | [TCP] ERROR for ('192.168.0.10', 4428): timed out
+2026-02-21 17:56:35,574 | [TCP] Client disconnected: ('192.168.0.10', 4428)
+2026-02-21 17:56:35,576 | [TCP] Client connected: ('192.168.0.10', 4431)
+Exception in thread Thread-18:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:35,577 | [TCP RX ('192.168.0.10', 4431)]: 160301005a0100005603016999e3c35f222fd68d035cfe143f7410f753bfcecc61554815516f22f747172800000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:36,539 | [TCP] ERROR for ('192.168.0.10', 4429): timed out
+2026-02-21 17:56:36,539 | [TCP] Client disconnected: ('192.168.0.10', 4429)
+2026-02-21 17:56:36,541 | [TCP] Client connected: ('192.168.0.10', 4432)
+Exception in thread Thread-19:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:36,542 | [TCP RX ('192.168.0.10', 4432)]: 160301005a0100005603016999e3c4a2241d488fd0808aadb6f8171565b07caaaf7f2d0c124b940c18c74400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:36,587 | [TCP] ERROR for ('192.168.0.10', 4430): timed out
+2026-02-21 17:56:36,587 | [TCP] Client disconnected: ('192.168.0.10', 4430)
+2026-02-21 17:56:36,589 | [TCP] Client connected: ('192.168.0.10', 4433)
+Exception in thread Thread-20:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:36,590 | [TCP RX ('192.168.0.10', 4433)]: 160301005a0100005603016999e3c4e3c421cbeda9052e184d5250b337cdc85b3bd728f9bcd5042c0bc1dc00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:40,582 | [TCP] ERROR for ('192.168.0.10', 4431): timed out
+2026-02-21 17:56:40,582 | [TCP] Client disconnected: ('192.168.0.10', 4431)
+Exception in thread Thread-21:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:40,590 | [TCP] Client connected: ('192.168.0.10', 4434)
+2026-02-21 17:56:40,590 | [TCP RX ('192.168.0.10', 4434)]: 160301005a0100005603016999e3c8b8a6ccd98e89ab2ad4e33bb7d682fb962be0f14caa2372c19ddda4cd00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:41,555 | [TCP] ERROR for ('192.168.0.10', 4432): timed out
+2026-02-21 17:56:41,555 | [TCP] Client disconnected: ('192.168.0.10', 4432)
+Exception in thread Thread-22:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:41,589 | [TCP] Client connected: ('192.168.0.10', 4435)
+2026-02-21 17:56:41,589 | [TCP RX ('192.168.0.10', 4435)]: 160301005a0100005603016999e3c911649b07467b7f077ac4325ec1760a21c09e91e31d7df3f61750813400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:41,603 | [TCP] ERROR for ('192.168.0.10', 4433): timed out
+2026-02-21 17:56:41,604 | [TCP] Client disconnected: ('192.168.0.10', 4433)
+Exception in thread Thread-23:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:45,601 | [TCP] ERROR for ('192.168.0.10', 4434): timed out
+2026-02-21 17:56:45,601 | [TCP] Client disconnected: ('192.168.0.10', 4434)
+Exception in thread Thread-24:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:56:45,604 | [TCP] Client connected: ('192.168.0.10', 4437)
+
+2026-02-21 17:56:45,606 | [TCP RX ('192.168.0.10', 4437)]: 160301005a0100005603016999e3cdf836e177c0635a01e217fb249f6070927d89328bedf2ce10256ffc5c00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:46,541 | [TCP] Client connected: ('192.168.0.10', 4438)
+2026-02-21 17:56:46,541 | [TCP RX ('192.168.0.10', 4438)]: 160301005a0100005603016999e3ceee6160cc4aa1531cb631fa6eb928afa394032b16c77f91355ec0f63f00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:46,600 | [TCP] ERROR for ('192.168.0.10', 4435): timed out
+2026-02-21 17:56:46,600 | [TCP] Client disconnected: ('192.168.0.10', 4435)
+2026-02-21 17:56:46,602 | [TCP] Client connected: ('192.168.0.10', 4439)
+Exception in thread Thread-25:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:46,603 | [TCP RX ('192.168.0.10', 4439)]: 160301005a0100005603016999e3ced359b79c7ccf43fd7c640f3c4001d6271020c673081d596c4445532200000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:50,611 | [TCP] Client connected: ('192.168.0.10', 4440)
+2026-02-21 17:56:50,611 | [TCP RX ('192.168.0.10', 4440)]: 160301005a0100005603016999e3d2f43ff14a88f0bdc9ba5cc8ed224bc05f2bc22b652217988950cecbff00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:50,621 | [TCP] ERROR for ('192.168.0.10', 4437): timed out
+2026-02-21 17:56:50,622 | [TCP] Client disconnected: ('192.168.0.10', 4437)
+Exception in thread Thread-26:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:51,558 | [TCP] ERROR for ('192.168.0.10', 4438): timed out
+2026-02-21 17:56:51,558 | [TCP] Client disconnected: ('192.168.0.10', 4438)
+Exception in thread Thread-27:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:56:51,560 | [TCP] Client connected: ('192.168.0.10', 4441)
+
+2026-02-21 17:56:51,561 | [TCP RX ('192.168.0.10', 4441)]: 160301005a0100005603016999e3d3e6c87f2ab2d260105ab0706377abb7464ce3c44ae27d64ef4ce5f69100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:51,606 | [TCP] ERROR for ('192.168.0.10', 4439): timed out
+2026-02-21 17:56:51,606 | [TCP] Client disconnected: ('192.168.0.10', 4439)
+Exception in thread Thread-28:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:51,626 | [TCP] Client connected: ('192.168.0.10', 4442)
+2026-02-21 17:56:51,627 | [TCP RX ('192.168.0.10', 4442)]: 160301005a0100005603016999e3d3fb5df5b9e2a7dbf435bf4cd8c7ae5f4faa908cd0f2bb5d810411b39200000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:55,626 | [TCP] ERROR for ('192.168.0.10', 4440): timed out
+2026-02-21 17:56:55,626 | [TCP] Client disconnected: ('192.168.0.10', 4440)
+Exception in thread Thread-29:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:56:55,629 | [TCP] Client connected: ('192.168.0.10', 4443)
+
+2026-02-21 17:56:55,630 | [TCP RX ('192.168.0.10', 4443)]: 160301005a0100005603016999e3d7b5cdd5be403052798f4ece89a7778ec0c21c3ce88486f3be1708081e00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:56:56,568 | [TCP] ERROR for ('192.168.0.10', 4441): timed out
+2026-02-21 17:56:56,568 | [TCP] Client disconnected: ('192.168.0.10', 4441)
+Exception in thread Thread-30:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:56,632 | [TCP] ERROR for ('192.168.0.10', 4442): timed out
+2026-02-21 17:56:56,632 | [TCP] Client disconnected: ('192.168.0.10', 4442)
+2026-02-21 17:56:56,634 | [TCP] Client connected: ('192.168.0.10', 4445)
+Exception in thread Thread-31:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:56:56,634 | [TCP RX ('192.168.0.10', 4445)]: 160301005a0100005603016999e3d8a93250e31f2762d3f92cba1fdf9db307152297160c3a5b0b1ca1426a00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:00,602 | [TCP] Client connected: ('192.168.0.10', 4446)
+2026-02-21 17:57:00,602 | [TCP RX ('192.168.0.10', 4446)]: 160301005a0100005603016999e3dc26806f241fa8cfaeed91593955f829e59e9aeeb7a34d3fbe0b86fcaf00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:00,645 | [TCP] ERROR for ('192.168.0.10', 4443): timed out
+2026-02-21 17:57:00,645 | [TCP] Client disconnected: ('192.168.0.10', 4443)
+Exception in thread Thread-32:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:01,555 | [TCP] Client connected: ('192.168.0.10', 4447)
+2026-02-21 17:57:01,555 | [TCP RX ('192.168.0.10', 4447)]: 160301005a0100005603016999e3dd74e791d3eeea8d14b5b7bd3342037877d122ef3c7aff0325aea0d63a00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:01,615 | [TCP] Client connected: ('192.168.0.10', 4448)
+2026-02-21 17:57:01,615 | [TCP RX ('192.168.0.10', 4448)]: 160301005a0100005603016999e3dd1b402ba57e93e906ff6d33cd943545db57832bfb88ff60b96e89de2700000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:01,645 | [TCP] ERROR for ('192.168.0.10', 4445): timed out
+2026-02-21 17:57:01,645 | [TCP] Client disconnected: ('192.168.0.10', 4445)
+Exception in thread Thread-33:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:05,616 | [TCP] ERROR for ('192.168.0.10', 4446): timed out
+2026-02-21 17:57:05,616 | [TCP] Client disconnected: ('192.168.0.10', 4446)
+2026-02-21 17:57:05,619 | [TCP] Client connected: ('192.168.0.10', 4449)
+Exception in thread Thread-34:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:05,620 | [TCP RX ('192.168.0.10', 4449)]: 160301005a0100005603016999e3e128aedc0cec0d6ffa35f92b83d2b3ff517c47e3adbefed336329dcbdd00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:06,560 | [TCP] ERROR for ('192.168.0.10', 4447): timed out
+2026-02-21 17:57:06,560 | [TCP] Client disconnected: ('192.168.0.10', 4447)
+2026-02-21 17:57:06,562 | [TCP] Client connected: ('192.168.0.10', 4450)
+Exception in thread Thread-35:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:06,564 | [TCP RX ('192.168.0.10', 4450)]: 160301005a0100005603016999e3e21cd9f3b5fdc4f54a6d29db3f483531a5ee0506d1629f9016142a355f00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:06,624 | [TCP] ERROR for ('192.168.0.10', 4448): timed out
+2026-02-21 17:57:06,624 | [TCP] Client disconnected: ('192.168.0.10', 4448)
+2026-02-21 17:57:06,625 | [TCP] Client connected: ('192.168.0.10', 4451)
+2026-02-21 17:57:06,626 | [TCP RX ('192.168.0.10', 4451)]: 160301005a0100005603016999e3e292d62b7a8137612cc0fc9f3191e56ae33a8dc77c43d9ed8f118deec000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-36:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:10,627 | [TCP] ERROR for ('192.168.0.10', 4449): timed out
+2026-02-21 17:57:10,627 | [TCP] Client disconnected: ('192.168.0.10', 4449)
+Exception in thread Thread-37:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:10,634 | [TCP] Client connected: ('192.168.0.10', 4452)
+2026-02-21 17:57:10,634 | [TCP RX ('192.168.0.10', 4452)]: 160301005a0100005603016999e3e67369136dca80a0937ce87f9e9dd303c15ebbd6eedeb74bdc534e900d00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:11,564 | [TCP] ERROR for ('192.168.0.10', 4450): timed out
+2026-02-21 17:57:11,564 | [TCP] Client disconnected: ('192.168.0.10', 4450)
+Exception in thread Thread-38:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:11,628 | [TCP] ERROR for ('192.168.0.10', 4451): timed out
+2026-02-21 17:57:11,628 | [TCP] Client disconnected: ('192.168.0.10', 4451)
+Exception in thread Thread-39:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:11,646 | [TCP] Client connected: ('192.168.0.10', 4453)
+2026-02-21 17:57:11,646 | [TCP RX ('192.168.0.10', 4453)]: 160301005a0100005603016999e3e733ef60c8fc5a56768693f4ce699d670da7cccdbacfc672e73e3b360600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:15,642 | [TCP] ERROR for ('192.168.0.10', 4452): timed out
+2026-02-21 17:57:15,642 | [TCP] Client disconnected: ('192.168.0.10', 4452)
+Exception in thread Thread-40:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:15,646 | [TCP] Client connected: ('192.168.0.10', 4454)
+2026-02-21 17:57:15,646 | [TCP RX ('192.168.0.10', 4454)]: 160301005a0100005603016999e3ebb24a34d3c6fb688bd500b0481ac9190156c6258838b6f97eb8a4126e00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:16,569 | [TCP] Client connected: ('192.168.0.10', 4455)
+2026-02-21 17:57:16,569 | [TCP RX ('192.168.0.10', 4455)]: 160301005a0100005603016999e3ec0f961f09f6bdcad755b893edf97d3d17980e1cdb295ae7f5a84f09d300000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:16,660 | [TCP] ERROR for ('192.168.0.10', 4453): timed out
+2026-02-21 17:57:16,660 | [TCP] Client disconnected: ('192.168.0.10', 4453)
+Exception in thread Thread-41:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:57:16,662 | [TCP] Client connected: ('192.168.0.10', 4456)
+
+2026-02-21 17:57:16,663 | [TCP RX ('192.168.0.10', 4456)]: 160301005a0100005603016999e3ec203bc8894d2c2f733767cd8b61b638b410ea1211a8ccd607143eac9300000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:20,652 | [TCP] Client connected: ('192.168.0.10', 4458)
+2026-02-21 17:57:20,652 | [TCP RX ('192.168.0.10', 4458)]: 160301005a0100005603016999e3f029274b0e202cf2dc0ea95f1056cad9f9092890645aa418c380328a2100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:20,662 | [TCP] ERROR for ('192.168.0.10', 4454): timed out
+2026-02-21 17:57:20,663 | [TCP] Client disconnected: ('192.168.0.10', 4454)
+Exception in thread Thread-42:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:21,572 | [TCP] ERROR for ('192.168.0.10', 4455): timed out
+2026-02-21 17:57:21,572 | [TCP] Client disconnected: ('192.168.0.10', 4455)
+2026-02-21 17:57:21,574 | [TCP] Client connected: ('192.168.0.10', 4459)
+2026-02-21 17:57:21,575 | [TCP RX ('192.168.0.10', 4459)]: 160301005a0100005603016999e3f1e5eeea35833679edd606947ed29bafec96bb113d10894a1d3b8f42c000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-43:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:21,655 | [TCP] Client connected: ('192.168.0.10', 4460)
+2026-02-21 17:57:21,656 | [TCP RX ('192.168.0.10', 4460)]: 160301005a0100005603016999e3f199a75716c4e2df5fc6291b78f913eabb92d7eeaa18ea1b819b5e778800000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:21,668 | [TCP] ERROR for ('192.168.0.10', 4456): timed out
+2026-02-21 17:57:21,669 | [TCP] Client disconnected: ('192.168.0.10', 4456)
+Exception in thread Thread-44:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:25,656 | [TCP] ERROR for ('192.168.0.10', 4458): timed out
+2026-02-21 17:57:25,656 | [TCP] Client disconnected: ('192.168.0.10', 4458)
+2026-02-21 17:57:25,659 | [TCP] Client connected: ('192.168.0.10', 4462)
+Exception in thread Thread-45:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:25,660 | [TCP RX ('192.168.0.10', 4462)]: 160301005a0100005603016999e3f5f2d3d705fe8eea7c552fe1220c28774e6b2d4f4ae2f6d096cc32478900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:26,580 | [TCP] ERROR for ('192.168.0.10', 4459): timed out
+2026-02-21 17:57:26,580 | [TCP] Client disconnected: ('192.168.0.10', 4459)
+Exception in thread Thread-46:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:26,660 | [TCP] ERROR for ('192.168.0.10', 4460): timed out
+2026-02-21 17:57:26,660 | [TCP] Client disconnected: ('192.168.0.10', 4460)
+Exception in thread Thread-47:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:57:26,662 | [TCP] Client connected: ('192.168.0.10', 4463)
+
+2026-02-21 17:57:26,663 | [TCP RX ('192.168.0.10', 4463)]: 160301005a0100005603016999e3f6c346895776dd60e77b27f3840ecb5fea5240f3437448cf652e7dfb3200000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:30,665 | [TCP] ERROR for ('192.168.0.10', 4462): timed out
+2026-02-21 17:57:30,665 | [TCP] Client disconnected: ('192.168.0.10', 4462)
+Exception in thread Thread-48:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:30,673 | [TCP] Client connected: ('192.168.0.10', 4464)
+2026-02-21 17:57:30,674 | [TCP RX ('192.168.0.10', 4464)]: 160301005a0100005603016999e3fa7fc85e71f3a1640b5e483b924a37bc4daa51661ebb784d9fee7b220c00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:31,580 | [TCP] Client connected: ('192.168.0.10', 4465)
+2026-02-21 17:57:31,581 | [TCP RX ('192.168.0.10', 4465)]: 160301005a0100005603016999e3fb4fd22fcc68a9edf0266e93c5a56dc3b143563caa16dd6878c5cabde500000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:31,668 | [TCP] ERROR for ('192.168.0.10', 4463): timed out
+2026-02-21 17:57:31,668 | [TCP] Client disconnected: ('192.168.0.10', 4463)
+Exception in thread Thread-49:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:31,686 | [TCP] Client connected: ('192.168.0.10', 4466)
+2026-02-21 17:57:31,686 | [TCP RX ('192.168.0.10', 4466)]: 160301005a0100005603016999e3fbb8d6de4b3426370d0a6aa3704bf027fe5fd5eabcaf5495d7220e36da00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:35,686 | [TCP] ERROR for ('192.168.0.10', 4464): timed out
+2026-02-21 17:57:35,686 | [TCP] Client disconnected: ('192.168.0.10', 4464)
+2026-02-21 17:57:35,689 | [TCP] Client connected: ('192.168.0.10', 4468)
+Exception in thread Thread-50:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:35,690 | [TCP RX ('192.168.0.10', 4468)]: 160301005a0100005603016999e3ff18b0eb280b5bb2fd6a5e4aa5e52acc8776500012de92755aa0613ce000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:36,595 | [TCP] ERROR for ('192.168.0.10', 4465): timed out
+2026-02-21 17:57:36,595 | [TCP] Client disconnected: ('192.168.0.10', 4465)
+2026-02-21 17:57:36,598 | [TCP] Client connected: ('192.168.0.10', 4469)
+Exception in thread Thread-51:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:36,599 | [TCP RX ('192.168.0.10', 4469)]: 160301005a0100005603016999e40091c85c67429cb310925422b7592910e8d6d15d894bfc2445cd04411000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:36,690 | [TCP] ERROR for ('192.168.0.10', 4466): timed out
+2026-02-21 17:57:36,690 | [TCP] Client disconnected: ('192.168.0.10', 4466)
+2026-02-21 17:57:36,692 | [TCP] Client connected: ('192.168.0.10', 4470)
+2026-02-21 17:57:36,693 | [TCP RX ('192.168.0.10', 4470)]: 160301005a0100005603016999e40067e5a1a48b1d99410261fcc971caea1f3b95e48710918d28f41833f000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-52:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:40,665 | [TCP] Client connected: ('192.168.0.10', 4471)
+2026-02-21 17:57:40,665 | [TCP RX ('192.168.0.10', 4471)]: 160301005a0100005603016999e404a4fb25866e2a93580e1b8dfbeda44130ffeb6cdaf2951c7cab4791be00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:40,705 | [TCP] ERROR for ('192.168.0.10', 4468): timed out
+2026-02-21 17:57:40,705 | [TCP] Client disconnected: ('192.168.0.10', 4468)
+Exception in thread Thread-53:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:41,615 | [TCP] ERROR for ('192.168.0.10', 4469): timed out
+2026-02-21 17:57:41,615 | [TCP] Client disconnected: ('192.168.0.10', 4469)
+Exception in thread Thread-54:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:41,665 | [TCP] Client connected: ('192.168.0.10', 4472)
+2026-02-21 17:57:41,665 | [TCP RX ('192.168.0.10', 4472)]: 160301005a0100005603016999e40527f490c85ef1029181b7df28ef1c082d19f28b3430238d8cf3765b4900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:41,695 | [TCP] ERROR for ('192.168.0.10', 4470): timed out
+2026-02-21 17:57:41,695 | [TCP] Client disconnected: ('192.168.0.10', 4470)
+Exception in thread Thread-55:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:45,669 | [TCP] ERROR for ('192.168.0.10', 4471): timed out
+2026-02-21 17:57:45,669 | [TCP] Client disconnected: ('192.168.0.10', 4471)
+2026-02-21 17:57:45,672 | [TCP] Client connected: ('192.168.0.10', 4474)
+Exception in thread Thread-56:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:45,673 | [TCP RX ('192.168.0.10', 4474)]: 160301005a0100005603016999e409f058c462a938843d0533ce065543bedb6deac916f404a48b66e3299a00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:46,585 | [TCP] Client connected: ('192.168.0.10', 4475)
+2026-02-21 17:57:46,585 | [TCP RX ('192.168.0.10', 4475)]: 160301005a0100005603016999e40abb2f1e8d720cb8e01cf10c4aac45cd2afc02e882f745465dd9dff13600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:46,674 | [TCP] ERROR for ('192.168.0.10', 4472): timed out
+2026-02-21 17:57:46,674 | [TCP] Client disconnected: ('192.168.0.10', 4472)
+Exception in thread Thread-57:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:46,676 | [TCP] Client connected: ('192.168.0.10', 4476)
+2026-02-21 17:57:46,677 | [TCP RX ('192.168.0.10', 4476)]: 160301005a0100005603016999e40adcd4b6ff908dffdff8360b35363782167d56b94c5f4636bc77c7bd7600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:50,680 | [TCP] ERROR for ('192.168.0.10', 4474): timed out
+2026-02-21 17:57:50,681 | [TCP] Client disconnected: ('192.168.0.10', 4474)
+Exception in thread Thread-58:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:50,702 | [TCP] Client connected: ('192.168.0.10', 4477)
+2026-02-21 17:57:50,702 | [TCP RX ('192.168.0.10', 4477)]: 160301005a0100005603016999e40ef3da561c7bc31b2eb2de6f1bc80e6b1141d7c23dfacab46c585aab3e00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:51,601 | [TCP] ERROR for ('192.168.0.10', 4475): timed out
+2026-02-21 17:57:51,601 | [TCP] Client disconnected: ('192.168.0.10', 4475)
+Exception in thread Thread-59:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:57:51,603 | [TCP] Client connected: ('192.168.0.10', 4478)
+
+2026-02-21 17:57:51,604 | [TCP RX ('192.168.0.10', 4478)]: 160301005a0100005603016999e40f404b3342cccc7c687739ba6698bc16ada2108714bd46eb9f471da13d00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:51,681 | [TCP] ERROR for ('192.168.0.10', 4476): timed out
+2026-02-21 17:57:51,681 | [TCP] Client disconnected: ('192.168.0.10', 4476)
+Exception in thread Thread-60:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:51,716 | [TCP] Client connected: ('192.168.0.10', 4479)
+2026-02-21 17:57:51,716 | [TCP RX ('192.168.0.10', 4479)]: 160301005a0100005603016999e40f1f496ed8729b5ac2eed6e36ef7deeaabaf32d7cde359a11aa7001c9900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:51,988 | [TCP] Client connected: ('192.168.0.10', 4480)
+2026-02-21 17:57:51,989 | [TCP RX ('192.168.0.10', 4480)]: 160301005a0100005603016999e40fffe6114e302416584acd041c857287467d3f49193d6402d1d8a30c8300000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:55,713 | [TCP] ERROR for ('192.168.0.10', 4477): timed out
+2026-02-21 17:57:55,713 | [TCP] Client disconnected: ('192.168.0.10', 4477)
+2026-02-21 17:57:55,715 | [TCP] Client connected: ('192.168.0.10', 4481)
+2026-02-21 17:57:55,715 | [TCP RX ('192.168.0.10', 4481)]: 160301005a0100005603016999e413b1d169fb7d028d6bdf07e7a87b8892593a760346a1c5163e3088926400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-61:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:56,606 | [TCP] ERROR for ('192.168.0.10', 4478): timed out
+2026-02-21 17:57:56,606 | [TCP] Client disconnected: ('192.168.0.10', 4478)
+Exception in thread Thread-62:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:56,718 | [TCP] ERROR for ('192.168.0.10', 4479): timed out
+2026-02-21 17:57:56,718 | [TCP] Client disconnected: ('192.168.0.10', 4479)
+2026-02-21 17:57:56,720 | [TCP] Client connected: ('192.168.0.10', 4482)
+Exception in thread Thread-63:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:57:56,720 | [TCP RX ('192.168.0.10', 4482)]: 160301005a0100005603016999e414b12b88327a1589efdc4d6411a4ed48fb35094214e886fe65ec4bedc600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:57:57,005 | [TCP] ERROR for ('192.168.0.10', 4480): timed out
+2026-02-21 17:57:57,005 | [TCP] Client disconnected: ('192.168.0.10', 4480)
+2026-02-21 17:57:57,008 | [TCP] Client connected: ('192.168.0.10', 4483)
+2026-02-21 17:57:57,009 | [TCP RX ('192.168.0.10', 4483)]: 160301005a0100005603016999e4156d75728d7dd018d4e387bd1aeda9dd770c87b4d93165bc2053da445400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-64:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:00,705 | [TCP] Client connected: ('192.168.0.10', 4484)
+2026-02-21 17:58:00,706 | [TCP RX ('192.168.0.10', 4484)]: 160301005a0100005603016999e41861a94fb5cc03a1abe2c5a8b45de73ede8063c7fc41f9dd3b8bc8f96100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:00,717 | [TCP] ERROR for ('192.168.0.10', 4481): timed out
+2026-02-21 17:58:00,718 | [TCP] Client disconnected: ('192.168.0.10', 4481)
+Exception in thread Thread-65:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:01,600 | [TCP] Client connected: ('192.168.0.10', 4485)
+2026-02-21 17:58:01,600 | [TCP RX ('192.168.0.10', 4485)]: 160301005a0100005603016999e419c02b5ded29513b3af0cdc41a713f424ee8dc088ef213306f1068c2e600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:01,706 | [TCP] Client connected: ('192.168.0.10', 4486)
+2026-02-21 17:58:01,707 | [TCP RX ('192.168.0.10', 4486)]: 160301005a0100005603016999e419a6f7490b50c0dee707d37cc79324b85fe5104136e0f1c8c40ad4f83c00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:01,736 | [TCP] ERROR for ('192.168.0.10', 4482): timed out
+2026-02-21 17:58:01,737 | [TCP] Client disconnected: ('192.168.0.10', 4482)
+Exception in thread Thread-66:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:02,020 | [TCP] ERROR for ('192.168.0.10', 4483): timed out
+2026-02-21 17:58:02,021 | [TCP] Client disconnected: ('192.168.0.10', 4483)
+Exception in thread Thread-67:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:05,713 | [TCP] ERROR for ('192.168.0.10', 4484): timed out
+2026-02-21 17:58:05,713 | [TCP] Client disconnected: ('192.168.0.10', 4484)
+2026-02-21 17:58:05,716 | [TCP] Client connected: ('192.168.0.10', 4488)
+Exception in thread Thread-68:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:05,717 | [TCP RX ('192.168.0.10', 4488)]: 160301005a0100005603016999e41d8e2291401dde5fcd739906463e0fdd76effb1515d4d0b567d9e033cf00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:06,605 | [TCP] ERROR for ('192.168.0.10', 4485): timed out
+2026-02-21 17:58:06,605 | [TCP] Client disconnected: ('192.168.0.10', 4485)
+2026-02-21 17:58:06,609 | [TCP] Client connected: ('192.168.0.10', 4489)
+Exception in thread Thread-69:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:06,610 | [TCP RX ('192.168.0.10', 4489)]: 160301005a0100005603016999e41ee3057004c962037f000e4d6508a9d5de87cdda12c360ace81c3fc38100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:06,716 | [TCP] ERROR for ('192.168.0.10', 4486): timed out
+2026-02-21 17:58:06,716 | [TCP] Client disconnected: ('192.168.0.10', 4486)
+2026-02-21 17:58:06,718 | [TCP] Client connected: ('192.168.0.10', 4490)
+Exception in thread Thread-70:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:06,719 | [TCP RX ('192.168.0.10', 4490)]: 160301005a0100005603016999e41e095eb7459efe1395dc1818c8614b03eae5013466fcc89b1f6287836100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:10,723 | [TCP] Client connected: ('192.168.0.10', 4491)
+2026-02-21 17:58:10,724 | [TCP RX ('192.168.0.10', 4491)]: 160301005a0100005603016999e422bfd1f7c9c9f9048fa4bfe5d2dd69d7f0fd3c68d81601e7dc434a036200000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:10,732 | [TCP] ERROR for ('192.168.0.10', 4488): timed out
+2026-02-21 17:58:10,732 | [TCP] Client disconnected: ('192.168.0.10', 4488)
+Exception in thread Thread-71:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:11,623 | [TCP] ERROR for ('192.168.0.10', 4489): timed out
+2026-02-21 17:58:11,623 | [TCP] Client disconnected: ('192.168.0.10', 4489)
+Exception in thread Thread-72:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:11,735 | [TCP] ERROR for ('192.168.0.10', 4490): timed out
+2026-02-21 17:58:11,735 | [TCP] Client disconnected: ('192.168.0.10', 4490)
+Exception in thread Thread-73:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:11,739 | [TCP] Client connected: ('192.168.0.10', 4492)
+2026-02-21 17:58:11,740 | [TCP RX ('192.168.0.10', 4492)]: 160301005a0100005603016999e42304e09ac8f5481660eb33406ed29708ba68a7bc8df034e9afedb6af0400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:15,740 | [TCP] ERROR for ('192.168.0.10', 4491): timed out
+2026-02-21 17:58:15,740 | [TCP] Client disconnected: ('192.168.0.10', 4491)
+Exception in thread Thread-74:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:58:15,743 | [TCP] Client connected: ('192.168.0.10', 4494)
+
+2026-02-21 17:58:15,744 | [TCP RX ('192.168.0.10', 4494)]: 160301005a0100005603016999e4278c60659a5fb99784b01f6b8cca706ce120efe4bfb2b2072d2601453d00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:16,610 | [TCP] Client connected: ('192.168.0.10', 4495)
+2026-02-21 17:58:16,611 | [TCP RX ('192.168.0.10', 4495)]: 160301005a0100005603016999e4289b1f19730ebcd810c47a01eab44443322fe9c1bb075c5b488593518900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:16,747 | [TCP] ERROR for ('192.168.0.10', 4492): timed out
+2026-02-21 17:58:16,747 | [TCP] Client disconnected: ('192.168.0.10', 4492)
+Exception in thread Thread-75:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:58:16,751 | [TCP] Client connected: ('192.168.0.10', 4496)
+
+2026-02-21 17:58:16,752 | [TCP RX ('192.168.0.10', 4496)]: 160301005a0100005603016999e428b0ad8f42345788d5aca5b8cb63758e99dcda95b8324b39683ee1b9ea00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:20,739 | [TCP] Client connected: ('192.168.0.10', 4497)
+2026-02-21 17:58:20,739 | [TCP RX ('192.168.0.10', 4497)]: 160301005a0100005603016999e42c3c16655f5bac2246690aa6d1bd3645e9880c9a44362150167dd7125000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:20,749 | [TCP] ERROR for ('192.168.0.10', 4494): timed out
+2026-02-21 17:58:20,750 | [TCP] Client disconnected: ('192.168.0.10', 4494)
+Exception in thread Thread-76:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:21,620 | [TCP] ERROR for ('192.168.0.10', 4495): timed out
+2026-02-21 17:58:21,620 | [TCP] Client disconnected: ('192.168.0.10', 4495)
+2026-02-21 17:58:21,622 | [TCP] Client connected: ('192.168.0.10', 4498)
+Exception in thread Thread-77:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:21,622 | [TCP RX ('192.168.0.10', 4498)]: 160301005a0100005603016999e42dbe60b8fed98efe7fc017a624fd33c02a0ef43757d05fb87779cca27100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:21,750 | [TCP] Client connected: ('192.168.0.10', 4499)
+2026-02-21 17:58:21,751 | [TCP RX ('192.168.0.10', 4499)]: 160301005a0100005603016999e42d2cd7df134b486e5655fce2395219710c6b35f9e2d0f0479f08e32c7400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:21,763 | [TCP] ERROR for ('192.168.0.10', 4496): timed out
+2026-02-21 17:58:21,764 | [TCP] Client disconnected: ('192.168.0.10', 4496)
+Exception in thread Thread-78:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:25,754 | [TCP] ERROR for ('192.168.0.10', 4497): timed out
+2026-02-21 17:58:25,754 | [TCP] Client disconnected: ('192.168.0.10', 4497)
+Exception in thread Thread-79:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:58:25,757 | [TCP] Client connected: ('192.168.0.10', 4500)
+
+2026-02-21 17:58:25,759 | [TCP RX ('192.168.0.10', 4500)]: 160301005a0100005603016999e4319b6ca05267dfa00429236b12aeccb36dd537bc0baf66b27af1a03bc900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:26,632 | [TCP] ERROR for ('192.168.0.10', 4498): timed out
+2026-02-21 17:58:26,632 | [TCP] Client disconnected: ('192.168.0.10', 4498)
+Exception in thread Thread-80:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:26,760 | [TCP] ERROR for ('192.168.0.10', 4499): timed out
+2026-02-21 17:58:26,760 | [TCP] Client disconnected: ('192.168.0.10', 4499)
+Exception in thread Thread-81:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:58:26,763 | [TCP] Client connected: ('192.168.0.10', 4501)
+
+2026-02-21 17:58:26,764 | [TCP RX ('192.168.0.10', 4501)]: 160301005a0100005603016999e432d7271700c634ec9025a997881287d2f2e6201830602de203c17ebd3c00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:30,732 | [TCP] Client connected: ('192.168.0.10', 4502)
+2026-02-21 17:58:30,732 | [TCP RX ('192.168.0.10', 4502)]: 160301005a0100005603016999e43674e48b848634e35564c3a79f1da7e91031a73dca029884f550117c4b00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:30,772 | [TCP] ERROR for ('192.168.0.10', 4500): timed out
+2026-02-21 17:58:30,772 | [TCP] Client disconnected: ('192.168.0.10', 4500)
+Exception in thread Thread-82:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:31,621 | [TCP] Client connected: ('192.168.0.10', 4504)
+2026-02-21 17:58:31,621 | [TCP RX ('192.168.0.10', 4504)]: 160301005a0100005603016999e4370b91681b96eadfe8e90fc4605fe22da9139043dc2614f33efdcaf2e800000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:31,744 | [TCP] Client connected: ('192.168.0.10', 4505)
+2026-02-21 17:58:31,745 | [TCP RX ('192.168.0.10', 4505)]: 160301005a0100005603016999e4379005d866bcae32281888cbc44a7a51e1416eec0770288358380971c600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:31,773 | [TCP] ERROR for ('192.168.0.10', 4501): timed out
+2026-02-21 17:58:31,773 | [TCP] Client disconnected: ('192.168.0.10', 4501)
+Exception in thread Thread-83:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:35,740 | [TCP] ERROR for ('192.168.0.10', 4502): timed out
+2026-02-21 17:58:35,740 | [TCP] Client disconnected: ('192.168.0.10', 4502)
+2026-02-21 17:58:35,743 | [TCP] Client connected: ('192.168.0.10', 4506)
+Exception in thread Thread-84:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:35,744 | [TCP RX ('192.168.0.10', 4506)]: 160301005a0100005603016999e43b8effc5e7b507f19e23a06fc6e0557375b51df3e4e158c2d97e3b175800000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:36,635 | [TCP] ERROR for ('192.168.0.10', 4504): timed out
+2026-02-21 17:58:36,635 | [TCP] Client disconnected: ('192.168.0.10', 4504)
+2026-02-21 17:58:36,638 | [TCP] Client connected: ('192.168.0.10', 4507)
+2026-02-21 17:58:36,638 | [TCP RX ('192.168.0.10', 4507)]: 160301005a0100005603016999e43c7f0ceb33870964d73312fbb6ab046184b22aa67a86160d4aad1fba5000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-85:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:36,747 | [TCP] ERROR for ('192.168.0.10', 4505): timed out
+2026-02-21 17:58:36,747 | [TCP] Client disconnected: ('192.168.0.10', 4505)
+2026-02-21 17:58:36,749 | [TCP] Client connected: ('192.168.0.10', 4508)
+Exception in thread Thread-86:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:36,749 | [TCP RX ('192.168.0.10', 4508)]: 160301005a0100005603016999e43c50a26bc9cd96a5bd85815d42a83b49b3deac9fada106b19fe34065d600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:40,747 | [TCP] ERROR for ('192.168.0.10', 4506): timed out
+2026-02-21 17:58:40,747 | [TCP] Client disconnected: ('192.168.0.10', 4506)
+Exception in thread Thread-87:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:40,753 | [TCP] Client connected: ('192.168.0.10', 4510)
+2026-02-21 17:58:40,753 | [TCP RX ('192.168.0.10', 4510)]: 160301005a0100005603016999e440034ce18330e7cfdab6c0b567d95d79124fa5e3c068855df6f172a33e00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:41,652 | [TCP] ERROR for ('192.168.0.10', 4507): timed out
+2026-02-21 17:58:41,652 | [TCP] Client disconnected: ('192.168.0.10', 4507)
+Exception in thread Thread-88:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:41,764 | [TCP] ERROR for ('192.168.0.10', 4508): timed out
+2026-02-21 17:58:41,764 | [TCP] Client disconnected: ('192.168.0.10', 4508)
+2026-02-21 17:58:41,768 | [TCP] Client connected: ('192.168.0.10', 4511)
+Exception in thread Thread-89:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:41,769 | [TCP RX ('192.168.0.10', 4511)]: 160301005a0100005603016999e44173b4395dde0e9cf4de1f3467a1f1eb9b8575ed546bf3bd7c11157f3400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:45,755 | [TCP] ERROR for ('192.168.0.10', 4510): timed out
+2026-02-21 17:58:45,755 | [TCP] Client disconnected: ('192.168.0.10', 4510)
+2026-02-21 17:58:45,758 | [TCP] Client connected: ('192.168.0.10', 4512)
+2026-02-21 17:58:45,758 | [TCP RX ('192.168.0.10', 4512)]: 160301005a0100005603016999e4457cab72d74bb6635441c65f62bc484b01c7b7a0d6517abaa5f873d28200000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-90:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:46,624 | [TCP] Client connected: ('192.168.0.10', 4513)
+2026-02-21 17:58:46,624 | [TCP RX ('192.168.0.10', 4513)]: 160301005a0100005603016999e44622b6e1f8ce9d534631a38d8e3c66f039dab0b824fe7ed96210fb593b00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:46,776 | [TCP] ERROR for ('192.168.0.10', 4511): timed out
+2026-02-21 17:58:46,776 | [TCP] Client disconnected: ('192.168.0.10', 4511)
+Exception in thread Thread-91:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:58:46,778 | [TCP] Client connected: ('192.168.0.10', 4514)
+
+2026-02-21 17:58:46,779 | [TCP RX ('192.168.0.10', 4514)]: 160301005a0100005603016999e446f28388164d1d7c74c140789928896d9ae92eefe8d3f3edce8326b27700000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:50,760 | [TCP] ERROR for ('192.168.0.10', 4512): timed out
+2026-02-21 17:58:50,760 | [TCP] Client disconnected: ('192.168.0.10', 4512)
+Exception in thread Thread-92:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:50,782 | [TCP] Client connected: ('192.168.0.10', 4516)
+2026-02-21 17:58:50,782 | [TCP RX ('192.168.0.10', 4516)]: 160301005a0100005603016999e44abf18ba85473ff291613713e86f25639b8fee2d2f3a44bd08fad538c800000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:51,631 | [TCP] ERROR for ('192.168.0.10', 4513): timed out
+2026-02-21 17:58:51,631 | [TCP] Client disconnected: ('192.168.0.10', 4513)
+2026-02-21 17:58:51,634 | [TCP] Client connected: ('192.168.0.10', 4517)
+2026-02-21 17:58:51,635 | [TCP RX ('192.168.0.10', 4517)]: 160301005a0100005603016999e44bfdc4da66e81d3a7356b129b57426440a0d2d584049c0252c8c23cb6900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-93:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:51,791 | [TCP] ERROR for ('192.168.0.10', 4514): timed out
+2026-02-21 17:58:51,791 | [TCP] Client disconnected: ('192.168.0.10', 4514)
+Exception in thread Thread-94:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:51,795 | [TCP] Client connected: ('192.168.0.10', 4518)
+2026-02-21 17:58:51,796 | [TCP RX ('192.168.0.10', 4518)]: 160301005a0100005603016999e44bfa6c5d12bd1543388246091de888d731c7a860193c57c6bcb476aa9100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:55,784 | [TCP] ERROR for ('192.168.0.10', 4516): timed out
+2026-02-21 17:58:55,784 | [TCP] Client disconnected: ('192.168.0.10', 4516)
+2026-02-21 17:58:55,787 | [TCP] Client connected: ('192.168.0.10', 4520)
+Exception in thread Thread-95:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:55,788 | [TCP RX ('192.168.0.10', 4520)]: 160301005a0100005603016999e44fca1eac98016543cebf15b17487cdf699ec157021683e403438c60e5300000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:58:56,646 | [TCP] ERROR for ('192.168.0.10', 4517): timed out
+2026-02-21 17:58:56,646 | [TCP] Client disconnected: ('192.168.0.10', 4517)
+Exception in thread Thread-96:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:56,806 | [TCP] ERROR for ('192.168.0.10', 4518): timed out
+2026-02-21 17:58:56,806 | [TCP] Client disconnected: ('192.168.0.10', 4518)
+2026-02-21 17:58:56,808 | [TCP] Client connected: ('192.168.0.10', 4521)
+Exception in thread Thread-97:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:58:56,809 | [TCP RX ('192.168.0.10', 4521)]: 160301005a0100005603016999e450610362b1a7f94b3ec8538e08d56009d42966564e23d54e6f4c2b6ff900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:00,790 | [TCP] Client connected: ('192.168.0.10', 4522)
+2026-02-21 17:59:00,791 | [TCP RX ('192.168.0.10', 4522)]: 160301005a0100005603016999e454eb9ef7f541cc0ca30070bdd2d9c4edb482b986f6cf3dc406052d755e00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:00,802 | [TCP] ERROR for ('192.168.0.10', 4520): timed out
+2026-02-21 17:59:00,803 | [TCP] Client disconnected: ('192.168.0.10', 4520)
+Exception in thread Thread-98:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:01,638 | [TCP] Client connected: ('192.168.0.10', 4523)
+2026-02-21 17:59:01,639 | [TCP RX ('192.168.0.10', 4523)]: 160301005a0100005603016999e4558f5092e31db49f9a1702ea397f7a72c46e04f86a08f28528aa03b1c400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:01,792 | [TCP] Client connected: ('192.168.0.10', 4524)
+2026-02-21 17:59:01,793 | [TCP RX ('192.168.0.10', 4524)]: 160301005a0100005603016999e455bd9ce7132b158c6734ebb79493d5a154c2b685df5a8533e2075847f100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:01,820 | [TCP] ERROR for ('192.168.0.10', 4521): timed out
+2026-02-21 17:59:01,820 | [TCP] Client disconnected: ('192.168.0.10', 4521)
+Exception in thread Thread-99:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:05,803 | [TCP] ERROR for ('192.168.0.10', 4522): timed out
+2026-02-21 17:59:05,803 | [TCP] Client disconnected: ('192.168.0.10', 4522)
+2026-02-21 17:59:05,805 | [TCP] Client connected: ('192.168.0.10', 4525)
+Exception in thread Thread-100:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:05,806 | [TCP RX ('192.168.0.10', 4525)]: 160301005a0100005603016999e45911c09971fb97e39c4bb3fb31f8a8ef0500e6e392b4ee83a4fccb0d1900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:06,649 | [TCP] ERROR for ('192.168.0.10', 4523): timed out
+2026-02-21 17:59:06,649 | [TCP] Client disconnected: ('192.168.0.10', 4523)
+2026-02-21 17:59:06,652 | [TCP] Client connected: ('192.168.0.10', 4526)
+2026-02-21 17:59:06,652 | [TCP RX ('192.168.0.10', 4526)]: 160301005a0100005603016999e45a6f150e7ab8af009860b4298f252806479fd440dde3345db15c6596dc00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-101:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:06,809 | [TCP] ERROR for ('192.168.0.10', 4524): timed out
+2026-02-21 17:59:06,809 | [TCP] Client disconnected: ('192.168.0.10', 4524)
+2026-02-21 17:59:06,812 | [TCP] Client connected: ('192.168.0.10', 4527)
+Exception in thread Thread-102:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:06,813 | [TCP RX ('192.168.0.10', 4527)]: 160301005a0100005603016999e45a25e112212245f308002dd52422568737bfa28a5f9a883112383aa6a400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:10,786 | [TCP] Client connected: ('192.168.0.10', 4528)
+2026-02-21 17:59:10,786 | [TCP RX ('192.168.0.10', 4528)]: 160301005a0100005603016999e45e373235b7b290de457c9631ef89dfd7bab0a74677ab705622a9392f1700000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:10,812 | [TCP] ERROR for ('192.168.0.10', 4525): timed out
+2026-02-21 17:59:10,812 | [TCP] Client disconnected: ('192.168.0.10', 4525)
+Exception in thread Thread-103:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:11,657 | [TCP] ERROR for ('192.168.0.10', 4526): timed out
+2026-02-21 17:59:11,657 | [TCP] Client disconnected: ('192.168.0.10', 4526)
+Exception in thread Thread-104:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:11,788 | [TCP] Client connected: ('192.168.0.10', 4529)
+2026-02-21 17:59:11,789 | [TCP RX ('192.168.0.10', 4529)]: 160301005a0100005603016999e45f0b8f3098660280b20306d504dc66396582dd90c5c60b97507b0c1f5300000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:11,817 | [TCP] ERROR for ('192.168.0.10', 4527): timed out
+2026-02-21 17:59:11,817 | [TCP] Client disconnected: ('192.168.0.10', 4527)
+Exception in thread Thread-105:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:15,789 | [TCP] ERROR for ('192.168.0.10', 4528): timed out
+2026-02-21 17:59:15,789 | [TCP] Client disconnected: ('192.168.0.10', 4528)
+2026-02-21 17:59:15,792 | [TCP] Client connected: ('192.168.0.10', 4530)
+Exception in thread Thread-106:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:15,793 | [TCP RX ('192.168.0.10', 4530)]: 160301005a0100005603016999e463eec4d8b1122e83b686c73af6653a67f4187ff86b75c75fe8886a69f600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:16,651 | [TCP] Client connected: ('192.168.0.10', 4531)
+2026-02-21 17:59:16,652 | [TCP RX ('192.168.0.10', 4531)]: 160301005a0100005603016999e4643358cc605ad3c239b70e529382129125671af707825a8957f1ad552c00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:16,804 | [TCP] ERROR for ('192.168.0.10', 4529): timed out
+2026-02-21 17:59:16,804 | [TCP] Client disconnected: ('192.168.0.10', 4529)
+2026-02-21 17:59:16,806 | [TCP] Client connected: ('192.168.0.10', 4532)
+2026-02-21 17:59:16,806 | [TCP RX ('192.168.0.10', 4532)]: 160301005a0100005603016999e4648ffbe28c1c34e9cce224b9e00a1eb3ffba0fa8a3efcb020e22216d7500000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-107:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:20,800 | [TCP] ERROR for ('192.168.0.10', 4530): timed out
+2026-02-21 17:59:20,800 | [TCP] Client disconnected: ('192.168.0.10', 4530)
+Exception in thread Thread-108:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:20,821 | [TCP] Client connected: ('192.168.0.10', 4534)
+2026-02-21 17:59:20,822 | [TCP RX ('192.168.0.10', 4534)]: 160301005a0100005603016999e468040868deccd914035c1649da60e38e03e60c7437d46488dbd30e1ecd00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:21,664 | [TCP] ERROR for ('192.168.0.10', 4531): timed out
+2026-02-21 17:59:21,664 | [TCP] Client disconnected: ('192.168.0.10', 4531)
+2026-02-21 17:59:21,666 | [TCP] Client connected: ('192.168.0.10', 4535)
+Exception in thread Thread-109:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:21,667 | [TCP RX ('192.168.0.10', 4535)]: 160301005a0100005603016999e469f2b6c75e37c725cddaa37e01a03d99d32eddb4328198eddb83474c8200000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:21,808 | [TCP] ERROR for ('192.168.0.10', 4532): timed out
+2026-02-21 17:59:21,808 | [TCP] Client disconnected: ('192.168.0.10', 4532)
+Exception in thread Thread-110:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:21,827 | [TCP] Client connected: ('192.168.0.10', 4536)
+2026-02-21 17:59:21,828 | [TCP RX ('192.168.0.10', 4536)]: 160301005a0100005603016999e469d930805d952aef841ed4353ee25efd2b333ab2caf3bb5f1f2fa1905e00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:25,829 | [TCP] ERROR for ('192.168.0.10', 4534): timed out
+2026-02-21 17:59:25,829 | [TCP] Client disconnected: ('192.168.0.10', 4534)
+2026-02-21 17:59:25,832 | [TCP] Client connected: ('192.168.0.10', 4537)
+2026-02-21 17:59:25,832 | [TCP RX ('192.168.0.10', 4537)]: 160301005a0100005603016999e46df9b3431cdd5d394c8db082941e0f7b92f30032acd60612ef2d47338200000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-111:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:26,670 | [TCP] ERROR for ('192.168.0.10', 4535): timed out
+2026-02-21 17:59:26,670 | [TCP] Client disconnected: ('192.168.0.10', 4535)
+Exception in thread Thread-112:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:26,829 | [TCP] ERROR for ('192.168.0.10', 4536): timed out
+2026-02-21 17:59:26,829 | [TCP] Client disconnected: ('192.168.0.10', 4536)
+2026-02-21 17:59:26,831 | [TCP] Client connected: ('192.168.0.10', 4538)
+2026-02-21 17:59:26,831 | [TCP RX ('192.168.0.10', 4538)]: 160301005a0100005603016999e46efaa56517e0914276d6582ad9e7b831c87c49db9f3ace82d30e7e385f00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-113:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:30,839 | [TCP] Client connected: ('192.168.0.10', 4541)
+2026-02-21 17:59:30,839 | [TCP RX ('192.168.0.10', 4541)]: 160301005a0100005603016999e4726b42e51a8dbcb54710ae15628dfe11edb37fac4e3632b5c65c5d6cea00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:30,849 | [TCP] ERROR for ('192.168.0.10', 4537): timed out
+2026-02-21 17:59:30,850 | [TCP] Client disconnected: ('192.168.0.10', 4537)
+Exception in thread Thread-114:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:31,666 | [TCP] Client connected: ('192.168.0.10', 4542)
+2026-02-21 17:59:31,667 | [TCP RX ('192.168.0.10', 4542)]: 160301005a0100005603016999e47373a537b3e5da6adede01a2abc3dde593d295adff8c2a8be6114a3f9a00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:31,834 | [TCP] ERROR for ('192.168.0.10', 4538): timed out
+2026-02-21 17:59:31,834 | [TCP] Client disconnected: ('192.168.0.10', 4538)
+Exception in thread Thread-115:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:31,852 | [TCP] Client connected: ('192.168.0.10', 4543)
+2026-02-21 17:59:31,852 | [TCP RX ('192.168.0.10', 4543)]: 160301005a0100005603016999e473727e12a67baa01b245656ec2fa2faf083de743464b5e54d1e93cec3400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:35,849 | [TCP] ERROR for ('192.168.0.10', 4541): timed out
+2026-02-21 17:59:35,849 | [TCP] Client disconnected: ('192.168.0.10', 4541)
+Exception in thread Thread-116:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:59:35,852 | [TCP] Client connected: ('192.168.0.10', 4544)
+
+2026-02-21 17:59:35,854 | [TCP RX ('192.168.0.10', 4544)]: 160301005a0100005603016999e4778da92df8bd9f5f37909da99acf100bb25a70d53c05d5aba06310654800000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:36,675 | [TCP] ERROR for ('192.168.0.10', 4542): timed out
+2026-02-21 17:59:36,675 | [TCP] Client disconnected: ('192.168.0.10', 4542)
+Exception in thread Thread-117:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:59:36,677 | [TCP] Client connected: ('192.168.0.10', 4545)
+
+2026-02-21 17:59:36,678 | [TCP RX ('192.168.0.10', 4545)]: 160301005a0100005603016999e478c5a7313e651264a213cf7f6afed270790ecd9ab1553a4e5720a9c98100000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:36,864 | [TCP] ERROR for ('192.168.0.10', 4543): timed out
+2026-02-21 17:59:36,864 | [TCP] Client disconnected: ('192.168.0.10', 4543)
+2026-02-21 17:59:36,866 | [TCP] Client connected: ('192.168.0.10', 4546)
+Exception in thread Thread-118:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:36,867 | [TCP RX ('192.168.0.10', 4546)]: 160301005a0100005603016999e4789bd8193f1a9ef0bda1e6e2ba8cd6a14570b1dff7e35cf38992ce4c0300000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:40,841 | [TCP] Client connected: ('192.168.0.10', 4548)
+2026-02-21 17:59:40,842 | [TCP RX ('192.168.0.10', 4548)]: 160301005a0100005603016999e47c822cd7c633be607ca101043d4acfef346b726a2bdc6d446fc420b3bf00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:40,868 | [TCP] ERROR for ('192.168.0.10', 4544): timed out
+2026-02-21 17:59:40,868 | [TCP] Client disconnected: ('192.168.0.10', 4544)
+Exception in thread Thread-119:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:41,691 | [TCP] ERROR for ('192.168.0.10', 4545): timed out
+2026-02-21 17:59:41,691 | [TCP] Client disconnected: ('192.168.0.10', 4545)
+Exception in thread Thread-120:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:41,853 | [TCP] Client connected: ('192.168.0.10', 4549)
+2026-02-21 17:59:41,853 | [TCP RX ('192.168.0.10', 4549)]: 160301005a0100005603016999e47dcecb84269a64d11b6e1a65aa4b612e20b6a5ba2fa38e033877ccca8600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:41,882 | [TCP] ERROR for ('192.168.0.10', 4546): timed out
+2026-02-21 17:59:41,882 | [TCP] Client disconnected: ('192.168.0.10', 4546)
+Exception in thread Thread-121:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:43,784 | [TCP] ERROR for ('192.168.0.10', 4549): [WinError 10054] Connessione in corso interrotta forzatamente dall'host remoto
+2026-02-21 17:59:43,784 | [TCP] ERROR for ('192.168.0.10', 4548): [WinError 10054] Connessione in corso interrotta forzatamente dall'host remoto
+2026-02-21 17:59:43,785 | [TCP] Client disconnected: ('192.168.0.10', 4549)
+2026-02-21 17:59:43,786 | [TCP] Client disconnected: ('192.168.0.10', 4548)
+Exception in thread Thread-123:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+ConnectionResetError: [WinError 10054] Connessione in corso interrotta forzatamente dall'host remoto
+Exception in thread Thread-122:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+ConnectionResetError: [WinError 10054] Connessione in corso interrotta forzatamente dall'host remoto
+
+
+2026-02-21 17:59:53,755 | [TCP] Client connected: ('192.168.0.10', 4550)
+2026-02-21 17:59:53,769 | [TCP RX ('192.168.0.10', 4550)]: 160301005a0100005603016999e48971d684876d8c21e4e79f29a6d6f31d5150b9a58ddbccbb7e65fb859400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:54,147 | [TCP] Client connected: ('192.168.0.10', 4551)
+2026-02-21 17:59:54,147 | [TCP RX ('192.168.0.10', 4551)]: 160301005a0100005603016999e48a02a6a37a66e60943edc38652f9e99b6b4b41dca71eee994f94e0daa200000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:58,775 | [TCP] ERROR for ('192.168.0.10', 4550): timed out
+2026-02-21 17:59:58,775 | [TCP] Client disconnected: ('192.168.0.10', 4550)
+Exception in thread Thread-124:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 17:59:58,784 | [TCP] Client connected: ('192.168.0.10', 4553)
+2026-02-21 17:59:58,784 | [TCP RX ('192.168.0.10', 4553)]: 160301005a0100005603016999e48e0d6e13f512f9587eb3f6e225b40eee6b7dfaa7803a02db8066b3805400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:58,846 | [TCP] Client connected: ('192.168.0.10', 4554)
+2026-02-21 17:59:58,847 | [TCP RX ('192.168.0.10', 4554)]: 160301005a0100005603016999e48e65717ba695977fa9266c3a19229e703452e04a068abba2e050914a1b00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 17:59:59,155 | [TCP] ERROR for ('192.168.0.10', 4551): timed out
+2026-02-21 17:59:59,155 | [TCP] Client disconnected: ('192.168.0.10', 4551)
+Exception in thread Thread-125:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+2026-02-21 17:59:59,157 | [TCP] Client connected: ('192.168.0.10', 4555)
+
+2026-02-21 17:59:59,158 | [TCP RX ('192.168.0.10', 4555)]: 160301005a0100005603016999e48fd776c421e1149f55e0264ae168c48fe875f12f7bcb55bffe5277828900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:00:03,788 | [TCP] ERROR for ('192.168.0.10', 4553): timed out
+2026-02-21 18:00:03,788 | [TCP] Client disconnected: ('192.168.0.10', 4553)
+Exception in thread Thread-126:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:03,852 | [TCP] ERROR for ('192.168.0.10', 4554): timed out
+2026-02-21 18:00:03,852 | [TCP] Client disconnected: ('192.168.0.10', 4554)
+2026-02-21 18:00:03,854 | [TCP] Client connected: ('192.168.0.10', 4556)
+Exception in thread Thread-127:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:03,855 | [TCP RX ('192.168.0.10', 4556)]: 160301005a0100005603016999e49367de20672c372c9f58711f9f38ae98e5f1416bed7af77352701f95a000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:00:04,172 | [TCP] ERROR for ('192.168.0.10', 4555): timed out
+2026-02-21 18:00:04,172 | [TCP] Client disconnected: ('192.168.0.10', 4555)
+Exception in thread Thread-128:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:08,867 | [TCP] ERROR for ('192.168.0.10', 4556): timed out
+2026-02-21 18:00:08,867 | [TCP] Client disconnected: ('192.168.0.10', 4556)
+Exception in thread Thread-129:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:09,143 | [TCP] Client connected: ('192.168.0.10', 4558)
+2026-02-21 18:00:09,144 | [TCP RX ('192.168.0.10', 4558)]: 160301005a0100005603016999e4998499dab3eea57dc919b429620e261492d0b9e37c43db4c05d99387c700000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:00:14,152 | [TCP] ERROR for ('192.168.0.10', 4558): timed out
+2026-02-21 18:00:14,152 | [TCP] Client disconnected: ('192.168.0.10', 4558)
+2026-02-21 18:00:14,154 | [TCP] Client connected: ('192.168.0.10', 4561)
+2026-02-21 18:00:14,154 | [TCP RX ('192.168.0.10', 4561)]: 160301005a0100005603016999e49e729409369f178464a217602e6d5c50a6dd0b26c48c67fd76eb42143400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+Exception in thread Thread-130:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:19,159 | [TCP] ERROR for ('192.168.0.10', 4561): timed out
+2026-02-21 18:00:19,159 | [TCP] Client disconnected: ('192.168.0.10', 4561)
+Exception in thread Thread-131:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:24,148 | [TCP] Client connected: ('192.168.0.10', 4562)
+2026-02-21 18:00:24,148 | [TCP RX ('192.168.0.10', 4562)]: 160301005a0100005603016999e4a88ef20b431976b22a7f15c6cf932e287a4241199cfa1b3c3611bd657000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:00:29,161 | [TCP] ERROR for ('192.168.0.10', 4562): timed out
+2026-02-21 18:00:29,161 | [TCP] Client disconnected: ('192.168.0.10', 4562)
+Exception in thread Thread-132:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:29,164 | [TCP] Client connected: ('192.168.0.10', 4564)
+2026-02-21 18:00:29,165 | [TCP RX ('192.168.0.10', 4564)]: 160301005a0100005603016999e4adf60719f863544de44ad89f209b6df3f935a9c56266a66a5a0e141bc400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:00:34,179 | [TCP] ERROR for ('192.168.0.10', 4564): timed out
+2026-02-21 18:00:34,179 | [TCP] Client disconnected: ('192.168.0.10', 4564)
+Exception in thread Thread-133:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:39,159 | [TCP] Client connected: ('192.168.0.10', 4566)
+2026-02-21 18:00:39,159 | [TCP RX ('192.168.0.10', 4566)]: 160301005a0100005603016999e4b7b2340a0a72d271c1bfca2deeb6c0dc0b122ff45e62521ce130f6f4ec00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:00:44,173 | [TCP] ERROR for ('192.168.0.10', 4566): timed out
+2026-02-21 18:00:44,173 | [TCP] Client disconnected: ('192.168.0.10', 4566)
+Exception in thread Thread-134:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:44,176 | [TCP] Client connected: ('192.168.0.10', 4567)
+2026-02-21 18:00:44,176 | [TCP RX ('192.168.0.10', 4567)]: 160301005a0100005603016999e4bca3b0c7359afa80537b5c7b25e6128ca2a43b9bc14b47be94b2dd3bd600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:00:49,177 | [TCP] ERROR for ('192.168.0.10', 4567): timed out
+2026-02-21 18:00:49,177 | [TCP] Client disconnected: ('192.168.0.10', 4567)
+Exception in thread Thread-135:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:54,171 | [TCP] Client connected: ('192.168.0.10', 4573)
+2026-02-21 18:00:54,171 | [TCP RX ('192.168.0.10', 4573)]: 160301005a0100005603016999e4c68c3bdba9e4274448ea91b90c3c4605468e3a44c641aea22aad467fb700000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:00:59,185 | [TCP] ERROR for ('192.168.0.10', 4573): timed out
+2026-02-21 18:00:59,185 | [TCP] Client disconnected: ('192.168.0.10', 4573)
+Exception in thread Thread-136:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:00:59,188 | [TCP] Client connected: ('192.168.0.10', 4574)
+2026-02-21 18:00:59,189 | [TCP RX ('192.168.0.10', 4574)]: 160301005a0100005603016999e4cb13fd6eb3b77f2491c283a739eb529d0ecaca696f1322291c38f8a06b00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:01:04,204 | [TCP] ERROR for ('192.168.0.10', 4574): timed out
+2026-02-21 18:01:04,204 | [TCP] Client disconnected: ('192.168.0.10', 4574)
+Exception in thread Thread-137:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:01:09,179 | [TCP] Client connected: ('192.168.0.10', 4575)
+2026-02-21 18:01:09,180 | [TCP RX ('192.168.0.10', 4575)]: 160301005a0100005603016999e4d57f595a527b9ff3d5c88189339fa94688466acdec54c8b3cd849b346900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:01:14,196 | [TCP] ERROR for ('192.168.0.10', 4575): timed out
+2026-02-21 18:01:14,196 | [TCP] Client disconnected: ('192.168.0.10', 4575)
+2026-02-21 18:01:14,199 | [TCP] Client connected: ('192.168.0.10', 4577)
+Exception in thread Thread-138:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:01:14,200 | [TCP RX ('192.168.0.10', 4577)]: 160301005a0100005603016999e4daa1d21a9e04f8a536766533b7ec69569c4d6ac74a9b3e96bbe45af68600000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:01:19,204 | [TCP] ERROR for ('192.168.0.10', 4577): timed out
+2026-02-21 18:01:19,204 | [TCP] Client disconnected: ('192.168.0.10', 4577)
+Exception in thread Thread-139:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:01:24,195 | [TCP] Client connected: ('192.168.0.10', 4581)
+2026-02-21 18:01:24,195 | [TCP RX ('192.168.0.10', 4581)]: 160301005a0100005603016999e4e4debaeb31bcde46cd52ce7134dd4d7a846b04b65292824d8a3fa0a13400000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:01:29,203 | [TCP] ERROR for ('192.168.0.10', 4581): timed out
+2026-02-21 18:01:29,203 | [TCP] Client disconnected: ('192.168.0.10', 4581)
+Exception in thread Thread-140:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:01:29,207 | [TCP] Client connected: ('192.168.0.10', 4583)
+2026-02-21 18:01:29,208 | [TCP RX ('192.168.0.10', 4583)]: 160301005a0100005603016999e4e99e099c421ebd9505be833bf44230445d35c3e81bcdc00425afd1921b00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:01:34,213 | [TCP] ERROR for ('192.168.0.10', 4583): timed out
+2026-02-21 18:01:34,213 | [TCP] Client disconnected: ('192.168.0.10', 4583)
+Exception in thread Thread-141:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:01:39,207 | [TCP] Client connected: ('192.168.0.10', 4584)
+2026-02-21 18:01:39,208 | [TCP RX ('192.168.0.10', 4584)]: 160301005a0100005603016999e4f3abf46f7dc0d220d5022c3877edf63363cab11b78aff14e2156e201be00000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:01:44,269 | [TCP] ERROR for ('192.168.0.10', 4584): timed out
+2026-02-21 18:01:44,269 | [TCP] Client disconnected: ('192.168.0.10', 4584)
+Exception in thread Thread-142:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:01:44,273 | [TCP] Client connected: ('192.168.0.10', 4586)
+2026-02-21 18:01:44,273 | [TCP RX ('192.168.0.10', 4586)]: 160301005a0100005603016999e4f88d545f08a1394edecb04e1b7ca64614d798da8ac54cea7808f7496e000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:01:49,289 | [TCP] ERROR for ('192.168.0.10', 4586): timed out
+2026-02-21 18:01:49,289 | [TCP] Client disconnected: ('192.168.0.10', 4586)
+Exception in thread Thread-143:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:01:54,218 | [TCP] Client connected: ('192.168.0.10', 4587)
+2026-02-21 18:01:54,218 | [TCP RX ('192.168.0.10', 4587)]: 160301005a0100005603016999e50261c07bf50ae77448631326859147e0fa17f591bdac5343a3846e312900000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:01:59,231 | [TCP] ERROR for ('192.168.0.10', 4587): timed out
+2026-02-21 18:01:59,231 | [TCP] Client disconnected: ('192.168.0.10', 4587)
+Exception in thread Thread-144:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:01:59,233 | [TCP] Client connected: ('192.168.0.10', 4588)
+2026-02-21 18:01:59,234 | [TCP RX ('192.168.0.10', 4588)]: 160301005a0100005603016999e507fa58ce90101234ed5a7b3c70bb1045089ce1f1ee60040ffa0a31b02000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:02:04,246 | [TCP] ERROR for ('192.168.0.10', 4588): timed out
+2026-02-21 18:02:04,246 | [TCP] Client disconnected: ('192.168.0.10', 4588)
+Exception in thread Thread-145:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+socket.timeout: timed out
+
+2026-02-21 18:02:09,221 | [TCP] Client connected: ('192.168.0.10', 4590)
+2026-02-21 18:02:09,222 | [TCP RX ('192.168.0.10', 4590)]: 160301005a0100005603016999e51110fb0b85f423433b8f403134c31be44b8772db69b77fa008dca5ff0000000ec00ac009c014c0130035002f000a0100001f000a00080006001d00170018000b000201000023000000170000ff01000100
+2026-02-21 18:02:12,250 | [TCP] ERROR for ('192.168.0.10', 4590): [WinError 10054] Connessione in corso interrotta forzatamente dall'host remoto
+2026-02-21 18:02:12,251 | [TCP] Client disconnected: ('192.168.0.10', 4590)
+Exception in thread Thread-146:
+Traceback (most recent call last):
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "C:\Users\abi4f\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\prj_python\mctrl660_emulator\tcp_server.py", line 14, in client_thread
+    handle_tcp_stream(conn, addr)
+  File "D:\prj_python\mctrl660_emulator\tcp_handler.py", line 28, in handle_tcp_stream
+    data = conn.recv(4096)
+ConnectionResetError: [WinError 10054] Connessione in corso interrotta forzatamente dall'host remoto

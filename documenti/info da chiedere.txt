@@ -1,0 +1,8 @@
+Micro-fix utile subito (multicast)
+
+Se vuoi togliere l’errore “Network is unreachable” e abilitare davvero multicast sul Raspberry, in genere basta:
+
+ip route | grep 224.0.0.0/4 || true
+sudo ip route add 224.0.0.0/4 dev eth0 || true
+
+Ma ripeto: non è bloccante per passare a TCP/5200.

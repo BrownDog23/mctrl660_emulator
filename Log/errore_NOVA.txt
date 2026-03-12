@@ -1,0 +1,16 @@
+Exception:Riferimento a un oggetto non impostato su un'istanza di oggetto.
+System.NullReferenceException
+Stack Trace:
+   in Nova.LCT.GigabitSystem.UI.UC_ScanBoard.ResetMoreSettingMenuStrip()
+   in Nova.LCT.GigabitSystem.UI.UC_ScanBoard.crystalButton_extendProp_Click(Object sender, EventArgs e)
+   in System.Windows.Forms.Control.OnClick(EventArgs e)
+   in System.Windows.Forms.Button.OnClick(EventArgs e)
+   in System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   in Nova.Control.CrystalButton.OnMouseUp(MouseEventArgs mevent)
+   in System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   in System.Windows.Forms.Control.WndProc(Message& m)
+   in System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   in System.Windows.Forms.Button.WndProc(Message& m)
+   in System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   in System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   in System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

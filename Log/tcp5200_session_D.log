@@ -1,0 +1,3 @@
+[TCP] Listening on 0.0.0.0:5200
+[TCP] Conn from ('192.168.0.10', 18564)
+[TCP] RX serial=8C dst=FF code=01 reg=0x01000000 len=1 raw=55aa008cfeff00000000010000000001010000e157

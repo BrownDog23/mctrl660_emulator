@@ -1,0 +1,1 @@
+dofile("/full_path_to/wireshark/novastar.lua")

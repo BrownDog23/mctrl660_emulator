@@ -1,0 +1,30 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..450cae6bac1b59e56edb93948ad3fb3d06fb6495
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,20 @@
++# Emulatore NovaLCT (mctrl660_emulator)
++
++Questo repository contiene un emulatore del controller **NovaStar MCTRL660** con gestione TCP/UDP.
++
++## Collegamento al progetto ChatGPT
++
++Repository reso disponibile per il progetto ChatGPT:
++
++- **Emulatore NovaLCT**: https://chatgpt.com/g/g-p-6995e0f2a9588191ac0cf888bc439fd6-emulatore-novalct/project
++
++## Avvio rapido
++
++```bash
++python main.py
++```
++
++Il processo avvia:
++
++- server UDP in un thread dedicato;
++- server TCP nel thread principale.
+ 
+EOF
+)

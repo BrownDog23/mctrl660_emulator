@@ -1,0 +1,8 @@
+Repository_GitHub
+
+https://github.com/cedric-uden/Novastar-Controller
+https://github.com/cedric-uden/Novastar-Controller/tree/master/fader
+https://manuals.plus/novastar/vx-pro-series-control-protocol-manual
+
+
+

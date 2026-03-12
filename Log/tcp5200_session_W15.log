@@ -1,0 +1,1937 @@
+[TCP] Listening on 0.0.0.0:5200 allowed_dst=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 255]
+[TCP] Conn from ('192.168.0.10', 3232)
+[TCP] RX serial=6E src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x01000000 len=1
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=56 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=9C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=5C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=6D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E4 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=0D src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=31 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B0 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=82 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=26 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=EE src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=CE src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=52 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=D9 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=2B src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=D8 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A7 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=0C src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=D0 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=45 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C1 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=BC src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=15 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=50 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=81 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=13 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=1C src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=BD src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=F7 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=F0 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=8B src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=33 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=CB src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=22 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=05 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=2D src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=1B src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=44 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=53 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=EC src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=27 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=4F src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=AF src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=37 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E8 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B1 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=C1 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=63 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=02 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=09 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=4F src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=BA src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=49 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=AE src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=AB src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=98 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=86 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=0C src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=EB src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=D0 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=EF src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=73 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=B8 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=91 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=99 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=BB src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=02 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=30 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=D4 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=FD src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=BC src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=62 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=B8 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=E2 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=1D src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=71 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=0D src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=DC src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=66 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=CE src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=51 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B8 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=BA src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=EE src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A0 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=CF src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=E8 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=1C src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=75 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=6B src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=A5 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=0F src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=58 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=81 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=FB src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B3 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=96 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=1E src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=9D src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=2D src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=AE src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=90 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=8D src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=03 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=4B src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=EB src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=02 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=66 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=91 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=3A src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=8B src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=A8 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A4 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=1D src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=7F src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=37 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=B7 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=C9 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=EF src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=C9 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=D2 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=E5 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=BA src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=69 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=57 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=AD src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=0A src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=36 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E6 src=FE dst=20 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=01 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=02 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=03 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=04 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=05 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=06 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=07 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=08 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=09 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=0A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=0B src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=0C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=0D src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=0E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=0F src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=10 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=11 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=12 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=13 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=14 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=15 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=16 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=17 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=18 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=19 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=1A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=1B src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=1C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=1D src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=1E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=1F src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=20 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=21 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=22 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=23 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=24 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=25 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=26 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=27 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=28 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=29 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=2A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=2B src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=2C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=2D src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=2E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=2F src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=30 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=31 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=32 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=33 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=34 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=35 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=36 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=37 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=38 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=39 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=3A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=3B src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=3C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=3D src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=3E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=3F src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=40 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=41 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=42 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=43 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] Rebuilding controller screen blocks from 0 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] (none)
+[EMU] ---- SCREEN_WRITES ----
+[EMU] (none)
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=0
+[EMU] 0x02000000 head=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x02000100 head=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x02020020 head=010000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x08000000 head=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU_FULL] 0x02000000=01010000202001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[EMU_FULL] 0x02000100=01a50000202001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[EMU_FULL] 0x02020020=01000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[EMU_FULL] 0x08000000=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=44 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=45 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=01 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=46 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=01 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] ERROR: [Errno 104] Connection reset by peer
+[TCP] Conn from ('192.168.0.10', 3237)
+[TCP] RX serial=CD src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x01000000 len=1
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=2E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=92 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=A0 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B0 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=D0 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=39 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=01 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=4E src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=35 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=D9 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=B9 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=04 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=36 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=C7 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=5A src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=AC src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C0 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=A6 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=8B src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=CF src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A2 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=E8 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=39 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B0 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A8 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=AE src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=7E src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=0C src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=6D src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=18 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=15 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=4D src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=7C src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B1 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=28 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=90 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=97 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=A2 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=89 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B7 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=8D src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=58 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=9D src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=A3 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=2B src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=89 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=9E src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=4E src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=98 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=04 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=72 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=80 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=38 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=BB src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=2B src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=44 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=59 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=EF src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=08 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=22 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=B9 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=F3 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=E0 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=1D src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C3 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=6B src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=86 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=83 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=9E src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=C9 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=14 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=1E src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=1C src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=D3 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=41 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=49 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=4A src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=95 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=84 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=1E src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=0F src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=2F src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=73 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=69 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A5 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=94 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=15 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=BF src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=86 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=E3 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=37 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=A7 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=9A src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=67 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=FC src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=99 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=76 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=80 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=DE src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=BF src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=02 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=1A src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=AF src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=CE src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=EE src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=54 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=63 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=64 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=7A src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=E0 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=F8 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=C2 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=6A src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=E8 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=12 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=89 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=80 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=77 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=76 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=2F src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=56 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=C6 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=FB src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=BA src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=91 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=6C src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=82 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B4 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=D5 src=FE dst=20 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=01 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=02 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000000 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=03 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05066000 len=256
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=04 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=05 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=06 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=07 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200000B len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=08 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=09 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000023 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=0A src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=0B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x03100109 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=0C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=0D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000022 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=0E src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=0F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=10 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=11 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=12 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=13 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=14 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=15 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=16 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=17 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=18 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=19 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=1A src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=1B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=1C src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=1D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=1E src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=1F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=20 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=21 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=22 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=23 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=24 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=25 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=26 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=27 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=28 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=29 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=2A src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=2B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=2C src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=2D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=2E src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=2F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=30 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=31 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=32 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=33 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=34 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=35 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=36 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=37 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=38 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=39 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=3A src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=3B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=3C src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=3D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=3E src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=3F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=40 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=41 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=42 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=43 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=44 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=45 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=46 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=47 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=48 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=49 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=4A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=4B src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=4C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=4D src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=4E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=4F src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=50 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=51 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=52 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=53 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=54 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=55 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=56 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=57 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=58 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=59 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=5A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=5B src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=5C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=5D src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=5E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=5F src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=60 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=61 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=62 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=63 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=64 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=65 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=66 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=67 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=68 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=69 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=6A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=6B src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=6C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=6D src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=6E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=6F src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=70 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=71 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=72 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=73 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=74 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=75 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=76 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=77 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=78 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=79 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=7A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=7B src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=7C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=7D src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=7E src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=7F src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=80 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=81 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=82 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=83 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=84 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=85 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=86 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=87 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x05000000 len=4
+[TCP] TX ack=00 bytes=24
+[TCP] RX serial=88 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02100000 len=15
+[TCP] TX ack=00 bytes=35
+[TCP] RX serial=89 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x05065000 len=10
+[TCP] TX ack=00 bytes=30
+[TCP] RX serial=8A src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=8B src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=8C src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=8D src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=01 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=8E src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=01 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=8F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02200117 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=90 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=00 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=91 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=00 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=92 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=01 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=93 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=01 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=94 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=02 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=95 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=02 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=96 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=03 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=97 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=03 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=98 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=04 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=99 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=04 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=9A src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=05 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=9B src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=05 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=9C src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=06 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=9D src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=06 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=9E src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=07 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=9F src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=07 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A0 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=08 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A1 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=08 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A2 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=09 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A3 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=09 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A4 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=0A data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A5 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=0A data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A6 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=0B data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A7 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=0B data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A8 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=0C data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A9 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=0C data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=AA src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=0D data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=AB src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=0D data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=AC src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=0E data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=AD src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=0E data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=AE src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=0F data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=AF src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=0F data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B0 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=10 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B1 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=10 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B2 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=11 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B3 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=11 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B4 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=12 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B5 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=12 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B6 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=13 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B7 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=13 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B8 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=14 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=B9 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=14 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=BA src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=15 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=BB src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=15 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=BC src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=16 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=BD src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=16 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=BE src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=17 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=BF src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=17 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C0 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=18 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C1 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=18 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C2 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=19 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C3 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=19 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C4 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=1A data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C5 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=1A data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C6 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=1B data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C7 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=1B data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C8 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=1C data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=C9 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=1C data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=CA src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=1D data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=CB src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=1D data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=CC src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=1E data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=CD src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=1E data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=CE src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=1F data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=CF src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=1F data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D0 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02020020 len=64
+[EMU] READBACK reg=0x02020020 dev=00 port=00 rcv=0000 dst=00 data=010000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=84
+[TCP] RX serial=D1 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=02 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D2 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=02 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D3 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=03 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D4 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=03 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D5 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=04 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D6 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=04 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D7 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=05 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D8 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=05 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=D9 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=06 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=DA src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=06 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=DB src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=07 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=DC src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=07 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=A7 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=D1 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=C9 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B6 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C4 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=1B src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=F4 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=7F src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A4 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=79 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=51 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=30 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=B0 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=44 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=A5 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=EA src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=73 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=3D src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=B1 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=55 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=73 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=19 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=FE src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=0A src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=AE src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=68 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=3B src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=1E src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=F3 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=3C src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=82 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=D0 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=AE src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=8D src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=D2 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=0E src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=2F src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=0C src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=A5 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=CC src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=1D src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=09 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=DA src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=FC src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=25 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=FE src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=A4 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=81 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=56 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=CF src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=1E src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=2E src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=CF src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=5F src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=61 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=8E src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=D2 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=BE src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=07 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=5B src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=DF src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=D6 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=8B src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=DD src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=08 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=DE src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=08 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=68 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=F6 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=7F src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=80 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=22 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=71 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=96 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=BA src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=66 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=97 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=E3 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=38 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=69 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=3D src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=01 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=E3 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=AE src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C3 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B8 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=C6 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=24 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=1E src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=53 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=01 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=4F src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=2C src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=44 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=3A src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=6F src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=05 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=49 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=EC src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=46 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=7D src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=72 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=06 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=A5 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=7E src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=82 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=10 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=BF src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=14 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B6 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=96 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=EA src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=27 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=F7 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=50 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=D1 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=DA src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=57 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=97 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=26 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=0F src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=66 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=4A src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=A3 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=7E src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=31 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=F5 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=2C src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=5B src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=4B src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=61 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=4D src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=F6 src=FE dst=20 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=DF src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=09 data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=E0 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=09 data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=E1 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x02000000 len=256
+[EMU] READBACK reg=0x02000000 dev=00 port=00 rcv=0000 dst=0A data=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=E2 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x02000100 len=256
+[EMU] READBACK reg=0x02000100 dev=00 port=00 rcv=0000 dst=0A data=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=E3 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200000B len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E4 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x08000000 len=256
+[EMU] READBACK reg=0x08000000 dev=00 port=00 rcv=0000 dst=00 data=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[TCP] TX ack=00 bytes=276
+[TCP] RX serial=E5 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200009D len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E6 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000023 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E7 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200009D len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E8 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200004B len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E9 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x03100109 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=EA src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x02000022 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=40 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=A7 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=06 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=0F src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=66 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=BB src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=15 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=28 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=33 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=F2 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=68 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=94 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=AC src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B1 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=C5 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=36 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=16 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=28 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=61 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=26 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=4C src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=8C src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=E2 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=63 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C8 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=54 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=49 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=F3 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=35 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=0C src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=85 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=D5 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=9B src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=27 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=56 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=7D src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=09 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=56 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=E2 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=E7 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=69 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=09 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=C1 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=38 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=F1 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B5 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=B4 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=9B src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=31 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=BA src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=D4 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=A2 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=98 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=17 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=E2 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B3 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C4 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=A1 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=46 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=12 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=71 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=20 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=F1 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=27 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=6D src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=92 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=F7 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=85 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=5A src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=47 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=2D src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=BF src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=45 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=79 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=BC src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=43 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C9 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=AA src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=71 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=12 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=9F src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=AD src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=C2 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=79 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=36 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=E1 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=3C src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=83 src=FE dst=15 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=43 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=A1 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=B8 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=66 src=FE dst=16 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=10 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=CF src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=75 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=48 src=FE dst=17 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=16 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=99 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=C9 src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=5F src=FE dst=18 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=BD src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=2F src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=40 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=E8 src=FE dst=19 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=8D src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=15 src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=5D src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=1F src=FE dst=1A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=5A src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=9F src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=E9 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=19 src=FE dst=1B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=30 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=33 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=71 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=C3 src=FE dst=1C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=5D src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=78 src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=EF src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=8B src=FE dst=1D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=55 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=73 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=41 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=B8 src=FE dst=1E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=8E src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=C5 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=AE src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=74 src=FE dst=1F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=04 src=FE dst=20 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=01 bytes=20
+[TCP] RX serial=EB src=FE dst=FF dev=00 port=00 rcv=0000 code=01 reg=0x02000018 len=1
+[EMU] COMMIT CMD reg=0x02000018 dst=FF dev=00 port=00 rcv=0000 data=00
+[EMU] Rebuilding controller screen blocks from 0 logical routing entries
+[EMU] ---- ROUTING_WRITES ----
+[EMU] (none)
+[EMU] ---- SCREEN_WRITES ----
+[EMU] (none)
+[EMU] Screen blocks rebuilt for dev=00 port=00 entries=0
+[EMU] 0x02000000 head=010100002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x02000100 head=01a500002020010100000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x02020020 head=010000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU] 0x08000000 head=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+[EMU_FULL] 0x02000000=01010000202001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[EMU_FULL] 0x02000100=01a50000202001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[EMU_FULL] 0x02020020=01000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[EMU_FULL] 0x08000000=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+[TCP] TX ack=00 bytes=20
+[TCP] RX serial=EC src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x0200009D len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=70 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=6D src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=D9 src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=EB src=FE dst=00 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=21 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=84 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=1D src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=29 src=FE dst=01 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A3 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=B7 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=9E src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=35 src=FE dst=02 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=DC src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=5E src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=B0 src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=EA src=FE dst=03 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=9C src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=A8 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=3E src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=09 src=FE dst=04 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=49 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=EC src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=87 src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=5A src=FE dst=05 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=C6 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=65 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=E7 src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=1B src=FE dst=06 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E5 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=71 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=B8 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=39 src=FE dst=07 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=1E src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=DD src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=01 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=56 src=FE dst=08 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=83 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=8C src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=CD src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=06 src=FE dst=09 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=38 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=4A src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=9D src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=00 src=FE dst=0A dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=EE src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=8F src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=D1 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=16 src=FE dst=0B dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=52 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=88 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=8F src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=86 src=FE dst=0C dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=A0 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=08 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=0B src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=82 src=FE dst=0D dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=E4 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=7E src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=24 src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=BB src=FE dst=0E dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=9B src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=01 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=43 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=31 src=FE dst=0F dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=FD src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=64 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=17 src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=FD src=FE dst=10 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=5C src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=5A src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=67 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=10 src=FE dst=11 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=D9 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=38 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=D0 src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=FE src=FE dst=12 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=4F src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=86 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
+[TCP] RX serial=6A src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x14000000 len=88
+[TCP] TX ack=00 bytes=108
+[TCP] RX serial=37 src=FE dst=13 dev=00 port=00 rcv=0000 code=00 reg=0x00000006 len=1
+[TCP] TX ack=00 bytes=21
+[TCP] RX serial=93 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000002 len=2
+[TCP] TX ack=00 bytes=22
+[TCP] RX serial=D1 src=FE dst=14 dev=00 port=00 rcv=0000 code=00 reg=0x00000016 len=8
+[TCP] TX ack=00 bytes=28
