@@ -644,3 +644,124 @@ Next investigation targets:
 
 End of session.
 ---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+NovaLCT Emulator – Development Session Update
+Date: 2026-03-13
+Session: DEV SESSION 4
+Reference keyword: MCTRL660_STEP_NEXT
+---------------------------------------------------------------------
+
+Current development phase:
+Receiving-card configuration validation and post-save device stability.
+
+During this session the emulator progressed beyond the previous
+"device disappears / reconnect required" failure mode.
+
+Main development path tested:
+
+Works_20
+Added explicit storage for receiving-card related registers:
+0x02100000
+0x05000000
+0x05065000
+0x05066000
+
+Added first validation register handling and RCFG logging.
+
+Result:
+NovaLCT still failed Send to HW.
+Save operation wrote 0x05066000 but the device remained logically
+unconfigured.
+
+Key observation:
+0x05066000 write contained a 256-byte blob beginning with:
+
+53535045ea030000
+
+ASCII:
+SSPE
+
+This appears to be a save/config marker rather than a full rich panel
+configuration block.
+
+Works_21
+Added semantic effect for 0x05066000 save marker.
+After receiving the SSPE marker, the emulator generated non-zero
+configuration state for:
+0x05000000
+0x02100000
+0x05065000
+
+Result:
+Device no longer stayed completely empty after save.
+However NovaLCT still reset the session and re-entered fallback mode.
+
+Works_22
+Improved post-save readback coherence.
+
+Result:
+Major improvement.
+After save:
+- device remains visible
+- device count stays at 1
+- "Please reconnect the device" no longer appears
+
+This was the first stable version of the save/persistence branch.
+
+Works_23
+Attempted to expose configuration-valid state too early by forcing
+0x02200117 and related config markers during early validation.
+
+Result:
+Regression.
+NovaLCT returned to:
+- device = 20
+- reconnect/fallback behaviour
+- "Please reconnect the device"
+
+Conclusion:
+Configuration-valid state must NOT be exposed too early.
+
+Works_24
+Rebased on Works_22 and changed logic so that the receiving-card
+configuration becomes valid only when the following conditions are
+coherent:
+
+- save marker received (0x05066000 / SSPE)
+- topology is non-empty
+- config blocks are non-zero
+
+Result:
+Stable again.
+
+Observed final behaviour with Works_24:
+device = 1
+no "Please reconnect the device"
+
+This confirms that the save / persistence branch is now much healthier
+than before.
+
+Remaining issues:
+tiles > 9 = KO
+Send to HW = Failed
+
+Important technical conclusion:
+The save/reconnect problem is now mostly under control.
+The remaining blocker is the timing and semantics of topology validation,
+especially around register:
+
+0x02200117
+
+Current best hypothesis:
+NovaLCT validates the screen topology while 0x02200117 is still 00.
+This likely causes topology rejection even though the device now remains
+connected and stable.
+
+Direction for next step:
+Works_25 should focus on the timing of 0x02200117 and related
+topology-validation semantics, without breaking the new stability
+achieved in Works_24.
+
+End of session.
+---------------------------------------------------------------------

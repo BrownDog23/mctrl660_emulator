@@ -1,4 +1,4 @@
-# VERSION tcp_server.py: Works_19
+# VERSION tcp_server.py: Works_24
 
 import socket
 import argparse
@@ -8,7 +8,22 @@ MAX_READ_PAYLOAD = 4096
 
 IDENTITY_REGS = {0x00000002, 0x00000006, 0x00000016, 0x14000000}
 KEY_SCREEN_REGS = {0x02000000, 0x02000100, 0x02020020, 0x08000000}
-COMMAND_REGS = {0x02000011, 0x02000018}
+
+RCFG_REGS = {
+    0x02100000,
+    0x05000000,
+    0x05065000,
+    0x05066000,
+}
+
+VALIDATION_REGS = {
+    0x0200000B,
+    0x02000022,
+    0x02000023,
+    0x0200009D,
+    0x02200117,
+    0x03100109,
+}
 
 REGISTER_MAP = {
     (0x00000002, 2): b"\x01\x11",
@@ -18,21 +33,18 @@ REGISTER_MAP = {
 }
 
 MEM = {}
-
-COMMIT_SEEN = False
-
-# command-space only
-ROUTING_WRITES = []
-
-# parsed raw routing entries
-SCREEN_WRITES = []
-
-# semantic cabinet topology
-CABINETS = []
-
 CTRL_BLOCKS = {}
 
+COMMIT_SEEN = False
 SCREEN_BLOCKS_READY = False
+
+ROUTING_WRITES = []
+SCREEN_WRITES = []
+CABINETS = []
+
+RCFG_PRESENT = {}         # semantic "configured and coherent"
+RCFG_SAVE_MARK = {}       # raw 0x05066000 save marker
+RCFG_POSTSAVE_READS = {}  # debug counter
 
 
 def checksum_5555(frame_wo_checksum: bytes) -> int:
@@ -90,6 +102,12 @@ def mem_write(dev, port, rcvIndex, dst, reg, data):
         d[reg + i] = b
 
 
+def mem_read_slice(dev, port, rcvIndex, dst, reg, n):
+    key = mem_key(dev, port, rcvIndex, dst)
+    d = MEM.get(key, {})
+    return bytes(d.get(reg + i, 0) for i in range(n))
+
+
 def mem_overlay(dev, port, rcvIndex, dst, reg, data):
     key = mem_key(dev, port, rcvIndex, dst)
     d = MEM.get(key)
@@ -121,6 +139,17 @@ def ctrl_block_read(dev, port, reg, n):
     return data + (b"\x00" * (n - len(data)))
 
 
+def hex_preview(data: bytes, max_len: int = 48) -> str:
+    h = data.hex()
+    if len(h) <= max_len * 2:
+        return h
+    return h[: max_len * 2] + "..."
+
+
+def hex_full(data: bytes) -> str:
+    return data.hex()
+
+
 def is_sender_identity_reg(reg, n):
     return (
         (reg == 0x00000002 and n == 2) or
@@ -148,12 +177,163 @@ def read_default(dst, reg, n):
     return b"\x00" * n
 
 
+def parse_route_record(raw: bytes):
+    if len(raw) != 6:
+        return None
+
+    return {
+        "raw": bytes(raw),
+        "group": raw[0],
+        "a": raw[1],
+        "b": raw[2],
+        "c": raw[3],
+        "x": raw[4],
+        "y": raw[5],
+        "word": (raw[4] << 8) | raw[5],
+    }
+
+
+def save_marker_present(dev, port, rcvIndex, dst):
+    return mem_key(dev, port, rcvIndex, dst) in RCFG_SAVE_MARK
+
+
+def postsave_read_count(dev, port, rcvIndex, dst):
+    return int(RCFG_POSTSAVE_READS.get(mem_key(dev, port, rcvIndex, dst), 0))
+
+
+def bump_postsave_read(dev, port, rcvIndex, dst):
+    key = mem_key(dev, port, rcvIndex, dst)
+    RCFG_POSTSAVE_READS[key] = postsave_read_count(dev, port, rcvIndex, dst) + 1
+
+
+def build_runtime_02100000(dev, port, rcvIndex, dst):
+    count = len(CABINETS) & 0xFF
+    return bytes([
+        0x53, 0x53, 0x50, 0x45,   # SSPE
+        0x01,                     # version
+        dev & 0xFF,
+        port & 0xFF,
+        dst & 0xFF,
+        rcvIndex & 0xFF,
+        (rcvIndex >> 8) & 0xFF,
+        count,
+        0x01,                     # configured
+        0x01 if COMMIT_SEEN else 0x00,
+        0x00,
+        0x01,
+    ])
+
+
+def build_summary_05065000(dev, port, rcvIndex, dst):
+    count = len(CABINETS)
+    return bytes([
+        0x53,                     # S
+        0x50,                     # P
+        0x01,                     # version
+        0x01,                     # configured
+        dev & 0xFF,
+        port & 0xFF,
+        count & 0xFF,
+        (count >> 8) & 0xFF,
+        dst & 0xFF,
+        0x01,
+    ])
+
+
+def rcfg_blocks_nonzero(dev, port, rcvIndex, dst):
+    a = mem_read_slice(dev, port, rcvIndex, dst, 0x05000000, 4)
+    b = mem_read_slice(dev, port, rcvIndex, dst, 0x02100000, 15)
+    c = mem_read_slice(dev, port, rcvIndex, dst, 0x05065000, 10)
+    return any(a) and any(b) and any(c)
+
+
+def rcfg_configured(dev, port, rcvIndex, dst):
+    """
+    Works_24 rule:
+    configured only if:
+      - save marker exists
+      - topology exists
+      - derived config blocks are non-zero
+    """
+    key = mem_key(dev, port, rcvIndex, dst)
+    semantic = bool(RCFG_PRESENT.get(key, False))
+    return semantic and save_marker_present(dev, port, rcvIndex, dst) and len(CABINETS) > 0 and rcfg_blocks_nonzero(dev, port, rcvIndex, dst)
+
+
+def refresh_rcfg_semantic_state():
+    """
+    Re-evaluate semantic configured flag after topology changes.
+    """
+    for key in list(RCFG_PRESENT.keys()):
+        dev, port, rcv, dst = key
+        RCFG_PRESENT[key] = save_marker_present(dev, port, rcv, dst) and len(CABINETS) > 0 and rcfg_blocks_nonzero(dev, port, rcv, dst)
+
+
+def seed_rcfg_blocks(dev, port, rcvIndex, dst, save_blob=None):
+    """
+    Seed coherent blocks, but do NOT automatically expose configured=1
+    until topology + save marker + blocks all align.
+    """
+    mem_write(dev, port, rcvIndex, dst, 0x05000000, b"\x01\x00\x00\x00")
+    mem_write(dev, port, rcvIndex, dst, 0x02100000, build_runtime_02100000(dev, port, rcvIndex, dst))
+    mem_write(dev, port, rcvIndex, dst, 0x05065000, build_summary_05065000(dev, port, rcvIndex, dst))
+    if save_blob is not None:
+        mem_write(dev, port, rcvIndex, dst, 0x05066000, save_blob)
+
+
+def mark_rcfg_saved(dev, port, rcvIndex, dst, save_blob):
+    key = mem_key(dev, port, rcvIndex, dst)
+    RCFG_SAVE_MARK[key] = bytes(save_blob)
+    RCFG_POSTSAVE_READS[key] = 0
+
+    seed_rcfg_blocks(dev, port, rcvIndex, dst, save_blob=save_blob)
+
+    # semantic exposure delayed until coherence rule passes
+    RCFG_PRESENT[key] = save_marker_present(dev, port, rcvIndex, dst) and len(CABINETS) > 0 and rcfg_blocks_nonzero(dev, port, rcvIndex, dst)
+
+
+def validation_read(dev, port, rcvIndex, dst, reg, n):
+    route_count = len(CABINETS)
+    configured = rcfg_configured(dev, port, rcvIndex, dst)
+
+    if reg == 0x0200000B and n == 1:
+        return bytes([0x01 if route_count > 0 else 0x00])
+
+    if reg == 0x02000022 and n == 1:
+        return bytes([route_count & 0xFF])
+
+    if reg == 0x02000023 and n == 1:
+        return bytes([(route_count >> 8) & 0xFF])
+
+    if reg == 0x0200009D and n == 1:
+        return bytes([0x01 if (COMMIT_SEEN or configured) else 0x00])
+
+    if reg == 0x02200117 and n == 1:
+        return bytes([0x01 if configured else 0x00])
+
+    if reg == 0x03100109 and n == 1:
+        return b"\x01"
+
+    return None
+
+
 def read_data(dev, port, rcvIndex, dst, reg, n):
     if reg in KEY_SCREEN_REGS:
         data = ctrl_block_read(dev, port, reg, n)
         if data is not None:
             return data
         return b"\x00" * n
+
+    if reg in VALIDATION_REGS:
+        data = validation_read(dev, port, rcvIndex, dst, reg, n)
+        if data is not None:
+            return data
+
+    key = mem_key(dev, port, rcvIndex, dst)
+    if key in MEM:
+        direct = mem_read_slice(dev, port, rcvIndex, dst, reg, n)
+        if any(b != 0 for b in direct):
+            return direct
 
     base = bytearray(read_default(dst, reg, n))
     base = mem_overlay(dev, port, rcvIndex, dst, reg, base)
@@ -183,81 +363,10 @@ def finalize_ack(ack):
     return bytes(ack)
 
 
-def hex_preview(data: bytes, max_len: int = 48) -> str:
-    h = data.hex()
-    if len(h) <= max_len * 2:
-        return h
-    return h[: max_len * 2] + "..."
-
-
-def hex_full(data: bytes) -> str:
-    return data.hex()
-
-
-def parse_route_record(raw: bytes):
-    if len(raw) != 6:
-        return None
-
-    return {
-        "raw": bytes(raw),
-        "group": raw[0],
-        "a": raw[1],
-        "b": raw[2],
-        "c": raw[3],
-        "x": raw[4],
-        "y": raw[5],
-        "word": (raw[4] << 8) | raw[5],
-    }
-
-
-def dump_routing_writes():
-    print("[EMU] ---- ROUTING_WRITES ----")
-    if not ROUTING_WRITES:
-        print("[EMU] (none)")
-        return
-
-    for idx, item in enumerate(ROUTING_WRITES):
-        print(
-            f"[EMU] RAW[{idx:02d}] dev={item['dev']:02X} port={item['port']:02X} "
-            f"rcv={item['rcvIndex']:04X} dst={item['dst']:02X} data={item['data'].hex()}"
-        )
-
-
-def dump_screen_writes():
-    print("[EMU] ---- SCREEN_WRITES ----")
-    if not SCREEN_WRITES:
-        print("[EMU] (none)")
-        return
-
-    for idx, item in enumerate(SCREEN_WRITES):
-        print(
-            f"[EMU] ROUTE[{idx:02d}] dev={item['dev']:02X} port={item['port']:02X} "
-            f"rcv={item['rcvIndex']:04X} dst={item['dst']:02X} "
-            f"group={item['group']:02X} a={item['a']:02X} b={item['b']:02X} c={item['c']:02X} "
-            f"x={item['x']:02X} y={item['y']:02X} word=0x{item['word']:04X} raw={item['raw'].hex()}"
-        )
-
-
-def dump_cabinets():
-    print("[EMU] ---- CABINETS ----")
-    if not CABINETS:
-        print("[EMU] (none)")
-        return
-
-    for idx, c in enumerate(CABINETS):
-        print(
-            f"[EMU] CAB[{idx:02d}] tile={c['tile_index']:02X} port={c['sender_port']:02X} "
-            f"chain={c['chain_index']:02X} cascade={c['cascade_order']:02X} "
-            f"lx={c['layout_x']:02X} ly={c['layout_y']:02X} "
-            f"group={c['group']:02X} c={c['c']:02X} route=0x{c['route_word']:04X}"
-        )
-
-
 def rebuild_screen_writes_from_routing():
     global SCREEN_WRITES
 
     out = []
-
     for item in ROUTING_WRITES[-128:]:
         parsed = parse_route_record(item["data"])
         if not parsed:
@@ -278,7 +387,6 @@ def rebuild_screen_writes_from_routing():
 def rebuild_cabinets_from_screen_writes():
     global CABINETS
 
-    # group by sender port
     by_port = defaultdict(list)
     for item in SCREEN_WRITES:
         by_port[item["port"]].append(item)
@@ -288,18 +396,12 @@ def rebuild_cabinets_from_screen_writes():
     for port in sorted(by_port.keys()):
         port_items = list(by_port[port])
 
-        # cascade order: by original route-word progression
         cascade_items = sorted(port_items, key=lambda e: (e["word"], e["raw"]))
-
-        # layout order: by Y then X (screen grid style)
         layout_items = sorted(port_items, key=lambda e: (e["y"], e["x"], e["word"]))
 
         cascade_pos = {id(item): idx for idx, item in enumerate(cascade_items)}
         layout_pos = {id(item): idx for idx, item in enumerate(layout_items)}
 
-        # infer a simple 2D layout:
-        # same high nibble of x groups columns loosely; y orders rows.
-        # if values are dense, this still yields a stable layout view.
         unique_x = sorted({item["x"] for item in port_items})
         unique_y = sorted({item["y"] for item in port_items})
         x_rank = {v: i for i, v in enumerate(unique_x)}
@@ -322,16 +424,11 @@ def rebuild_cabinets_from_screen_writes():
                 "port": item["port"] & 0xFF,
             })
 
-    # deterministic order for serializer base
     cabinets.sort(key=lambda c: (c["sender_port"], c["tile_index"], c["cascade_order"], c["route_word"]))
     CABINETS = cabinets
 
 
 def pack_layout_entry(entry):
-    """
-    0x02000000 = layout table
-    [layout_x][layout_y][port][cascade_order][tile_index][group][c][00]
-    """
     return bytes([
         entry["layout_x"] & 0xFF,
         entry["layout_y"] & 0xFF,
@@ -345,10 +442,6 @@ def pack_layout_entry(entry):
 
 
 def pack_cascade_entry(entry):
-    """
-    0x02000100 = cascade table
-    [port][cascade_order][chain_index][tile_index][raw_x][raw_y][route_hi][route_lo]
-    """
     return bytes([
         entry["sender_port"] & 0xFF,
         entry["cascade_order"] & 0xFF,
@@ -362,10 +455,6 @@ def pack_cascade_entry(entry):
 
 
 def pack_summary_entry(entry):
-    """
-    0x02020020 = compact summary
-    [route_hi][route_lo][cascade_order][01]
-    """
     return bytes([
         (entry["route_word"] >> 8) & 0xFF,
         entry["route_word"] & 0xFF,
@@ -374,16 +463,80 @@ def pack_summary_entry(entry):
     ])
 
 
+def dump_routing_writes():
+    print("[EMU] ---- ROUTING_WRITES ----")
+    if not ROUTING_WRITES:
+        print("[EMU] (none)")
+        return
+    for idx, item in enumerate(ROUTING_WRITES):
+        print(
+            f"[EMU] RAW[{idx:02d}] dev={item['dev']:02X} port={item['port']:02X} "
+            f"rcv={item['rcvIndex']:04X} dst={item['dst']:02X} data={item['data'].hex()}"
+        )
+
+
+def dump_screen_writes():
+    print("[EMU] ---- SCREEN_WRITES ----")
+    if not SCREEN_WRITES:
+        print("[EMU] (none)")
+        return
+    for idx, item in enumerate(SCREEN_WRITES):
+        print(
+            f"[EMU] ROUTE[{idx:02d}] dev={item['dev']:02X} port={item['port']:02X} "
+            f"rcv={item['rcvIndex']:04X} dst={item['dst']:02X} "
+            f"group={item['group']:02X} a={item['a']:02X} b={item['b']:02X} c={item['c']:02X} "
+            f"x={item['x']:02X} y={item['y']:02X} word=0x{item['word']:04X} raw={item['raw'].hex()}"
+        )
+
+
+def dump_cabinets():
+    print("[EMU] ---- CABINETS ----")
+    if not CABINETS:
+        print("[EMU] (none)")
+        return
+    for idx, c in enumerate(CABINETS):
+        print(
+            f"[EMU] CAB[{idx:02d}] tile={c['tile_index']:02X} port={c['sender_port']:02X} "
+            f"chain={c['chain_index']:02X} cascade={c['cascade_order']:02X} "
+            f"lx={c['layout_x']:02X} ly={c['layout_y']:02X} "
+            f"group={c['group']:02X} c={c['c']:02X} route=0x{c['route_word']:04X}"
+        )
+
+
+def dump_rcfg_summary():
+    print("[EMU] ---- RCFG_STATE ----")
+    found = False
+    for key in sorted(set(list(MEM.keys()) + list(RCFG_PRESENT.keys()) + list(RCFG_SAVE_MARK.keys()))):
+        dev, port, rcv, dst = key
+        present = rcfg_configured(dev, port, rcv, dst)
+        save = 1 if save_marker_present(dev, port, rcv, dst) else 0
+        if not present and not save and not rcfg_blocks_nonzero(dev, port, rcv, dst):
+            continue
+        found = True
+        print(
+            f"[EMU] RCFG dev={dev:02X} port={port:02X} rcv={rcv:04X} dst={dst:02X} "
+            f"present={1 if present else 0} save={save} "
+            f"02100000={hex_preview(mem_read_slice(dev, port, rcv, dst, 0x02100000, 15))} "
+            f"05000000={hex_preview(mem_read_slice(dev, port, rcv, dst, 0x05000000, 4))} "
+            f"05065000={hex_preview(mem_read_slice(dev, port, rcv, dst, 0x05065000, 10))} "
+            f"reads={postsave_read_count(dev, port, rcv, dst)}"
+        )
+    if not found:
+        print("[EMU] (none)")
+
+
 def build_controller_blocks():
     global SCREEN_BLOCKS_READY
 
     rebuild_screen_writes_from_routing()
     rebuild_cabinets_from_screen_writes()
+    refresh_rcfg_semantic_state()
 
     print(f"[EMU] Rebuilding controller screen blocks from {len(CABINETS)} cabinet entries")
     dump_routing_writes()
     dump_screen_writes()
     dump_cabinets()
+    dump_rcfg_summary()
 
     groups = {}
     if CABINETS:
@@ -401,7 +554,6 @@ def build_controller_blocks():
 
         count = len(items)
 
-        # headers
         blk_02000000[0] = 0x01
         blk_02000000[1] = 0x01
         blk_02000000[2] = dev & 0xFF
@@ -425,12 +577,8 @@ def build_controller_blocks():
         blk_02020020[2] = port & 0xFF
         blk_02020020[3] = count & 0xFF
 
-        # 0x02000000 uses layout order
         layout_items = sorted(items, key=lambda e: (e["layout_y"], e["layout_x"], e["tile_index"], e["route_word"]))
-        # 0x02000100 uses cascade order
         cascade_items = sorted(items, key=lambda e: (e["cascade_order"], e["route_word"], e["tile_index"]))
-        # 0x02020020 uses cascade summary
-        summary_items = list(cascade_items)
 
         off0 = 16
         for item in layout_items:
@@ -447,13 +595,12 @@ def build_controller_blocks():
             off1 += 8
 
         off2 = 8
-        for item in summary_items:
+        for item in cascade_items:
             packed = pack_summary_entry(item)
             if off2 + 4 <= 64:
                 blk_02020020[off2:off2 + 4] = packed
             off2 += 4
 
-        # presence / enable
         for idx, _ in enumerate(cascade_items):
             if idx < 256:
                 blk_08000000[idx] = 0x01
@@ -483,6 +630,43 @@ def ensure_screen_blocks_ready():
         build_controller_blocks()
 
 
+def is_sspe_marker(blob: bytes) -> bool:
+    return len(blob) >= 8 and blob[:4] == b"SSPE" and blob[4:8] == b"\xEA\x03\x00\x00"
+
+
+def store_rcfg(info):
+    reg = info["reg"]
+    wd = info["write_data"]
+    dev = info["dev"]
+    port = info["port"]
+    rcv = info["rcvIndex"]
+    dst = info["dst"]
+
+    mem_write(dev, port, rcv, dst, reg, wd)
+
+    if dst == 0xFF:
+        for d in (0x00, 0x01):
+            mem_write(dev, port, rcv, d, reg, wd)
+
+    print(
+        f"[EMU] RCFG WRITE reg=0x{reg:08X} dst={dst:02X} "
+        f"dev={dev:02X} port={port:02X} rcv={rcv:04X} len={len(wd)}"
+    )
+    print(f"[EMU_FULL] RCFG_0x{reg:08X}={wd.hex()}")
+
+    if reg == 0x05066000 and is_sspe_marker(wd):
+        if dst == 0xFF:
+            for d in (0x00, 0x01):
+                mark_rcfg_saved(dev, port, rcv, d, save_blob=wd)
+        else:
+            mark_rcfg_saved(dev, port, rcv, dst, save_blob=wd)
+
+        print(
+            f"[EMU] RCFG SAVE MARKER ACCEPTED reg=0x{reg:08X} "
+            f"dev={dev:02X} port={port:02X} rcv={rcv:04X} dst={dst:02X}"
+        )
+
+
 def handle_command_register_write(info):
     global COMMIT_SEEN
     global SCREEN_BLOCKS_READY
@@ -507,7 +691,6 @@ def handle_command_register_write(info):
             f"rcv={info['rcvIndex']:04X} data={wd.hex()}"
         )
 
-        # NovaLCT may read these blocks before commit
         build_controller_blocks()
         return True
 
@@ -534,17 +717,13 @@ def build_ack(req, allowed_dst):
         ack = make_ack_base(req, info, 0x01)
         return finalize_ack(ack)
 
-    # only dst=00 is a valid sender identity
+    # only one valid sender identity
     if info["code"] == 0x00 and is_sender_identity_reg(info["reg"], info["n"]):
         if info["dst"] == 0x00:
             ack = make_ack_base(req, info, 0x00)
             ack += read_data(
-                info["dev"],
-                info["port"],
-                info["rcvIndex"],
-                info["dst"],
-                info["reg"],
-                info["n"],
+                info["dev"], info["port"], info["rcvIndex"],
+                info["dst"], info["reg"], info["n"]
             )
             return finalize_ack(ack)
 
@@ -553,7 +732,6 @@ def build_ack(req, allowed_dst):
 
     ack = make_ack_base(req, info, 0x00)
 
-    # WRITE
     if info["code"] == 0x01:
         n = info["n"]
         wd = info["write_data"]
@@ -562,30 +740,25 @@ def build_ack(req, allowed_dst):
             if handle_command_register_write(info):
                 return finalize_ack(ack)
 
+            if info["reg"] in RCFG_REGS:
+                store_rcfg(info)
+                return finalize_ack(ack)
+
             mem_write(
-                info["dev"],
-                info["port"],
-                info["rcvIndex"],
-                info["dst"],
-                info["reg"],
-                wd,
+                info["dev"], info["port"], info["rcvIndex"],
+                info["dst"], info["reg"], wd
             )
 
             if info["dst"] == 0xFF:
                 for d in allowed_dst:
                     if d != 0xFF:
                         mem_write(
-                            info["dev"],
-                            info["port"],
-                            info["rcvIndex"],
-                            d,
-                            info["reg"],
-                            wd,
+                            info["dev"], info["port"], info["rcvIndex"],
+                            d, info["reg"], wd
                         )
 
         return finalize_ack(ack)
 
-    # READ
     if info["code"] == 0x00 and info["n"] > 0:
         n = info["n"]
 
@@ -597,17 +770,38 @@ def build_ack(req, allowed_dst):
             return finalize_ack(ack)
 
         data = read_data(
-            info["dev"],
-            info["port"],
-            info["rcvIndex"],
-            info["dst"],
-            info["reg"],
-            n,
+            info["dev"], info["port"], info["rcvIndex"],
+            info["dst"], info["reg"], n
         )
+
+        if save_marker_present(info["dev"], info["port"], info["rcvIndex"], info["dst"]) and (
+            info["reg"] in VALIDATION_REGS or info["reg"] in RCFG_REGS
+        ):
+            bump_postsave_read(info["dev"], info["port"], info["rcvIndex"], info["dst"])
+            print(
+                f"[EMU] POSTSAVE READ#{postsave_read_count(info['dev'], info['port'], info['rcvIndex'], info['dst'])} "
+                f"reg=0x{info['reg']:08X} dst={info['dst']:02X} data={hex_preview(data)}"
+            )
 
         if info["reg"] in KEY_SCREEN_REGS:
             print(
                 f"[EMU] READBACK reg=0x{info['reg']:08X} "
+                f"dev={info['dev']:02X} port={info['port']:02X} "
+                f"rcv={info['rcvIndex']:04X} dst={info['dst']:02X} "
+                f"data={hex_preview(data)}"
+            )
+
+        if info["reg"] in VALIDATION_REGS:
+            print(
+                f"[EMU] VALIDATION READ reg=0x{info['reg']:08X} "
+                f"dev={info['dev']:02X} port={info['port']:02X} "
+                f"rcv={info['rcvIndex']:04X} dst={info['dst']:02X} "
+                f"data={data.hex()}"
+            )
+
+        if info["reg"] in RCFG_REGS:
+            print(
+                f"[EMU] RCFG READ reg=0x{info['reg']:08X} "
                 f"dev={info['dev']:02X} port={info['port']:02X} "
                 f"rcv={info['rcvIndex']:04X} dst={info['dst']:02X} "
                 f"data={hex_preview(data)}"

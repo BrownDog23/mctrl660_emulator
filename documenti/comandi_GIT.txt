@@ -1,0 +1,175 @@
+1)
+Git è un sistema di controllo versione "pignolo": vuole sapere esattamente chi sta firmando ogni modifica (commit) per poterlo mostrare nella cronologia.
+È un'operazione che si fa una sola volta sul tuo PC. Copia e incolla questi due comandi sostituendo i tuoi dati (quelli che usi su GitHub):
+
+Imposta la tua email:
+git config --global user.email "la_tua_email@esempio.com"
+
+Imposta il tuo nome (o username):
+powershell
+git config --global user.name "IlTuoNome"
+
+
+
+2)
+1. Collega la repository
+Copia l'indirizzo della tua repository che vedi nella barra del browser (o dal tasto verde "Code" su GitHub) e digitalo così:
+
+git remote add origin https://github.com
+(Sostituisci l'URL con quello reale della tua repository).
+
+
+
+3)
+. Creare il file .gitignore
+Questo file dice a Git: "Ignora questi file, non caricarli mai".
+Crea un file di testo nella cartella principale e nominalo esattamente .gitignore (attenzione al punto iniziale).
+
+esempio:
+Aprine il contenuto e incolla queste righe (basate sul tuo git status):
+text
+__pycache__/
+*.pyc
+server.key
+cert/
+# Aggiungi qui altre cartelle o file sensibili
+
+
+
+4)
+aggiornare i file nella repositroy GitHub
+
+1.Crea/Modifica .gitignore.
+Questo file dice a Git: "Ignora questi file, non caricarli mai".
+
+2.git add -A
+Il parametro -A (All) dice a Git di aggiungere i nuovi file, aggiornare quelli modificati e segnare come eliminati quelli che hai cancellato fisicamente dal PC.
+
+3.git commit -m "Messaggio descrittivo"
+Crea il "pacchetto" da inviare:
+	Messaggio dettagliato (Titolo + Descrizione)
+	Se la modifica è complessa, è meglio separare un titolo breve da una spiegazione più lunga. Puoi farlo direttamente da terminale usando più volte il 	parametro -m:
+		git commit -m "Titolo: Rifatto sistema di logging" -m "Spostato logger.py nella r
+
+	Usando un Editor di testo (Il metodo dei professionisti)
+	Se scrivi solo git commit (senza -m), Git aprirà l'editor di testo predefinito (spesso Vim o Notepad):
+		Scrivi il titolo nella prima riga.
+		Lascia una riga vuota.
+		Scrivi tutti i dettagli che vuoi nelle righe successive.
+		Salva e chiudi l'editor
+
+
+4.git push -u origin master --force
+Attenzione: Il comando --force è potente. Distruggerà qualsiasi modifica fatta direttamente sul sito GitHub che non è presente sul tuo PC, rendendo la repository online identica alla tua cartella locale.
+
+
+5)
+manteniamo la repository GitHub aggiornata:
+
+Git lo fa già in automatico: è progettato proprio per confrontare i file sul tuo PC con quelli su GitHub e caricare solo le differenze.
+Ecco i tre comandi "magici" da usare ogni volta che finisci una sessione di lavoro:
+
+	1.Seleziona le modifiche:
+		git add .
+	(Git scansiona tutto, ma "prepara" per il caricamento solo i file che hanno nuovi contenuti o i nuovi file creati)
+
+	2.Crea il pacchetto (con Notepad++):
+		git commit
+	(Si aprirà Notepad++: scrivi il tuo messaggio, salva e chiudi. Git impacchetterà solo i file modificati)
+
+	Cosa succede ai file non modificati?
+	Rimangono esattamente come sono, sia sul tuo PC che su GitHub. Git non spreca banda né tempo per ricaricare file identici.
+
+	3.Per vedere l'elenco dei file (git status)
+	Questo lo conosci già, ma è il primo passo. Ti dice quali file sono stati modificati, aggiunti o eliminati:
+		git status	
+	
+	4.In rosso: File modificati ma non ancora "preparati" (unstaged).
+	   In verde: File pronti per il commit (staged).
+
+	5.Per vedere le modifiche nel dettaglio (git diff)
+	Se vuoi vedere quali righe di codice hai aggiunto o rimosso dentro i file prima di fare il commit, usa:
+	Vedere le modifiche non ancora aggiunte:
+		git diff
+	(Mostra le differenze tra i file sul PC e l'ultimo commit fatto)
+
+	6.edere le modifiche già aggiunte (verdi) con git add:
+		git diff --cached
+	(Utilissimo per controllare un'ultima volta cosa stai per inviare prima di lanciare il commit)
+	
+	Quando lanci il comando, vedrai del testo colorato nel terminale:
+		Le righe che iniziano con - (in rosso) sono quelle che hai cancellato o modificato.
+		Le righe che iniziano con + (in verde) sono quelle nuove che hai aggiunto.
+	Un piccolo trucco:
+	Se hai fatto molte modifiche e il terminale diventa chilometrico, puoi visualizzare solo i nomi dei file che sono diversi rispetto a GitHub con:	
+		git diff --stat
+
+PROMEMORIA:
+promemoria rapido per i tuoi futuri aggiornamenti:
+	git status (per vedere cosa hai toccato).
+	git add . (per preparare i file).
+	git commit (si apre Notepad++, scrivi, salva e chiudi).
+	git push origin main (per mandare tutto online)
+
+
+6) creazione ALIAS
+
+In Git, gli alias sono scorciatoie personalizzate. Possiamo creare un comando unico (ad esempio git sync) che esegue add, apre l'editor per il commit e fa il push in un colpo solo.
+Tuttavia, poiché il terminale standard non permette di concatenare facilmente comandi complessi con un alias interno a Git, il modo più potente e semplice su Windows è creare un piccolo file script nella cartella del tuo progetto.
+
+	1.Opzione: Il file "Sincronizza.bat"
+	Crea un file di testo nella cartella del tuo progetto, chiamalo sincronizza.bat e incolla questo codice, ho aggiunto il comando pause alla fine, che blocca la 	finestra finché non premi un tasto:
+
+		nome file: aggiorna.bat
+
+		@echo off
+		echo ==========================================
+		echo    SINCRONIZZAZIONE REPOSITORY GITHUB
+		echo ==========================================
+		echo.
+
+		echo [1/3] Aggiunta file modificati...
+		git add -A
+
+		echo [2/3] Apertura Notepad++ per il messaggio di commit...
+		echo (Salva e chiudi Notepad++ per continuare)
+		git commit
+
+		echo [3/3] Invio dei file al server (branch main)...
+		git push origin main
+
+		echo.
+		echo ==========================================
+		echo    OPERAZIONE COMPLETATA!
+		echo    Premi un tasto per chiudere la finestra.
+		echo ==========================================
+		pause
+	
+	Come usarlo:
+	Fai le tue modifiche ai file .py.
+	da Windows:
+		Fai doppio clic su sincronizza.bat.
+	da PowerShell:
+		.\sincronizza.bat
+	da CMD:
+		sincronizza.bat
+	
+	Si aprirà Notepad++: scrivi il tuo messaggio, salva e chiudi.
+	Il terminale finirà di caricare tutto su GitHub e si chiuderà premendo un tasto.
+	Vantaggio: Non dovrai più scrivere nemmeno una riga di comando!
+
+
+	2.Se preferisci un alias interno a Git (più tecnico)
+	Se vuoi invece digitare solo un comando corto nel terminale (es. git up), scrivi questo una sola volta:
+
+		git config --global alias.up "!git add -A && git commit"
+	
+	In questo caso, digitando git up si aprirà Notepad++ per il commit. Dopo averlo chiuso, dovrai solo scrivere git push per finire.
+	
+	piccolo trucco:
+	Se vuoi anche la comodità del comando rapido dentro Git (l'alias che abbiamo creato prima), ora ti basta scrivere:
+		git up && git push origin main
+	Questo comando:
+	Esegue l'add e il commit (aprendo Notepad++).
+	Se chiudi Notepad++ e il commit va a buon fine, lancia subito il push
+

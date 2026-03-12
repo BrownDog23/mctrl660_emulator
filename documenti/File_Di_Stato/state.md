@@ -9,17 +9,17 @@ MCTRL660_STEP_NEXT
 
 PROJECT OBJECTIVE
 
-Reproduce the behaviour of a NovaStar MCTRL660 sending card in order
-to allow NovaLCT to interact with an emulator exactly as it would
-with the real hardware.
+Emulate a NovaStar MCTRL660 sending card closely enough that NovaLCT
+can interact with the emulator as if it were real hardware.
 
 The emulator must support:
 
-• device discovery
-• controller identity
-• routing configuration
-• screen topology reconstruction
-• hardware configuration commit
+- discovery
+- controller identity
+- routing configuration
+- screen topology reconstruction
+- receiving-card configuration flow
+- save / hardware commit flow
 
 ---------------------------------------------------------------------
 
@@ -28,23 +28,26 @@ CURRENT PROJECT STATUS
 Discovery layer
 Status: WORKING
 
-UDP discovery is correctly implemented and NovaLCT detects the emulator.
+UDP discovery is functioning correctly and NovaLCT detects the virtual
+controller.
 
 ---------------------------------------------------------------------
 
 TCP protocol session
 Status: WORKING
 
-NovaLCT opens a TCP connection on port 5200.
+NovaLCT opens a stable TCP connection on port 5200.
 
-Observed command pattern:
+Observed protocol flow:
 
-READ identity registers
-WRITE routing commands
-COMMIT configuration
-READ screen topology blocks
+identity reads
+routing writes
+commit
+screen topology reads
+receiving-card validation reads
+save/config writes
 
-Protocol framing (55AA / AA55) and checksum handling are stable.
+Packet framing and checksum handling are stable.
 
 ---------------------------------------------------------------------
 
@@ -53,147 +56,196 @@ Status: WORKING
 
 NovaLCT detects exactly one sending card.
 
+Current visible result:
 sending card = 1
 
-Identity registers implemented:
+Identity registers implemented and stable:
 
 0x00000002
 0x00000006
 0x00000016
 0x14000000
 
-These registers correctly emulate an MCTRL660 controller.
+Only dst=00 is exposed as a valid sender identity.
 
 ---------------------------------------------------------------------
 
 Routing commands
 Status: WORKING
 
-Routing commands are received through register:
+Routing records are received through:
 
 0x02000011
-
-Each command contains a 6-byte routing record.
-
-Example:
-
-260311183435
-
-Routing entries are stored in a dedicated command space
-and parsed into logical routing records.
 
 Commit command:
 
 0x02000018
 
-Triggers reconstruction of controller screen blocks.
+These registers are correctly handled as commands and are no longer
+written into generic memory.
+
+Routing commands are parsed into logical topology data.
 
 ---------------------------------------------------------------------
 
 Screen topology reconstruction
 Status: PARTIALLY WORKING
 
-Screen blocks currently generated:
+The emulator synthesizes the following controller-level blocks:
 
-0x02000000  (layout table)
-0x02000100  (cascade table)
-0x02020020  (summary table)
-0x08000000  (presence map)
+0x02000000
+0x02000100
+0x02020020
+0x08000000
 
-These blocks are synthesized from routing entries.
+These are rebuilt from routing entries and read back correctly by
+NovaLCT.
 
-NovaLCT successfully reads the blocks and the emulator
-rebuilds topology data dynamically.
+Current situation:
+- topology pipeline is functional
+- NovaLCT reads the blocks successfully
+- but topology is still not fully accepted
 
-However NovaLCT still rejects the configuration.
-
-Current result:
-
+Observed result:
 tiles > 9 = KO
 
-This indicates the topology serialization does not yet match
-the exact structure expected by the real controller.
+This remains the main unresolved functional blocker.
 
 ---------------------------------------------------------------------
 
-Hardware commit
-Status: NOT WORKING
+Receiving-card configuration flow
+Status: PARTIALLY WORKING
 
-Send to HW operation fails.
+Registers now handled:
 
-NovaLCT response:
+0x02100000
+0x05000000
+0x05065000
+0x05066000
 
-Failed to send data
+Important finding:
+NovaLCT writes a 256-byte blob to:
 
-This likely indicates that additional metadata or validation
-fields inside the topology blocks are missing or incorrect.
+0x05066000
+
+Observed header:
+
+53535045ea030000
+
+ASCII:
+SSPE
+
+This acts as a save/config marker and is now recognized by the emulator.
+
+The emulator now generates non-zero semantic configuration state after
+save marker acceptance.
 
 ---------------------------------------------------------------------
 
-Observed secondary behaviour
+Save / persistence branch
+Status: STABLE ENOUGH FOR CONTINUED WORK
 
-During testing the following behaviour was observed:
+A major milestone was achieved in this session.
 
-Send to HW → Failed
-Receiving Card Save → Failed
-Screen Connection Save → Failed
+Previous behaviour:
+after save failure NovaLCT often entered fallback mode,
+device count could jump from 1 to 20,
+and the software showed:
+"Please reconnect the device"
 
-After these failures NovaLCT changes the detected device count:
+Current behaviour with Works_24:
+- device remains visible
+- device count stays at 1
+- "Please reconnect the device" no longer appears
 
-1 → 20
+This means the save / persistence branch is significantly improved.
 
-Hypothesis:
+---------------------------------------------------------------------
 
-NovaLCT may enter a fallback re-enumeration mode after persistent
-configuration write failures.
+Validation registers
+Status: PARTIALLY UNDERSTOOD
 
-Further logging is required to understand the protocol branch
-executed in this situation.
+Important validation-related registers observed:
+
+0x0200000B
+0x02000022
+0x02000023
+0x0200009D
+0x02200117
+0x03100109
+
+Current strongest hypothesis:
+
+0x02200117 is a key receiving-card configuration validity flag.
+
+Problem:
+during topology validation NovaLCT still sees 0x02200117 at the wrong
+time / wrong state, so topology is likely rejected before the system is
+considered fully configured.
+
+---------------------------------------------------------------------
+
+Current stable base
+Status: Works_24
+
+Works_24 is now the best current baseline because it preserves:
+
+- device = 1
+- no reconnect collapse
+- no "Please reconnect the device"
+
+while still allowing continued investigation of the topology-validation
+problem.
+
+Works_23 is NOT the correct base because it exposed configured state too
+early and caused regression to fallback/re-enumeration.
 
 ---------------------------------------------------------------------
 
 CURRENT PRIMARY BLOCKER
 
-Exact structure of controller screen topology blocks.
+The remaining blocker is no longer generic save failure.
 
-The emulator must reproduce the same internal layout used by the
-MCTRL660 controller when serializing topology data.
+The remaining blocker is:
 
-Without this NovaLCT refuses to commit the configuration.
+screen topology acceptance timing and validation semantics
+
+Most likely centered around:
+- 0x02200117
+- relation between topology_count and config-valid state
+- order in which NovaLCT expects these states to become valid
 
 ---------------------------------------------------------------------
 
-NEXT INVESTIGATION TARGETS
+NEXT INVESTIGATION TARGET
 
-1. Refine screen topology block structure.
+Works_25
 
-2. Investigate validation registers near:
-
-0x02000000
-0x0200000B
-0x02000023
-0x0200009D
-
-3. Capture full protocol sequence during:
-
-Send to HW
-Receiving Card Save
-Screen Connection Save
-
-4. Analyze how NovaLCT validates topology before allowing commit.
+Focus:
+- keep Works_24 as baseline
+- preserve:
+  - device = 1
+  - no reconnect
+  - stable save flow
+- refine timing of:
+  0x02200117
+- make receiving-card configuration become valid at the correct moment
+  relative to topology validation, not too early and not too late
 
 ---------------------------------------------------------------------
 
 END STATE SNAPSHOT
 
-Discovery             OK
-TCP session           OK
-Controller identity   OK
-Routing commands      OK
-Commit command        OK
+Discovery                 OK
+TCP session               OK
+Controller identity       OK
+Routing commands          OK
+Commit command            OK
+Save/persistence branch   STABLE
+Device visibility         STABLE (device = 1)
 
-Screen topology       NOT VALIDATED
-Tiles > 9             FAIL
-Send to HW            FAIL
+Tiles > 9                 FAIL
+Send to HW                FAIL
+Topology acceptance       NOT YET SOLVED
 
 ---------------------------------------------------------------------
