@@ -23,13 +23,13 @@ The emulator must support:
 
 ---------------------------------------------------------------------
 
-CURRENT PROJECT STATUS
+CURRENT PROJECT STATUS (2026-03-13)
 
 Discovery layer
 Status: WORKING
 
-UDP discovery is functioning correctly and NovaLCT detects the virtual
-controller.
+UDP discovery is fully functional and NovaLCT reliably detects
+the virtual controller.
 
 ---------------------------------------------------------------------
 
@@ -38,7 +38,7 @@ Status: WORKING
 
 NovaLCT opens a stable TCP connection on port 5200.
 
-Observed protocol flow:
+Protocol flow confirmed:
 
 identity reads
 routing writes
@@ -56,24 +56,24 @@ Status: WORKING
 
 NovaLCT detects exactly one sending card.
 
-Current visible result:
+Observed result:
 sending card = 1
 
-Identity registers implemented and stable:
+Identity registers implemented:
 
 0x00000002
 0x00000006
 0x00000016
 0x14000000
 
-Only dst=00 is exposed as a valid sender identity.
+Only dst=00 is exposed as controller identity.
 
 ---------------------------------------------------------------------
 
-Routing commands
+Routing command handling
 Status: WORKING
 
-Routing records are received through:
+Routing entries are received through:
 
 0x02000011
 
@@ -81,49 +81,46 @@ Commit command:
 
 0x02000018
 
-These registers are correctly handled as commands and are no longer
-written into generic memory.
+These registers are treated as command registers
+and are not written to persistent memory.
 
-Routing commands are parsed into logical topology data.
+Routing commands are parsed into an internal topology model.
 
 ---------------------------------------------------------------------
 
 Screen topology reconstruction
 Status: PARTIALLY WORKING
 
-The emulator synthesizes the following controller-level blocks:
+The emulator synthesizes controller-level screen blocks:
 
 0x02000000
 0x02000100
 0x02020020
 0x08000000
 
-These are rebuilt from routing entries and read back correctly by
-NovaLCT.
+These blocks are reconstructed from routing entries and
+read back correctly by NovaLCT.
 
-Current situation:
-- topology pipeline is functional
-- NovaLCT reads the blocks successfully
-- but topology is still not fully accepted
+However the topology is still rejected during validation.
 
 Observed result:
+
 tiles > 9 = KO
 
-This remains the main unresolved functional blocker.
+This remains the primary functional blocker.
 
 ---------------------------------------------------------------------
 
 Receiving-card configuration flow
 Status: PARTIALLY WORKING
 
-Registers now handled:
+Registers implemented:
 
 0x02100000
 0x05000000
 0x05065000
 0x05066000
 
-Important finding:
 NovaLCT writes a 256-byte blob to:
 
 0x05066000
@@ -135,102 +132,105 @@ Observed header:
 ASCII:
 SSPE
 
-This acts as a save/config marker and is now recognized by the emulator.
-
-The emulator now generates non-zero semantic configuration state after
-save marker acceptance.
+This is interpreted as a configuration save marker and
+is now recognized by the emulator.
 
 ---------------------------------------------------------------------
 
 Save / persistence branch
-Status: STABLE ENOUGH FOR CONTINUED WORK
+Status: STABLE
 
-A major milestone was achieved in this session.
+Earlier versions triggered a fallback mode where NovaLCT
+re-enumerated devices and temporarily showed:
 
-Previous behaviour:
-after save failure NovaLCT often entered fallback mode,
-device count could jump from 1 to 20,
-and the software showed:
+device count = 20
 "Please reconnect the device"
 
-Current behaviour with Works_24:
-- device remains visible
-- device count stays at 1
-- "Please reconnect the device" no longer appears
+With Works_24 and later versions:
 
-This means the save / persistence branch is significantly improved.
+device remains visible
+device count stays at 1
+no reconnect message appears
+
+This branch is now considered stable enough for further work.
 
 ---------------------------------------------------------------------
 
 Validation registers
-Status: PARTIALLY UNDERSTOOD
+Status: INVESTIGATED
 
-Important validation-related registers observed:
+Registers examined:
 
+0x0200009D
+0x02200117
 0x0200000B
 0x02000022
 0x02000023
-0x0200009D
-0x02200117
-0x03100109
 
-Current strongest hypothesis:
+Experiments forcing these registers during routing
+did not change NovaLCT behaviour.
 
-0x02200117 is a key receiving-card configuration validity flag.
+Conclusion:
 
-Problem:
-during topology validation NovaLCT still sees 0x02200117 at the wrong
-time / wrong state, so topology is likely rejected before the system is
-considered fully configured.
+Topology acceptance is not controlled solely by these registers.
 
 ---------------------------------------------------------------------
 
-Current stable base
-Status: Works_24
+Topology probe behaviour
 
-Works_24 is now the best current baseline because it preserves:
+Experimental builds modifying the representation of early
+screen topology blocks revealed an important pattern.
 
-- device = 1
-- no reconnect collapse
-- no "Please reconnect the device"
+Baseline topology synthesis:
 
-while still allowing continued investigation of the topology-validation
-problem.
+NovaLCT accepts only two routing entries.
 
-Works_23 is NOT the correct base because it exposed configured state too
-early and caused regression to fallback/re-enumeration.
+Modified synthesis ("mirror_minimal"):
+
+NovaLCT continues routing up to four entries.
+
+Interpretation:
+
+NovaLCT performs an incremental topology validation using
+the first cabinets as a probe before accepting the full routing.
+
+---------------------------------------------------------------------
+
+Current baseline
+
+Works_24 remains the stable reference implementation.
+
+Later experimental builds investigate topology synthesis
+without breaking the stability achieved in Works_24.
 
 ---------------------------------------------------------------------
 
 CURRENT PRIMARY BLOCKER
 
-The remaining blocker is no longer generic save failure.
+Screen topology acceptance by NovaLCT.
 
-The remaining blocker is:
+Symptoms:
 
-screen topology acceptance timing and validation semantics
+tiles > 9 = KO
+Send to HW = Failed
 
-Most likely centered around:
-- 0x02200117
-- relation between topology_count and config-valid state
-- order in which NovaLCT expects these states to become valid
+Most likely cause:
+
+incorrect internal structure of controller screen blocks.
 
 ---------------------------------------------------------------------
 
 NEXT INVESTIGATION TARGET
 
-Works_25
+Improve topology synthesis model used to generate:
 
-Focus:
-- keep Works_24 as baseline
-- preserve:
-  - device = 1
-  - no reconnect
-  - stable save flow
-- refine timing of:
-  0x02200117
-- make receiving-card configuration become valid at the correct moment
-  relative to topology validation, not too early and not too late
+0x02000000
+0x02000100
+0x02020020
+0x08000000
+
+Focus on the structure of the first cabinets which NovaLCT
+appears to use as a topology validation probe.
 
 ---------------------------------------------------------------------
 

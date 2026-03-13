@@ -341,3 +341,166 @@ Send to HW
       Device list rebuild
 
 This behaviour suggests NovaLCT may attempt a fallback rescan procedure when configuration persistence fails.
+
+
+=====================================================================
+NEW FINDINGS FROM EMULATOR DEVELOPMENT
+=====================================================================
+
+These findings refine the understanding of the topology validation
+phase inside NovaLCT.
+
+------------------------------------------------------------
+A. TOPOLOGY PROBE MECHANISM
+------------------------------------------------------------
+
+NovaLCT does not immediately send the full routing table.
+
+Instead it performs a progressive probe:
+
+route1
+validation read
+route2
+validation read
+commit
+possible abort
+
+Observed behaviour:
+
+baseline emulator
+    route_writes = 2
+    commit
+    connection reset by NovaLCT
+
+mirror_minimal experiment
+    route_writes = 4
+    commit
+    connection reset
+
+Conclusion:
+
+NovaLCT performs a topology plausibility check on
+the first cabinets before continuing.
+
+
+------------------------------------------------------------
+B. VALIDATION REGISTERS ARE NOT PRIMARY GATE
+------------------------------------------------------------
+
+Registers tested:
+
+0x0200009D
+0x02200117
+0x0200000B
+0x02000022
+0x02000023
+
+Experiments forcing these registers showed:
+
+forcing 0200009D → no change
+forcing 02200117 → no change
+
+Conclusion:
+
+Validation registers are secondary indicators,
+not the main topology acceptance gate.
+
+
+------------------------------------------------------------
+C. SCREEN BLOCK STRUCTURE MATTERS
+------------------------------------------------------------
+
+Blocks synthesized by controller:
+
+0x02000000
+0x02000100
+0x02020020
+0x08000000
+
+These blocks are generated from routing commands.
+
+Experiments modifying the representation of the
+first cabinets changed NovaLCT behaviour:
+
+baseline
+    abort after 2 cabinets
+
+mirror_minimal
+    abort after 4 cabinets
+
+zero_tail
+    abort after 2 cabinets
+
+Conclusion:
+
+NovaLCT evaluates the internal coherence
+of these blocks during topology construction.
+
+
+------------------------------------------------------------
+D. LIKELY INTERNAL CONTROLLER MODEL
+------------------------------------------------------------
+
+Routing commands
+        │
+        ▼
+internal topology model
+        │
+        ▼
+controller screen blocks
+        │
+        ▼
+NovaLCT validation
+
+
+Possible internal fields:
+
+cabinet geometry
+cascade order
+sender port mapping
+chain length
+tile coordinates
+
+
+------------------------------------------------------------
+E. CURRENT WORKING HYPOTHESIS
+------------------------------------------------------------
+
+NovaLCT performs progressive validation:
+
+1) receive first routing commands
+2) reconstruct topology
+3) verify cabinet geometry coherence
+4) continue routing if valid
+
+Failure occurs when the generated topology
+is inconsistent with NovaLCT expectations.
+
+
+------------------------------------------------------------
+F. CURRENT PROJECT STATUS
+------------------------------------------------------------
+
+Discovery                    OK
+TCP session                  OK
+Identity enumeration         OK
+Sending card detected        OK
+
+Topology synthesis           PARTIAL
+
+Observed behaviour:
+
+tiles > 9                    FAIL
+Send to HW                   FAIL
+
+However:
+
+routing acceptance improved
+from 2 cabinets → 4 cabinets
+using simplified topology model.
+
+
+Next investigation direction:
+
+improve topology synthesis model
+for the first cabinets.

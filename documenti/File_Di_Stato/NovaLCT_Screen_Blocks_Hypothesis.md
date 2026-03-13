@@ -567,3 +567,116 @@ tiles > 9 OK
 Send to HW OK
 
 =====================================================================
+
+
+---
+
+# New Findings — Screen Block Behaviour (Works_26 → Works_33)
+
+## Observation
+
+NovaLCT reads controller screen blocks during
+screen routing operations.
+
+Registers involved:
+
+0x02000000
+0x02000100
+0x02020020
+0x08000000
+
+
+These reads occur **before routing commit**.
+
+
+## Behaviour During Routing
+
+Routing commands are written through:
+
+0x02000011
+
+Followed by:
+
+0x02000018 (commit)
+
+
+However NovaLCT already reads screen blocks
+before commit.
+
+
+## Experimental Variations
+
+Different synthesis strategies were tested.
+
+### Baseline
+
+Standard topology reconstruction.
+
+Observed behaviour:
+
+routing accepted: 2 entries
+
+
+### Mirror Minimal
+
+Simplified replication of early cabinet structure.
+
+Observed behaviour:
+
+routing accepted: 4 entries
+
+
+### Zero Tail
+
+Remaining entries filled with zeros.
+
+Observed behaviour:
+
+routing accepted: 2 entries
+
+
+## Interpretation
+
+NovaLCT validates topology incrementally.
+
+The first cabinets appear to function as a
+**topology probe**.
+
+NovaLCT likely verifies:
+
+geometry coherence  
+cascade continuity  
+cabinet ordering  
+
+
+## Hypothesis
+
+Screen blocks may contain a compact representation
+of the topology model.
+
+Possible structure:
+
+02000000 → cabinet layout table  
+02000100 → cascade chain table  
+02020020 → topology summary  
+08000000 → device presence / descriptors
+
+
+## Implication for Emulator
+
+The emulator must generate screen blocks
+based on a coherent internal topology model.
+
+Direct memory mirroring is insufficient.
+
+
+## Current Focus
+
+Improve the structure of the first cabinets
+inside the synthesized screen blocks.
+
+This should allow NovaLCT to accept
+routing tables larger than 9 tiles.
+
+
+================================================================

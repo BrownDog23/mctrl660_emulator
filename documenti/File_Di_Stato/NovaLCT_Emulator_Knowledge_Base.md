@@ -337,5 +337,140 @@ Next investigation areas:
 
 ---
 
+---
+
+# UPDATE — Emulator Development (Works_26 → Works_33)
+
+## Background
+
+After stabilizing the controller session and screen block synthesis
+in Works_24, additional investigations were performed to understand
+why NovaLCT rejects routing configurations beyond tile index 9.
+
+Observed behaviour:
+
+sending card = 1
+tiles > 9 = KO
+Send to HW = NO
+
+
+## Validation Register Experiments
+
+The following registers were suspected as topology validation gates:
+
+0x0200009D
+0x02200117
+0x0200000B
+0x02000022
+0x02000023
+
+Multiple emulator builds attempted to force these values
+during routing and commit phases.
+
+Results:
+
+forcing 0x0200009D → no behavioural change
+forcing 0x02200117 → no behavioural change
+
+Conclusion:
+
+These registers are **not the primary acceptance gate**
+for screen topology.
+
+
+## Topology Probe Behaviour
+
+Analysis of routing traffic revealed that NovaLCT performs
+a progressive topology probe.
+
+Typical sequence observed:
+
+READ screen blocks
+WRITE route entry
+WRITE route entry
+READ validation registers
+WRITE route entry
+WRITE route entry
+COMMIT
+
+
+Baseline emulator behaviour:
+
+route writes accepted: 2
+NovaLCT aborts session
+
+
+Experimental builds modifying screen block structure produced:
+
+route writes accepted: 4
+NovaLCT aborts session
+
+
+Interpretation:
+
+NovaLCT evaluates the internal consistency of the topology
+generated from the first routing entries.
+
+
+## Screen Block Synthesis
+
+Controller readback blocks involved:
+
+0x02000000
+0x02000100
+0x02020020
+0x08000000
+
+These blocks are not simple memory storage but are
+generated representations of the routing topology.
+
+They likely encode:
+
+- cabinet geometry
+- cascade order
+- sender port mapping
+- receiving card index
+- tile coordinate system
+
+
+## Key Insight
+
+The emulator is no longer blocked by register validation.
+
+The current blocker is:
+
+**topology representation inside screen blocks.**
+
+
+## Current Project Status
+
+Discovery UDP: OK  
+TCP session: OK  
+Controller detection: OK  
+Sending card: OK  
+
+Topology acceptance: PARTIAL
+
+
+Observed limitation:
+
+tiles beyond index 9 rejected
+
+
+## Next Development Direction
+
+Improve topology synthesis model
+used to generate controller screen blocks.
+
+Focus area:
+
+first cabinets used by NovaLCT
+as topology validation probe.
+
+
+---
+
 # Parola di ripartenza
 MCTRL660_STEP_NEXT
+
+

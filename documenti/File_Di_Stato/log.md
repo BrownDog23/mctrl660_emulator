@@ -765,3 +765,105 @@ achieved in Works_24.
 
 End of session.
 ---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+NovaLCT Emulator – Development Session Update
+Date: 2026-03-13
+Session: DEV SESSION 5
+Reference keyword: MCTRL660_STEP_NEXT
+---------------------------------------------------------------------
+
+Current development phase:
+Topology validation behaviour and screen block semantics.
+
+During this session multiple experimental builds were tested
+in order to identify the mechanism used by NovaLCT to accept
+or reject screen routing topology.
+
+Development iterations tested:
+
+Works_25
+Introduced first timing adjustments for validation register
+0x02200117.
+
+Result:
+No improvement in topology acceptance.
+Tiles > 9 remained rejected.
+
+Works_26 → Works_28
+Experiments focused on validation registers and post-routing
+state exposure.
+
+Registers tested:
+
+0x0200009D
+0x02200117
+
+These values were forced in different routing phases
+(route1, route2, commit).
+
+Result:
+No behavioural change in NovaLCT.
+
+Conclusion:
+Validation registers alone do not control topology acceptance.
+
+Works_29 → Works_32
+Focus shifted from validation registers to the internal
+representation of screen topology blocks.
+
+Experiments modified how the emulator synthesizes the
+controller-level screen blocks:
+
+0x02000000
+0x02000100
+0x02020020
+0x08000000
+
+Different strategies tested:
+
+baseline
+mirror_minimal
+zero_tail
+
+Observed behaviour:
+
+baseline
+NovaLCT accepts only the first two routing entries.
+
+mirror_minimal
+NovaLCT continues routing up to four entries.
+
+zero_tail
+Behaviour identical to baseline (two entries).
+
+Interpretation:
+
+NovaLCT appears to perform an incremental topology probe,
+evaluating the coherence of the first cabinets before
+accepting further routing entries.
+
+This strongly suggests that topology acceptance is governed
+by the internal structure of the screen blocks rather than
+individual validation registers.
+
+Current experimental direction:
+
+expand topology synthesis logic for early cabinets
+to produce a coherent topology model that NovaLCT
+will accept beyond tile index 9.
+
+Current project status remains:
+
+device detected
+sending card = 1
+stable TCP session
+
+Remaining issues:
+
+tiles > 9 = KO
+Send to HW = Failed
+
+End of session.
+---------------------------------------------------------------------
+

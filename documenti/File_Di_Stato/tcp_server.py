@@ -1,4 +1,4 @@
-# VERSION tcp_server.py: Works_24
+# VERSION tcp_server.py: Works_33
 
 import socket
 import argparse
@@ -38,6 +38,9 @@ CTRL_BLOCKS = {}
 COMMIT_SEEN = False
 SCREEN_BLOCKS_READY = False
 
+# Works_33: experiment on first two cabinets only
+FIRST2_BUILDER_MODE = "baseline"  # baseline | mirror_minimal | zero_tail
+
 ROUTING_WRITES = []
 SCREEN_WRITES = []
 CABINETS = []
@@ -45,6 +48,61 @@ CABINETS = []
 RCFG_PRESENT = {}         # semantic "configured and coherent"
 RCFG_SAVE_MARK = {}       # raw 0x05066000 save marker
 RCFG_POSTSAVE_READS = {}  # debug counter
+RCFG_ACCEPTED = {}        # sticky acceptance state (never regress within session)
+SPECIAL_BRANCH_WRITES = []
+
+CONNECTION_SEQ = 0
+ACTIVE_CONN_ID = 0
+SESSION_STATE = defaultdict(lambda: {
+    "route_writes": 0,
+    "commits": 0,
+    "validation_reads": 0,
+    "screen_reads": 0,
+    "rcfg_reads": 0,
+    "rcfg_writes": 0,
+    "special_writes": 0,
+    "first_route_regs": [],
+    "first_validation": [],
+    "first_screen_reads": [],
+    "early_abort_suspected": False,
+})
+
+
+def session_state():
+    return SESSION_STATE[ACTIVE_CONN_ID]
+
+
+def session_note(kind: str, payload: str):
+    st = session_state()
+    bucket = None
+    if kind == "route":
+        bucket = st["first_route_regs"]
+    elif kind == "validation":
+        bucket = st["first_validation"]
+    elif kind == "screen":
+        bucket = st["first_screen_reads"]
+    if bucket is not None and len(bucket) < 12:
+        bucket.append(payload)
+
+
+def dump_session_summary(conn_id: int, reason: str):
+    st = SESSION_STATE.get(conn_id)
+    if not st:
+        return
+    print(f"[EMU] ---- SESSION {conn_id} SUMMARY ({reason}) ----")
+    print(f"[EMU] first2_builder={FIRST2_BUILDER_MODE}")
+    print(
+        f"[EMU] route_writes={st['route_writes']} commits={st['commits']} "
+        f"validation_reads={st['validation_reads']} screen_reads={st['screen_reads']} "
+        f"rcfg_reads={st['rcfg_reads']} rcfg_writes={st['rcfg_writes']} "
+        f"special_writes={st['special_writes']} early_abort_suspected={1 if st['early_abort_suspected'] else 0}"
+    )
+    if st['first_route_regs']:
+        print(f"[EMU] first_route_regs={' | '.join(st['first_route_regs'])}")
+    if st['first_validation']:
+        print(f"[EMU] first_validation={' | '.join(st['first_validation'])}")
+    if st['first_screen_reads']:
+        print(f"[EMU] first_screen_reads={' | '.join(st['first_screen_reads'])}")
 
 
 def checksum_5555(frame_wo_checksum: bytes) -> int:
@@ -150,6 +208,18 @@ def hex_full(data: bytes) -> str:
     return data.hex()
 
 
+def dump_bytes_by8(label: str, data: bytes, limit: int = 64):
+    chunked = []
+    for i in range(0, min(len(data), limit), 8):
+        chunk = data[i:i+8]
+        chunked.append(f"{i:02X}:{chunk.hex()}")
+    print(f"[EMU] {label} {' | '.join(chunked)}")
+
+
+def first2_builder_active():
+    return FIRST2_BUILDER_MODE != "baseline"
+
+
 def is_sender_identity_reg(reg, n):
     return (
         (reg == 0x00000002 and n == 2) or
@@ -206,6 +276,32 @@ def bump_postsave_read(dev, port, rcvIndex, dst):
     RCFG_POSTSAVE_READS[key] = postsave_read_count(dev, port, rcvIndex, dst) + 1
 
 
+def rcfg_accepted(dev, port, rcvIndex, dst):
+    return bool(RCFG_ACCEPTED.get(mem_key(dev, port, rcvIndex, dst), False))
+
+
+def mark_rcfg_accepted(dev, port, rcvIndex, dst, reason=""):
+    key = mem_key(dev, port, rcvIndex, dst)
+    if not RCFG_ACCEPTED.get(key, False):
+        RCFG_ACCEPTED[key] = True
+        extra = f" reason={reason}" if reason else ""
+        print(
+            f"[EMU] RCFG ACCEPTED dev={dev:02X} port={port:02X} "
+            f"rcv={rcvIndex:04X} dst={dst:02X}{extra}"
+        )
+
+
+def protocol_branch_key(info):
+    return info["dev"] == 0x01 and info["port"] == 0xFF and info["rcvIndex"] == 0xFFFF
+
+
+def branch_seen_after_save(dst):
+    for item in reversed(SPECIAL_BRANCH_WRITES):
+        if item["dst"] in (dst, 0xFF):
+            return True
+    return False
+
+
 def build_runtime_02100000(dev, port, rcvIndex, dst):
     count = len(CABINETS) & 0xFF
     return bytes([
@@ -247,17 +343,34 @@ def rcfg_blocks_nonzero(dev, port, rcvIndex, dst):
     return any(a) and any(b) and any(c)
 
 
+def topology_ready(dev, port, rcvIndex, dst):
+    return len(CABINETS) > 0 and COMMIT_SEEN
+
+
 def rcfg_configured(dev, port, rcvIndex, dst):
     """
-    Works_24 rule:
+    Works_33 rule:
     configured only if:
+      - semantic present flag exists
       - save marker exists
-      - topology exists
+      - topology exists and has been committed
       - derived config blocks are non-zero
     """
     key = mem_key(dev, port, rcvIndex, dst)
     semantic = bool(RCFG_PRESENT.get(key, False))
-    return semantic and save_marker_present(dev, port, rcvIndex, dst) and len(CABINETS) > 0 and rcfg_blocks_nonzero(dev, port, rcvIndex, dst)
+    return semantic and save_marker_present(dev, port, rcvIndex, dst) and topology_ready(dev, port, rcvIndex, dst) and rcfg_blocks_nonzero(dev, port, rcvIndex, dst)
+
+
+def rcfg_acceptance_ready(dev, port, rcvIndex, dst):
+    if rcfg_accepted(dev, port, rcvIndex, dst):
+        return True
+    if not rcfg_configured(dev, port, rcvIndex, dst):
+        return False
+    if postsave_read_count(dev, port, rcvIndex, dst) >= 1:
+        return True
+    if branch_seen_after_save(dst):
+        return True
+    return False
 
 
 def refresh_rcfg_semantic_state():
@@ -266,7 +379,7 @@ def refresh_rcfg_semantic_state():
     """
     for key in list(RCFG_PRESENT.keys()):
         dev, port, rcv, dst = key
-        RCFG_PRESENT[key] = save_marker_present(dev, port, rcv, dst) and len(CABINETS) > 0 and rcfg_blocks_nonzero(dev, port, rcv, dst)
+        RCFG_PRESENT[key] = save_marker_present(dev, port, rcv, dst) and topology_ready(dev, port, rcv, dst) and rcfg_blocks_nonzero(dev, port, rcv, dst)
 
 
 def seed_rcfg_blocks(dev, port, rcvIndex, dst, save_blob=None):
@@ -289,12 +402,23 @@ def mark_rcfg_saved(dev, port, rcvIndex, dst, save_blob):
     seed_rcfg_blocks(dev, port, rcvIndex, dst, save_blob=save_blob)
 
     # semantic exposure delayed until coherence rule passes
-    RCFG_PRESENT[key] = save_marker_present(dev, port, rcvIndex, dst) and len(CABINETS) > 0 and rcfg_blocks_nonzero(dev, port, rcvIndex, dst)
+    RCFG_PRESENT[key] = save_marker_present(dev, port, rcvIndex, dst) and topology_ready(dev, port, rcvIndex, dst) and rcfg_blocks_nonzero(dev, port, rcvIndex, dst)
 
 
 def validation_read(dev, port, rcvIndex, dst, reg, n):
     route_count = len(CABINETS)
     configured = rcfg_configured(dev, port, rcvIndex, dst)
+    accepted = rcfg_acceptance_ready(dev, port, rcvIndex, dst)
+
+    if accepted:
+        mark_rcfg_accepted(dev, port, rcvIndex, dst, reason="validation")
+
+    print(
+        f"[EMU] VALIDATION STATE reg=0x{reg:08X} dst={dst:02X} route_count={route_count} "
+        f"commit={1 if COMMIT_SEEN else 0} configured={1 if configured else 0} "
+        f"accepted={1 if accepted else 0} save={1 if save_marker_present(dev, port, rcvIndex, dst) else 0} "
+        f"postreads={postsave_read_count(dev, port, rcvIndex, dst)}"
+    )
 
     if reg == 0x0200000B and n == 1:
         return bytes([0x01 if route_count > 0 else 0x00])
@@ -306,10 +430,10 @@ def validation_read(dev, port, rcvIndex, dst, reg, n):
         return bytes([(route_count >> 8) & 0xFF])
 
     if reg == 0x0200009D and n == 1:
-        return bytes([0x01 if (COMMIT_SEEN or configured) else 0x00])
+        return bytes([0x01 if (COMMIT_SEEN or configured or accepted or rcfg_accepted(dev, port, rcvIndex, dst)) else 0x00])
 
     if reg == 0x02200117 and n == 1:
-        return bytes([0x01 if configured else 0x00])
+        return bytes([0x01 if accepted else 0x00])
 
     if reg == 0x03100109 and n == 1:
         return b"\x01"
@@ -533,6 +657,7 @@ def build_controller_blocks():
     refresh_rcfg_semantic_state()
 
     print(f"[EMU] Rebuilding controller screen blocks from {len(CABINETS)} cabinet entries")
+    print(f"[EMU] FIRST4_BUILDER_MODE={FIRST2_BUILDER_MODE}")
     dump_routing_writes()
     dump_screen_writes()
     dump_cabinets()
@@ -581,29 +706,92 @@ def build_controller_blocks():
         cascade_items = sorted(items, key=lambda e: (e["cascade_order"], e["route_word"], e["tile_index"]))
 
         off0 = 16
-        for item in layout_items:
+        for idx, item in enumerate(layout_items):
             packed = pack_layout_entry(item)
+            if FIRST2_BUILDER_MODE == "mirror_minimal" and idx < 4:
+                packed = bytes([
+                    item["sender_port"] & 0xFF,
+                    item["tile_index"] & 0xFF,
+                    item["tile_index"] & 0xFF,
+                    item["cascade_order"] & 0xFF,
+                    0x00, 0x00, 0x00, 0x00,
+                ])
+            elif FIRST2_BUILDER_MODE == "zero_tail" and idx < 4:
+                packed = bytes([
+                    item["layout_x"] & 0xFF,
+                    item["layout_y"] & 0xFF,
+                    item["sender_port"] & 0xFF,
+                    item["cascade_order"] & 0xFF,
+                    0x00, 0x00, 0x00, 0x00,
+                ])
             if off0 + 8 <= 256:
                 blk_02000000[off0:off0 + 8] = packed
             off0 += 8
 
         off1 = 16
-        for item in cascade_items:
+        for idx, item in enumerate(cascade_items):
             packed = pack_cascade_entry(item)
+            if FIRST2_BUILDER_MODE == "mirror_minimal" and idx < 4:
+                packed = bytes([
+                    item["sender_port"] & 0xFF,
+                    item["tile_index"] & 0xFF,
+                    item["cascade_order"] & 0xFF,
+                    0x00,
+                    item["raw_x"] & 0xFF,
+                    item["raw_y"] & 0xFF,
+                    0x00, 0x00,
+                ])
+            elif FIRST2_BUILDER_MODE == "zero_tail" and idx < 4:
+                packed = bytes([
+                    item["sender_port"] & 0xFF,
+                    item["cascade_order"] & 0xFF,
+                    item["chain_index"] & 0xFF,
+                    item["tile_index"] & 0xFF,
+                    0x00, 0x00, 0x00, 0x00,
+                ])
             if off1 + 8 <= 256:
                 blk_02000100[off1:off1 + 8] = packed
             off1 += 8
 
         off2 = 8
-        for item in cascade_items:
+        for idx, item in enumerate(cascade_items):
             packed = pack_summary_entry(item)
+            if FIRST2_BUILDER_MODE == "mirror_minimal" and idx < 4:
+                packed = bytes([
+                    item["sender_port"] & 0xFF,
+                    item["tile_index"] & 0xFF,
+                    item["cascade_order"] & 0xFF,
+                    0x01,
+                ])
+            elif FIRST2_BUILDER_MODE == "zero_tail" and idx < 4:
+                packed = bytes([
+                    item["sender_port"] & 0xFF,
+                    item["cascade_order"] & 0xFF,
+                    0x00,
+                    0x01,
+                ])
             if off2 + 4 <= 64:
                 blk_02020020[off2:off2 + 4] = packed
             off2 += 4
 
-        for idx, _ in enumerate(cascade_items):
-            if idx < 256:
-                blk_08000000[idx] = 0x01
+        for idx, item in enumerate(cascade_items):
+            if idx < 456:
+                if FIRST2_BUILDER_MODE == "baseline":
+                    blk_08000000[idx] = 0x01
+                elif FIRST2_BUILDER_MODE == "mirror_minimal":
+                    blk_08000000[idx*4:idx*4+4] = bytes([
+                        item["sender_port"] & 0xFF,
+                        item["tile_index"] & 0xFF,
+                        item["cascade_order"] & 0xFF,
+                        0x01,
+                    ])
+                elif FIRST2_BUILDER_MODE == "zero_tail":
+                    blk_08000000[idx*4:idx*4+4] = bytes([
+                        item["sender_port"] & 0xFF,
+                        item["cascade_order"] & 0xFF,
+                        0x00,
+                        0x01,
+                    ])
 
         ctrl_block_write(dev, port, 0x02000000, bytes(blk_02000000))
         ctrl_block_write(dev, port, 0x02000100, bytes(blk_02000100))
@@ -611,6 +799,7 @@ def build_controller_blocks():
         ctrl_block_write(dev, port, 0x08000000, bytes(blk_08000000))
 
         print(f"[EMU] Screen blocks rebuilt for dev={dev:02X} port={port:02X} entries={count}")
+        print(f"[EMU] FIRST4 active_mode={FIRST2_BUILDER_MODE} shaped_entries={min(count, 4)}")
         print(f"[EMU] 0x02000000 head={hex_preview(bytes(blk_02000000))}")
         print(f"[EMU] 0x02000100 head={hex_preview(bytes(blk_02000100))}")
         print(f"[EMU] 0x02020020 head={hex_preview(bytes(blk_02020020))}")
@@ -622,8 +811,14 @@ def build_controller_blocks():
             print(f"[EMU_FULL] 0x02020020={hex_full(bytes(blk_02020020))}")
             print(f"[EMU_FULL] 0x08000000={hex_full(bytes(blk_08000000))}")
 
-    SCREEN_BLOCKS_READY = True
+        if count <= 4:
+            print("[EMU] ---- FIRST4 STRUCTURED DUMP ----")
+            dump_bytes_by8("02000000", bytes(blk_02000000), limit=48)
+            dump_bytes_by8("02000100", bytes(blk_02000100), limit=48)
+            dump_bytes_by8("02020020", bytes(blk_02020020), limit=32)
+            dump_bytes_by8("08000000", bytes(blk_08000000), limit=32)
 
+    SCREEN_BLOCKS_READY = True
 
 def ensure_screen_blocks_ready():
     if not SCREEN_BLOCKS_READY:
@@ -634,6 +829,30 @@ def is_sspe_marker(blob: bytes) -> bool:
     return len(blob) >= 8 and blob[:4] == b"SSPE" and blob[4:8] == b"\xEA\x03\x00\x00"
 
 
+def store_special_branch(info):
+    st = session_state()
+    st["special_writes"] += 1
+    SPECIAL_BRANCH_WRITES.append({
+        "serial": info["serial"],
+        "dst": info["dst"],
+        "reg": info["reg"],
+        "n": info["n"],
+        "data": bytes(info["write_data"]),
+    })
+    SPECIAL_BRANCH_WRITES[:] = SPECIAL_BRANCH_WRITES[-128:]
+    print(
+        f"[EMU] SPECIAL BRANCH WRITE dst={info['dst']:02X} reg=0x{info['reg']:08X} "
+        f"len={info['n']} data={hex_preview(info['write_data'])}"
+    )
+
+    # Conservative rule: once NovaLCT enters this branch after save, keep the main
+    # controller validation state sticky instead of regressing to 0 mid-session.
+    for key in list(RCFG_SAVE_MARK.keys()):
+        dev, port, rcv, dst = key
+        if dst in (0x00, 0x01):
+            mark_rcfg_accepted(dev, port, rcv, dst, reason="special-branch")
+
+
 def store_rcfg(info):
     reg = info["reg"]
     wd = info["write_data"]
@@ -642,6 +861,8 @@ def store_rcfg(info):
     rcv = info["rcvIndex"]
     dst = info["dst"]
 
+    st = session_state()
+    st["rcfg_writes"] += 1
     mem_write(dev, port, rcv, dst, reg, wd)
 
     if dst == 0xFF:
@@ -675,6 +896,9 @@ def handle_command_register_write(info):
     wd = info["write_data"]
 
     if reg == 0x02000011:
+        st = session_state()
+        st["route_writes"] += 1
+        session_note("route", f"0x{info['reg']:08X}@p{info['port']:02X}/r{info['rcvIndex']:04X}:{wd.hex()}")
         ROUTING_WRITES.append({
             "dev": info["dev"],
             "port": info["port"],
@@ -695,6 +919,8 @@ def handle_command_register_write(info):
         return True
 
     if reg == 0x02000018:
+        st = session_state()
+        st["commits"] += 1
         COMMIT_SEEN = True
         SCREEN_BLOCKS_READY = False
 
@@ -740,6 +966,10 @@ def build_ack(req, allowed_dst):
             if handle_command_register_write(info):
                 return finalize_ack(ack)
 
+            if protocol_branch_key(info):
+                store_special_branch(info)
+                return finalize_ack(ack)
+
             if info["reg"] in RCFG_REGS:
                 store_rcfg(info)
                 return finalize_ack(ack)
@@ -782,8 +1012,14 @@ def build_ack(req, allowed_dst):
                 f"[EMU] POSTSAVE READ#{postsave_read_count(info['dev'], info['port'], info['rcvIndex'], info['dst'])} "
                 f"reg=0x{info['reg']:08X} dst={info['dst']:02X} data={hex_preview(data)}"
             )
+            if info["reg"] in (0x05000000, 0x05065000, 0x02100000, 0x0200009D):
+                if rcfg_configured(info["dev"], info["port"], info["rcvIndex"], info["dst"]):
+                    mark_rcfg_accepted(info["dev"], info["port"], info["rcvIndex"], info["dst"], reason=f"postsave-reg-0x{info['reg']:08X}")
 
         if info["reg"] in KEY_SCREEN_REGS:
+            st = session_state()
+            st["screen_reads"] += 1
+            session_note("screen", f"0x{info['reg']:08X}/n={info['n']}")
             print(
                 f"[EMU] READBACK reg=0x{info['reg']:08X} "
                 f"dev={info['dev']:02X} port={info['port']:02X} "
@@ -792,6 +1028,11 @@ def build_ack(req, allowed_dst):
             )
 
         if info["reg"] in VALIDATION_REGS:
+            st = session_state()
+            st["validation_reads"] += 1
+            session_note("validation", f"0x{info['reg']:08X}={data.hex()}")
+            if st["route_writes"] <= 2 and st["commits"] >= 1 and len(CABINETS) <= 2:
+                st["early_abort_suspected"] = True
             print(
                 f"[EMU] VALIDATION READ reg=0x{info['reg']:08X} "
                 f"dev={info['dev']:02X} port={info['port']:02X} "
@@ -800,6 +1041,8 @@ def build_ack(req, allowed_dst):
             )
 
         if info["reg"] in RCFG_REGS:
+            st = session_state()
+            st["rcfg_reads"] += 1
             print(
                 f"[EMU] RCFG READ reg=0x{info['reg']:08X} "
                 f"dev={info['dev']:02X} port={info['port']:02X} "
@@ -817,20 +1060,30 @@ def main():
     ap.add_argument("--host", default="0.0.0.0")
     ap.add_argument("--port", type=int, default=5200)
     ap.add_argument("--allowed-dst", default="00,01,FF")
+    ap.add_argument("--first2-builder", default="baseline", choices=["baseline", "mirror_minimal", "zero_tail"])
     args = ap.parse_args()
+
+    global FIRST2_BUILDER_MODE
+    FIRST2_BUILDER_MODE = args.first2_builder
 
     allowed_dst = set(int(x.strip(), 16) for x in args.allowed_dst.split(","))
 
     print(f"[TCP] Listening on {args.host}:{args.port} allowed_dst={sorted(allowed_dst)}")
+    print(f"[EMU] FIRST4_BUILDER_MODE={FIRST2_BUILDER_MODE}")
 
     s = socket.socket()
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind((args.host, args.port))
     s.listen(10)
 
+    global CONNECTION_SEQ, ACTIVE_CONN_ID
+
     while True:
         c, a = s.accept()
-        print("[TCP] Conn from", a)
+        CONNECTION_SEQ += 1
+        ACTIVE_CONN_ID = CONNECTION_SEQ
+        SESSION_STATE[ACTIVE_CONN_ID]  # ensure created
+        print(f"[TCP] Conn#{ACTIVE_CONN_ID} from {a}")
         buf = bytearray()
 
         try:
@@ -858,8 +1111,10 @@ def main():
 
         except Exception as e:
             print("[TCP] ERROR:", e)
+            dump_session_summary(ACTIVE_CONN_ID, reason=f"exception:{e}")
 
         finally:
+            dump_session_summary(ACTIVE_CONN_ID, reason="close")
             c.close()
 
 
