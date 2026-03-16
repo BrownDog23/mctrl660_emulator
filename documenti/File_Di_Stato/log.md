@@ -867,3 +867,105 @@ Send to HW = Failed
 End of session.
 ---------------------------------------------------------------------
 
+---------------------------------------------------------------------
+NovaLCT Emulator – Development Session Update
+Date: 2026-03-16
+Session: DEV SESSION 6
+Reference keyword: MCTRL660_STEP_NEXT
+---------------------------------------------------------------------
+
+Current development phase:
+Topology probe investigation and screen-block serialization analysis.
+
+During this phase multiple experimental builds were tested in order to
+identify which part of the synthesized controller-level topology blocks
+is responsible for NovaLCT rejecting the routing process early.
+
+Key experimental result:
+
+Works_33 remained the best experimental branch.
+
+Observed behaviour with Works_33:
+NovaLCT accepted routing up to 5 route writes before aborting.
+
+Subsequent builds tested multiple isolated and combined hypotheses:
+
+Works_34b
+Attempted to extend the successful shaping pattern from 4 to 8 cabinets.
+Result: regression to 2 route writes.
+
+Works_35
+Kept early shaping but enriched summary/descriptor blocks.
+Result: no improvement, regression to short routing.
+
+Works_36
+Changed only 0x08000000 relative to the better branch.
+Result: no improvement.
+
+Works_37
+Restored 0x02000100 in W33 style while keeping later changes.
+Result: no improvement.
+
+Works_38
+Extended strict W33-style serialization linearly to more cabinets.
+Result: regression to 1 route write.
+
+Works_39
+Introduced explicit topology-model logging and single-source-of-truth
+serialization for all 4 screen blocks.
+Result: useful diagnostic output, but routing still stopped at 2 entries.
+
+Works_40
+Preserved route arrival order and removed cabinet sorting.
+Result: no improvement; sorting is not the primary blocker.
+
+Technical conclusions now considered strong:
+
+1. Validation registers are not the primary acceptance gate.
+   In particular:
+   - 0x0200009D is not sufficient
+   - 0x02200117 is not sufficient
+
+2. A single screen block is not the sole blocker.
+   The rejection depends on the combined coherence of:
+   - 0x02000000
+   - 0x02000100
+   - 0x02020020
+   - 0x08000000
+
+3. Sorting order is not the main issue.
+   Preserving route arrival order did not unlock further routing.
+
+4. The best observed improvement remains Works_33.
+   Therefore Works_33 should be frozen as the best current
+   experimental reference.
+
+Recommended next direction:
+
+Stop incremental byte-level patching of individual blocks.
+
+Start a new reverse engineering phase focused on the semantic meaning
+of routing payload fields and their true topological interpretation.
+
+Main target for next session:
+
+route payload semantics:
+- x
+- y
+- c
+- tile_index
+- cascade_order
+- layout_x / layout_y
+
+Goal:
+understand the actual topology model NovaLCT expects,
+then regenerate all screen blocks from that semantic model.
+
+Current user-visible status remains:
+
+sending card = 1
+tiles > 9 = KO
+Send to HW = NO
+
+End of session.
+---------------------------------------------------------------------

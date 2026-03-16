@@ -23,7 +23,7 @@ The emulator must support:
 
 ---------------------------------------------------------------------
 
-CURRENT PROJECT STATUS (2026-03-13)
+CURRENT PROJECT STATUS (2026-03-16)
 
 Discovery layer
 Status: WORKING
@@ -38,7 +38,7 @@ Status: WORKING
 
 NovaLCT opens a stable TCP connection on port 5200.
 
-Protocol flow confirmed:
+Confirmed protocol flow:
 
 identity reads
 routing writes
@@ -59,18 +59,18 @@ NovaLCT detects exactly one sending card.
 Observed result:
 sending card = 1
 
-Identity registers implemented:
+Implemented identity registers:
 
 0x00000002
 0x00000006
 0x00000016
 0x14000000
 
-Only dst=00 is exposed as controller identity.
+Only dst=00 is exposed as valid controller identity.
 
 ---------------------------------------------------------------------
 
-Routing command handling
+Routing commands
 Status: WORKING
 
 Routing entries are received through:
@@ -81,10 +81,60 @@ Commit command:
 
 0x02000018
 
-These registers are treated as command registers
-and are not written to persistent memory.
+These are correctly handled as command registers and are no longer
+written into generic persistent memory.
 
-Routing commands are parsed into an internal topology model.
+Routing commands are parsed into an internal topology structure.
+
+---------------------------------------------------------------------
+
+Save / persistence branch
+Status: STABLE
+
+Receiving-card configuration save handling is stable enough
+for continued work.
+
+Implemented registers:
+
+0x02100000
+0x05000000
+0x05065000
+0x05066000
+
+Observed save/config marker:
+
+0x05066000
+header: 53535045ea030000
+ASCII: SSPE
+
+Current behaviour:
+- device remains visible
+- device count stays at 1
+- "Please reconnect the device" no longer appears
+
+This branch is no longer the main blocker.
+
+---------------------------------------------------------------------
+
+Validation registers
+Status: INVESTIGATED / NOT PRIMARY BLOCKER
+
+Registers tested:
+
+0x0200000B
+0x02000022
+0x02000023
+0x0200009D
+0x02200117
+0x03100109
+
+Experimental forcing and timing adjustments showed that:
+
+- 0x0200009D is not the primary topology gate
+- 0x02200117 is not the primary topology gate
+
+These registers participate in the protocol state,
+but they do not by themselves explain routing rejection.
 
 ---------------------------------------------------------------------
 
@@ -98,139 +148,90 @@ The emulator synthesizes controller-level screen blocks:
 0x02020020
 0x08000000
 
-These blocks are reconstructed from routing entries and
-read back correctly by NovaLCT.
-
-However the topology is still rejected during validation.
+NovaLCT reads these blocks successfully,
+but still rejects topology during early routing validation.
 
 Observed result:
-
-tiles > 9 = KO
-
-This remains the primary functional blocker.
-
----------------------------------------------------------------------
-
-Receiving-card configuration flow
-Status: PARTIALLY WORKING
-
-Registers implemented:
-
-0x02100000
-0x05000000
-0x05065000
-0x05066000
-
-NovaLCT writes a 256-byte blob to:
-
-0x05066000
-
-Observed header:
-
-53535045ea030000
-
-ASCII:
-SSPE
-
-This is interpreted as a configuration save marker and
-is now recognized by the emulator.
-
----------------------------------------------------------------------
-
-Save / persistence branch
-Status: STABLE
-
-Earlier versions triggered a fallback mode where NovaLCT
-re-enumerated devices and temporarily showed:
-
-device count = 20
-"Please reconnect the device"
-
-With Works_24 and later versions:
-
-device remains visible
-device count stays at 1
-no reconnect message appears
-
-This branch is now considered stable enough for further work.
-
----------------------------------------------------------------------
-
-Validation registers
-Status: INVESTIGATED
-
-Registers examined:
-
-0x0200009D
-0x02200117
-0x0200000B
-0x02000022
-0x02000023
-
-Experiments forcing these registers during routing
-did not change NovaLCT behaviour.
-
-Conclusion:
-
-Topology acceptance is not controlled solely by these registers.
-
----------------------------------------------------------------------
-
-Topology probe behaviour
-
-Experimental builds modifying the representation of early
-screen topology blocks revealed an important pattern.
-
-Baseline topology synthesis:
-
-NovaLCT accepts only two routing entries.
-
-Modified synthesis ("mirror_minimal"):
-
-NovaLCT continues routing up to four entries.
-
-Interpretation:
-
-NovaLCT performs an incremental topology validation using
-the first cabinets as a probe before accepting the full routing.
-
----------------------------------------------------------------------
-
-Current baseline
-
-Works_24 remains the stable reference implementation.
-
-Later experimental builds investigate topology synthesis
-without breaking the stability achieved in Works_24.
-
----------------------------------------------------------------------
-
-CURRENT PRIMARY BLOCKER
-
-Screen topology acceptance by NovaLCT.
-
-Symptoms:
-
 tiles > 9 = KO
 Send to HW = Failed
 
-Most likely cause:
+---------------------------------------------------------------------
 
-incorrect internal structure of controller screen blocks.
+Best experimental branch
+
+Works_33 is currently the best experimental branch.
+
+Observed behaviour with Works_33:
+NovaLCT accepted routing up to 5 route writes before aborting.
+
+This is the strongest improvement observed so far.
+
+Works_34b / Works_35 / Works_36 / Works_37 / Works_38 /
+Works_39 / Works_40 did not improve over Works_33 and were
+mainly useful for excluding incorrect hypotheses.
+
+---------------------------------------------------------------------
+
+Important exclusions
+
+The following are now considered excluded as main isolated causes:
+
+- validation registers alone
+- 0x08000000 alone
+- 0x02000100 alone
+- simple extension of W33 byte patterns
+- cabinet sorting as the sole blocker
+
+---------------------------------------------------------------------
+
+Current main blocker
+
+The remaining blocker is the semantic interpretation
+of the routing payload and the topology model derived from it.
+
+In other words:
+
+NovaLCT is rejecting the combined topology coherence
+of the synthesized screen blocks.
+
+This is no longer a simple byte-patching problem.
 
 ---------------------------------------------------------------------
 
 NEXT INVESTIGATION TARGET
 
-Improve topology synthesis model used to generate:
+Start a new reverse engineering phase focused on:
 
-0x02000000
-0x02000100
-0x02020020
-0x08000000
+route payload semantics
 
-Focus on the structure of the first cabinets which NovaLCT
-appears to use as a topology validation probe.
+Main fields to understand:
+
+- x
+- y
+- c
+- tile_index
+- cascade_order
+- layout_x
+- layout_y
+
+Goal:
+derive the true topological model expected by NovaLCT,
+then regenerate all 4 controller-level screen blocks
+from that semantic model.
+
+---------------------------------------------------------------------
+
+Recommended working reference
+
+Stable base:
+Works_24
+
+Best experimental branch:
+Works_33
+
+Next work should begin from:
+- Works_24 for stability
+- Works_33 for topology-probe reference
 
 ---------------------------------------------------------------------
 

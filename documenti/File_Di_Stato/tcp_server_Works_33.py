@@ -1,4 +1,4 @@
-# VERSION tcp_server.py: Works_40
+# VERSION tcp_server.py: Works_33
 
 import socket
 import argparse
@@ -38,7 +38,7 @@ CTRL_BLOCKS = {}
 COMMIT_SEEN = False
 SCREEN_BLOCKS_READY = False
 
-# Works_40: experiment on first two cabinets only
+# Works_33: experiment on first two cabinets only
 FIRST2_BUILDER_MODE = "baseline"  # baseline | mirror_minimal | zero_tail
 
 ROUTING_WRITES = []
@@ -349,7 +349,7 @@ def topology_ready(dev, port, rcvIndex, dst):
 
 def rcfg_configured(dev, port, rcvIndex, dst):
     """
-    Works_40 rule:
+    Works_33 rule:
     configured only if:
       - semantic present flag exists
       - save marker exists
@@ -627,23 +627,6 @@ def dump_cabinets():
         )
 
 
-def dump_topology_model():
-    print("[EMU] ---- TOPOLOGY_MODEL ----")
-    if not CABINETS:
-        print("[EMU] (none)")
-        return
-
-    for idx, c in enumerate(CABINETS):
-        print(
-            f"[EMU] MODEL[{idx:02d}] "
-            f"port={c['sender_port']:02X} tile={c['tile_index']:02X} "
-            f"cascade={c['cascade_order']:02X} chain={c['chain_index']:02X} "
-            f"layout=({c['layout_x']:02X},{c['layout_y']:02X}) "
-            f"raw=({c['raw_x']:02X},{c['raw_y']:02X}) "
-            f"route=0x{c['route_word']:04X}"
-        )
-
-
 def dump_rcfg_summary():
     print("[EMU] ---- RCFG_STATE ----")
     found = False
@@ -678,7 +661,6 @@ def build_controller_blocks():
     dump_routing_writes()
     dump_screen_writes()
     dump_cabinets()
-    dump_topology_model()
     dump_rcfg_summary()
 
     groups = {}
@@ -697,52 +679,31 @@ def build_controller_blocks():
 
         count = len(items)
 
-        # Shared single source of truth: the topology model in `items`.
-        port_count = len({it["sender_port"] for it in items}) if items else 1
-        max_tile = max((it["tile_index"] for it in items), default=0)
-        max_cascade = max((it["cascade_order"] for it in items), default=0)
-        max_lx = max((it["layout_x"] for it in items), default=0)
-        max_ly = max((it["layout_y"] for it in items), default=0)
-
-        # 0x02000000 : layout view
         blk_02000000[0] = 0x01
         blk_02000000[1] = 0x01
         blk_02000000[2] = dev & 0xFF
         blk_02000000[3] = port & 0xFF
         blk_02000000[4] = count & 0xFF
         blk_02000000[5] = 0x20
-        blk_02000000[6] = (max_lx + 1) & 0xFF if items else 0x01
-        blk_02000000[7] = (max_ly + 1) & 0xFF if items else 0x01
+        blk_02000000[6] = 0x01
+        blk_02000000[7] = 0x01
 
-        # 0x02000100 : cascade / chain view
         blk_02000100[0] = 0x01
         blk_02000100[1] = 0xA5
         blk_02000100[2] = dev & 0xFF
         blk_02000100[3] = port & 0xFF
         blk_02000100[4] = count & 0xFF
-        blk_02000100[5] = port_count & 0xFF
-        blk_02000100[6] = (max_cascade + 1) & 0xFF if items else 0x01
+        blk_02000100[5] = 0x20
+        blk_02000100[6] = 0x01
         blk_02000100[7] = 0x01
 
-        # 0x02020020 : compact summary view
         blk_02020020[0] = 0x01
         blk_02020020[1] = dev & 0xFF
         blk_02020020[2] = port & 0xFF
         blk_02020020[3] = count & 0xFF
-        blk_02020020[4] = port_count & 0xFF
-        blk_02020020[5] = (max_tile + 1) & 0xFF if items else 0x00
-        blk_02020020[6] = (max_cascade + 1) & 0xFF if items else 0x00
-        blk_02020020[7] = 0x01 if count > 0 else 0x00
 
-        # 0x08000000 : presence/descriptor view
-        blk_08000000[0] = count & 0xFF
-        blk_08000000[1] = port_count & 0xFF
-        blk_08000000[2] = (max_tile + 1) & 0xFF if items else 0x00
-        blk_08000000[3] = (max_cascade + 1) & 0xFF if items else 0x00
-
-        # Works_40: preserve route arrival order to keep chain semantics stable
-        layout_items = list(items)
-        cascade_items = list(items)
+        layout_items = sorted(items, key=lambda e: (e["layout_y"], e["layout_x"], e["tile_index"], e["route_word"]))
+        cascade_items = sorted(items, key=lambda e: (e["cascade_order"], e["route_word"], e["tile_index"]))
 
         off0 = 16
         for idx, item in enumerate(layout_items):
@@ -753,10 +714,7 @@ def build_controller_blocks():
                     item["tile_index"] & 0xFF,
                     item["tile_index"] & 0xFF,
                     item["cascade_order"] & 0xFF,
-                    item["layout_x"] & 0xFF,
-                    item["layout_y"] & 0xFF,
-                    0x01,
-                    item["chain_index"] & 0xFF,
+                    0x00, 0x00, 0x00, 0x00,
                 ])
             elif FIRST2_BUILDER_MODE == "zero_tail" and idx < 4:
                 packed = bytes([
@@ -778,11 +736,10 @@ def build_controller_blocks():
                     item["sender_port"] & 0xFF,
                     item["tile_index"] & 0xFF,
                     item["cascade_order"] & 0xFF,
-                    item["chain_index"] & 0xFF,
+                    0x00,
                     item["raw_x"] & 0xFF,
                     item["raw_y"] & 0xFF,
-                    item["layout_x"] & 0xFF,
-                    item["layout_y"] & 0xFF,
+                    0x00, 0x00,
                 ])
             elif FIRST2_BUILDER_MODE == "zero_tail" and idx < 4:
                 packed = bytes([
@@ -804,7 +761,7 @@ def build_controller_blocks():
                     item["sender_port"] & 0xFF,
                     item["tile_index"] & 0xFF,
                     item["cascade_order"] & 0xFF,
-                    item["chain_index"] & 0xFF,
+                    0x01,
                 ])
             elif FIRST2_BUILDER_MODE == "zero_tail" and idx < 4:
                 packed = bytes([
@@ -818,30 +775,23 @@ def build_controller_blocks():
             off2 += 4
 
         for idx, item in enumerate(cascade_items):
-            base = idx * 4
-            if base + 4 > 256:
-                break
-            if FIRST2_BUILDER_MODE == "baseline":
-                blk_08000000[base:base+4] = bytes([
-                    item["sender_port"] & 0xFF,
-                    item["tile_index"] & 0xFF,
-                    item["cascade_order"] & 0xFF,
-                    0x01,
-                ])
-            elif FIRST2_BUILDER_MODE == "mirror_minimal":
-                blk_08000000[base:base+4] = bytes([
-                    item["sender_port"] & 0xFF,
-                    item["tile_index"] & 0xFF,
-                    item["cascade_order"] & 0xFF,
-                    item["chain_index"] & 0xFF,
-                ])
-            elif FIRST2_BUILDER_MODE == "zero_tail":
-                blk_08000000[base:base+4] = bytes([
-                    item["sender_port"] & 0xFF,
-                    item["cascade_order"] & 0xFF,
-                    0x00,
-                    0x01,
-                ])
+            if idx < 456:
+                if FIRST2_BUILDER_MODE == "baseline":
+                    blk_08000000[idx] = 0x01
+                elif FIRST2_BUILDER_MODE == "mirror_minimal":
+                    blk_08000000[idx*4:idx*4+4] = bytes([
+                        item["sender_port"] & 0xFF,
+                        item["tile_index"] & 0xFF,
+                        item["cascade_order"] & 0xFF,
+                        0x01,
+                    ])
+                elif FIRST2_BUILDER_MODE == "zero_tail":
+                    blk_08000000[idx*4:idx*4+4] = bytes([
+                        item["sender_port"] & 0xFF,
+                        item["cascade_order"] & 0xFF,
+                        0x00,
+                        0x01,
+                    ])
 
         ctrl_block_write(dev, port, 0x02000000, bytes(blk_02000000))
         ctrl_block_write(dev, port, 0x02000100, bytes(blk_02000100))
